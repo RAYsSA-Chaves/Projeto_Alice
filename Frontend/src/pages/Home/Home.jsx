@@ -1,8 +1,11 @@
+import Livro from "../../components/Livro/livro";
+import "./Home.css";
+
 function Home() {
     return (
-        <>
-            <h1>Olá</h1>
-        </>
+        <main id="mainLivro">
+            <Livro/>
+        </main>
     )
 }
 
