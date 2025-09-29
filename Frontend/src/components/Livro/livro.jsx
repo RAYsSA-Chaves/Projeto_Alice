@@ -7,25 +7,25 @@ function Livro() {
     const [ativo, setAtivo] = useState("");
 
     // Variáveis de controle
-    let paginaAtual = 1;
+    const [paginaAtual, setPaginaAtual] = useState(1);
     let paginasQtd = 2;
     let maxPage = paginasQtd + 1;
 
     // Lógica das animações
     function openBook() {
-        book.style.transform = "translateX(50%)";
-        btnVoltar.style.transform = "translateX(-180px)";
-        btnProxima.style.transform = "translateX(180px)";
+        document.getElementById("book").style.transform = "translateX(50%)";
+        document.getElementById("btnVoltar").style.transform = "translateX(-180px)";
+        document.getElementById("btnProxima").style.transform = "translateX(180px)";
     };
     function closeBook(isAtBeginning) {
         if (isAtBeginning) {
-            book.style.transform = "translateX(0%)";
+            document.getElementById("book").style.transform = "translateX(0%)";
         } else {
-            book.style.transform = "translateX(100%)";
+            document.getElementById("book").style.transform = "translateX(100%)";
         }
         
-        btnVoltar.style.transform = "translateX(0px)";
-        btnProxima.style.transform = "translateX(0px)";
+        document.getElementById("btnVoltar").style.transform = "translateX(0px)";
+        document.getElementById("btnProxima").style.transform = "translateX(0px)";
     };
     function nextPage() {
         if(paginaAtual < maxPage) {
@@ -41,20 +41,24 @@ function Livro() {
                 default:
                     throw new Error("Estado desconhecido");
             }
-            paginaAtual++;
-        };
+            setPaginaAtual(paginaAtual + 1);
+        }
     };
     function backPage() {
         if (paginaAtual > 1) {
             switch (paginaAtual) {
                 case 2:
-                    closeBook();
+                    closeBook(true);
                     setAtivo(""); 
+                    break;
+                case 3:
+                    openBook();
+                    setAtivo("um"); 
                     break;
                 default:
                     throw new Error("Estado desconhecido");
             }
-            paginaAtual--;
+            setPaginaAtual(paginaAtual - 1);
         }
     };
     return (
@@ -68,13 +72,13 @@ function Livro() {
                 <div id="f1" className={ativo === "um" ? "folha virada" : "folha"}>
                     {/* Front */}
                     <div className="front">
-                        <div id="f1" className="frontContent">
+                        <div className="frontContent">
                             <h1>A</h1>
                         </div>
                     </div>
                     {/* Back */}
                     <div className="back">
-                        <div id="b1" className="backContent">
+                        <div className="backContent">
                             <h1>B</h1>
                         </div>
                     </div>
@@ -84,13 +88,13 @@ function Livro() {
                 <div id="f2" className={ativo === "dois" ? "folha virada" : "folha"}>
                     {/* Front */}
                     <div className="front">
-                        <div id="f2" className="frontContent">
+                        <div className="frontContent">
                             <h1>C</h1>
                         </div>
                     </div>
                     {/* Back */}
                     <div className="back">
-                        <div id="b2" className="backContent">
+                        <div className="backContent">
                             <h1>D</h1>
                         </div>
                     </div>
