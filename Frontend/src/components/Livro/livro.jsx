@@ -69,7 +69,7 @@ function Livro() {
             {/* Livro */}
             <div id="book" className="book">
                 {/* Folha 1 */}
-                <div id="f1" className={ativo === "um" ? "folha virada" : "folha"}>
+                <div id="f1" className={ativo === "um" ? "folha virada" : "folha"} style={{zIndex: ativo === "um" ?  1 : 2}}>
                     {/* Front */}
                     <div className="front">
                         <div className="frontContent">
@@ -85,7 +85,7 @@ function Livro() {
                 </div>
 
                 {/* Folha 2 */}
-                <div id="f2" className={ativo === "dois" ? "folha virada" : "folha"}>
+                <div id="f2" className={ativo === "dois" ? "folha virada" : "folha"} style={{zIndex: ativo === "dois" ? 2 : 1}}>
                     {/* Front */}
                     <div className="front">
                         <div className="frontContent">
