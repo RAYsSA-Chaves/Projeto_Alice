@@ -2,49 +2,65 @@ import { React, useState } from "react";
 import "./livro.css";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
-// Classes customizadas
-const [ativo, setAtivo] = useState("");
-
-// Lógica do efeito
-let paginaAtual = 1;
-let paginasQtd = 2;
-let maxPage = paginasQtd + 1;
-
-function openBook() {
-
-};
-
-function closeBook() {
-
-};
-
-function nextPage() {
-    if(paginaAtual < maxPage) {
-        switch(paginaAtual) {
-            case 1:
-                openBook();
-                setAtivo("um");
-                break;
-            case 2:
-                setAtivo("dois");
-                closeBook();
-                break;
-            default:
-                throw new Error("Estado desconhecido");
-        }
-        paginaAtual++;
-    }
-};
-
-function backPage() {
-
-};
-
 function Livro() {
+    // Estado da folha virada
+    const [ativo, setAtivo] = useState("");
+
+    // Variáveis de controle
+    let paginaAtual = 1;
+    let paginasQtd = 2;
+    let maxPage = paginasQtd + 1;
+
+    // Lógica das animações
+    function openBook() {
+        book.style.transform = "translateX(50%)";
+        btnVoltar.style.transform = "translateX(-180px)";
+        btnProxima.style.transform = "translateX(180px)";
+    };
+    function closeBook(isAtBeginning) {
+        if (isAtBeginning) {
+            book.style.transform = "translateX(0%)";
+        } else {
+            book.style.transform = "translateX(100%)";
+        }
+        
+        btnVoltar.style.transform = "translateX(0px)";
+        btnProxima.style.transform = "translateX(0px)";
+    };
+    function nextPage() {
+        if(paginaAtual < maxPage) {
+            switch(paginaAtual) {
+                case 1:
+                    openBook();
+                    setAtivo("um");
+                    break;
+                case 2:
+                    setAtivo("dois");
+                    closeBook();
+                    break;
+                default:
+                    throw new Error("Estado desconhecido");
+            }
+            paginaAtual++;
+        };
+    };
+    function backPage() {
+        if (paginaAtual > 1) {
+            switch (paginaAtual) {
+                case 2:
+                    closeBook();
+                    setAtivo(""); 
+                    break;
+                default:
+                    throw new Error("Estado desconhecido");
+            }
+            paginaAtual--;
+        }
+    };
     return (
         <>
             {/* Botão voltar página */}
-            <button className="bookBtn" id="btnVoltar" onClick={backPage()}><ChevronLeft size="50"/></button>
+            <button className="bookBtn" id="btnVoltar" onClick={backPage}><ChevronLeft size="50"/></button>
 
             {/* Livro */}
             <div id="book" className="book">
@@ -82,7 +98,7 @@ function Livro() {
             </div>
 
             {/* Botão próxima página */}
-            <button className="bookBtn" id="btnProxima" oncLick={nextPage()}><ChevronRight size="50"/></button>
+            <button className="bookBtn" id="btnProxima" onClick={nextPage}><ChevronRight size="50"/></button>
         </>
     )
 }

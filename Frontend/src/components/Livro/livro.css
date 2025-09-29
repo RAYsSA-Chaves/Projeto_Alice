@@ -9,6 +9,7 @@
     position: relative;
     width: 350px;
     height: 500px;
+    transition: transform 0.5s;
 }
 
 .folha {
@@ -18,6 +19,7 @@
     top: 0;
     left: 0;
     perspective: 1500px;
+    z-index:3;
 }
 
 .front, .back {
@@ -58,6 +60,10 @@
     transform: rotateY(-180deg);
 }
 
+.virada {
+    z-index: 1;
+}
+
 /* Botões */
 .bookBtn {
     border: none;
@@ -67,6 +73,7 @@
     margin: 10px;
     text-align: center;
     color: powderblue;
+    transition: transform 0.5s;
 }
 
 .bookBtn:focus {
