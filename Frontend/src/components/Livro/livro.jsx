@@ -1,112 +1,94 @@
-import { React, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import HTMLFlipBook from "react-pageflip";
+import { extrairPDF } from "./extrairPdf"; // importa a função
 import "./livro.css";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+
+// Caminho do PDF e capa personalizada
+const PDF_FILE = "/livro.pdf";
+const CAPA_IMG = "/capa.jpg";
 
 function Livro() {
-    // Estado da folha virada
-    const [ativo, setAtivo] = useState("");
+  const [paginas, setPaginas] = useState([]);
+  const flipBookRef = useRef();
 
-    // Variáveis de controle
-    const [paginaAtual, setPaginaAtual] = useState(1);
-    let paginasQtd = 2;
-    let maxPage = paginasQtd + 1;
+  // Carrega PDF ao montar o componente
+  useEffect(function () {
+    async function carregar() {
+      const paginasExtraidas = await extrairPDF(PDF_FILE);
 
-    // Lógica das animações
-    function openBook() {
-        document.getElementById("book").style.transform = "translateX(50%)";
-        document.getElementById("btnVoltar").style.transform = "translateX(-180px)";
-        document.getElementById("btnProxima").style.transform = "translateX(180px)";
-    };
-    function closeBook(isAtBeginning) {
-        if (isAtBeginning) {
-            document.getElementById("book").style.transform = "translateX(0%)";
-        } else {
-            document.getElementById("book").style.transform = "translateX(100%)";
-        }
-        
-        document.getElementById("btnVoltar").style.transform = "translateX(0px)";
-        document.getElementById("btnProxima").style.transform = "translateX(0px)";
-    };
-    function nextPage() {
-        if(paginaAtual < maxPage) {
-            switch(paginaAtual) {
-                case 1:
-                    openBook();
-                    setAtivo("um");
-                    break;
-                case 2:
-                    setAtivo("dois");
-                    closeBook();
-                    break;
-                default:
-                    throw new Error("Estado desconhecido");
-            }
-            setPaginaAtual(paginaAtual + 1);
-        }
-    };
-    function backPage() {
-        if (paginaAtual > 1) {
-            switch (paginaAtual) {
-                case 2:
-                    closeBook(true);
-                    setAtivo(""); 
-                    break;
-                case 3:
-                    openBook();
-                    setAtivo("um"); 
-                    break;
-                default:
-                    throw new Error("Estado desconhecido");
-            }
-            setPaginaAtual(paginaAtual - 1);
-        }
-    };
-    return (
-        <>
-            {/* Botão voltar página */}
-            <button className="bookBtn" id="btnVoltar" onClick={backPage}><ChevronLeft size="50"/></button>
+      // Remove a primeira página (capa do PDF)
+      paginasExtraidas.shift();
 
-            {/* Livro */}
-            <div id="book" className="book">
-                {/* Folha 1 */}
-                <div id="f1" className={ativo === "um" ? "folha virada" : "folha"} style={{zIndex: ativo === "um" ?  2 : 3}}>
-                    {/* Front */}
-                    <div className="front">
-                        <div className="frontContent">
-                            <h1>A</h1>
-                        </div>
-                    </div>
-                    {/* Back */}
-                    <div className="back">
-                        <div className="backContent">
-                            <h1>B</h1>
-                        </div>
-                    </div>
-                </div>
+      setPaginas(paginasExtraidas);
+    }
 
-                {/* Folha 2 */}
-                <div id="f2" className={ativo === "dois" ? "folha virada" : "folha"} style={{zIndex: ativo === "dois" ? 4 : 1}}>
-                    {/* Front */}
-                    {ativo !== "dois" && (
-                        <div className="front">
-                            <div className="frontContent">
-                                <h1>C</h1>
-                            </div>
-                        </div>
-                    )}
-                    {/* Back */}
-                    <div className="back">
-                        <div className="backContent">
-                            <h1>D</h1>
-                        </div>
-                    </div>
-                </div>
+    carregar();
+  }, []);
+
+  // Clique em palavra
+  function handleWordClick(word) {
+    alert("Você clicou na palavra: " + word);
+  }
+
+  return (
+    <div className="container-livro">
+      {/* Botões */}
+      <div className="botoes">
+        <button onClick={() => flipBookRef.current.pageFlip().flipPrev()}>
+          ◀ Anterior
+        </button>
+        <button onClick={() => flipBookRef.current.pageFlip().flipNext()}>
+          Próxima ▶
+        </button>
+      </div>
+
+      {/* Livro */}
+      <HTMLFlipBook width={500} height={700} ref={flipBookRef} className="livro">
+        {/* Capa personalizada */}
+        <div className="pagina">
+          <img src={CAPA_IMG} alt="Capa" className="pagina-fundo" />
+        </div>
+
+        {/* Demais páginas */}
+        {paginas.map(function (pagina, index) {
+          return (
+            <div
+              key={index}
+              className="pagina"
+              style={{ width: pagina.width, height: pagina.height }}
+            >
+              {/* Fundo */}
+              <img
+                src={pagina.backgroundImage}
+                alt={"Página " + (index + 2)}
+                className="pagina-fundo"
+              />
+
+              {/* Palavras clicáveis */}
+              {pagina.palavras.map(function (palavra, i) {
+                return (
+                  <span
+                    key={i}
+                    className="palavra"
+                    style={{
+                      top: palavra.y + "px",
+                      left: palavra.x + "px",
+                      fontSize: palavra.fontSize + "px",
+                    }}
+                    onClick={function () {
+                      handleWordClick(palavra.texto);
+                    }}
+                  >
+                    {palavra.texto}
+                  </span>
+                );
+              })}
             </div>
-
-            {/* Botão próxima página */}
-            <button className="bookBtn" id="btnProxima" onClick={nextPage}><ChevronRight size="50"/></button>
-        </>
-    )
+          );
+        })}
+      </HTMLFlipBook>
+    </div>
+  );
 }
 
 export default Livro;
