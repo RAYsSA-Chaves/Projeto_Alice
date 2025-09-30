@@ -87,11 +87,13 @@ function Livro() {
                 {/* Folha 2 */}
                 <div id="f2" className={ativo === "dois" ? "folha virada" : "folha"} style={{zIndex: ativo === "dois" ? 4 : 1}}>
                     {/* Front */}
-                    <div className="front">
-                        <div className="frontContent">
-                            <h1>C</h1>
+                    {ativo !== "dois" && (
+                        <div className="front">
+                            <div className="frontContent">
+                                <h1>C</h1>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     {/* Back */}
                     <div className="back">
                         <div className="backContent">
