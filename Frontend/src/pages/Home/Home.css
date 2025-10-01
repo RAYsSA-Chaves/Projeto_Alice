@@ -2,6 +2,64 @@
 
 :root {
     --fonte-primaria: 'Poppins';
-    --azul-degrade: linear-gradient(160deg, #3266DE 0%, #1B3778 0%)
+    --cor-branco: #FFFFFF;
+    --azul-escuro: #1B3778;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-primaria);
+}
+
+.paginaPrincipal {
+    background: linear-gradient(to bottom, #1B3778, #3266DE);
+    color: var(--cor-branco);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+    overflow: visible;
+}
+
+.titulos {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.fada img {
+    max-width: 85%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.estrela1 {
+    position: absolute;
+    width: 100vh;
+    height: 10vh;
+    top: 100px;
+    left: 80px;
+}
+
+.scroll {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: var(--cor-branco);
+    background: var(--azul-escuro);
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+    display: block;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.scroll:hover {
+    transform: scale(1.2);
+}
