@@ -24,14 +24,14 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
         # extrair palavras
         palavras_brutas = pagina.get_text("words")
         
-        # cada item é: [x0, y0, x1, y1, texto, bloco, linha]
+        # cada palavra é: [x0, y0, x1, y1, texto, bloco, linha]
         # x e y = coordenadas dos 4 cantos da palavra
         # bloco = número do bloco de texto ao qual a palavra pertence (parágrafo)
         # linha = linha dentro do bloco
         
         palavras = []
-        for item in palavras_brutas:
-            x0, y0, x1, y1, texto = item
+        for palavra in palavras_brutas:
+            x0, y0, x1, y1, texto = palavra
             palavras.append({
                 "text": texto,
                 "x": x0,
@@ -46,9 +46,9 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
 
         # percorre cada imagem
         num_imagem = 0
-        for imagem_info in imagens_da_pagina:
+        for imagem in imagens_da_pagina:
             # identificador interno da imagem no PDF
-            xref = imagem_info[0]
+            xref = imagem[0]
 
             # extrai os bytes da imagem
             img_extraida = doc.extract_image(xref)
@@ -75,9 +75,7 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
 
             numero_imagem += 1
 
-        # ----------------------------
-        # Salvar dados da página
-        # ----------------------------
+        # salvar dados da página
         dados["pages"].append({
             "number": num_pagina,
             "width": largura,
@@ -86,17 +84,11 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
             "images": imagens
         })
 
-    # ----------------------------
-    # Exportar para JSON
-    # ----------------------------
-    with open(saida_json, "w", encoding="utf-8") as f:
-        json.dump(dados, f, indent=2, ensure_ascii=False)
+    # exportar para JSON
+    with open(saida_json, "w", encoding="utf-8") as file:
+        json.dump(dados, file, indent=4, ensure_ascii=False)
 
     print(f"✅ Extração concluída! JSON salvo em {saida_json}")
 
 
-# ----------------------------
-# Exemplo de uso
-# ----------------------------
-# Aqui você escolhe qual PDF abrir, onde salvar imagens e o nome do JSON
-pdf_para_json("meu_arquivo.pdf", "imagens_extraidas", "saida.json")
+pdf_para_json("Alice-no-Pais-das-Maravilhas.pdf", "imagens_pdf")
