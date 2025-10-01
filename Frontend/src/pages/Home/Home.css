@@ -22,29 +22,121 @@
     justify-content: space-between;
     padding: 2rem;
     position: relative;
-    overflow: visible;
 }
 
 .titulos {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
+    text-align: justify;
+    margin-left: 20.10vh;
 }
 
 .fada img {
-    max-width: 85%;
-    height: auto;
+    max-width: 80%;
+    margin-top: -15vh;
+    height: 150vh;
     object-fit: contain;
     display: block;
+    float: left;
 }
 
 .estrela1 {
     position: absolute;
     width: 100vh;
-    height: 10vh;
-    top: 100px;
-    left: 80px;
+    height: 12vh;
+    top: 30vh;
+    left: -30vh;
+}
+
+.estrela2 {
+    position: absolute;
+    width: 80vh;
+    height: 5vh;
+    top: 50vh;
+    left: -10vh;  
+}
+
+.estrela3 {
+    position: absolute;
+    width: 10vh;
+    height: 3vh;
+    top: 60vh;
+}
+
+.estrela4 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 90vh;
+    left: -30vh;
+}
+
+.estrela5 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 30vh;
+    right: 50vh;
+}
+
+.estrela6 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 10vh;
+    right: 10vh;
+}
+
+.nuvem1 {
+    position: absolute;
+    width: 10vh;
+    height: 100vh;
+    top: 15vh;
+    left: 0;
+}
+
+.nuvem2 {
+    position: absolute;
+    width: 10vh;
+    height: 100vh;
+    top: -10vh;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.nuvem3 {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    align-self: flex-end; 
+    bottom: -50.5vh;
+    left: 0;
+}
+
+.nuvem4 {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    align-self: flex-end; 
+    top: 90vh;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.nuvem5 {
+    position: absolute;
+    width: 100vh;
+    height: 70vh;
+    bottom: -50vh;
+    top: 118vh;
+    left: 75vh;
+}
+
+.bolinha1 {
+    position: absolute;
+    
 }
 
 .scroll {
@@ -62,4 +154,8 @@
 
 .scroll:hover {
     transform: scale(1.2);
+}
+
+.secaoCards {
+    background: var(--cor-branco);
 }
