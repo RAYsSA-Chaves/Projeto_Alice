@@ -4,90 +4,38 @@
     box-sizing: border-box;
 }
 
-/* Livro */
-.book {
-    position: relative;
-    width: 350px;
-    height: 500px;
-    transition: transform 0.5s;
-}
-
-.folha {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    perspective: 1500px;
-    z-index: 3;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    transform-origin: left;
-}
-
-.front, .back {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-}
-
-.back {
-    transform: rotateY(180deg);
-}
-
-.front {
-    z-index: 2;
-    border-left: 3px solid rgba(128, 128, 128, 0.23);
-}
-
-.back {
-    transform: rotateY(180deg);
-    z-index: 1;
-}
-
-.frontContent, .backContent {
-    width: 100%;
-    height: 100%;
+.container-livro {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-/* Efeito página virada */
-.virada {
-    transform: rotateY(-180deg);
-    z-index: 5;
-}
-
-/* Botões */
-.bookBtn {
-    border: none;
-    background-color: gray;
-    border-radius: 50px;
+    justify-content: center;
+  }
+  
+  .botoes {
+    margin-bottom: 15px;
+  }
+  
+  .livro {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .pagina {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    overflow: hidden;
+  }
+  
+  .pagina-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .palavra {
+    position: absolute;
+    color: transparent; /* deixa invisível */
+    background: rgba(255,255,0,0.3); /* debug: amarelo */
     cursor: pointer;
-    margin: 10px;
-    text-align: center;
-    color: powderblue;
-    transition: transform 0.5s;
-}
-
-.bookBtn:focus {
-    outline: none;
-}
-
-.bookBtn:hover {
-    background-color: #636363;
-}
-
-/* Ordem das páginas */
-#f1 {
-    z-index: 2;
-}
-
-#f2 {
-    z-index: 1;
-}
+  }
+  

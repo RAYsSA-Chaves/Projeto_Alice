@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
-import { extrairPDF } from "./extrairPdf"; // importa a função
+import { extrairPDF } from "../../data/extrairPdf"; // importa a função
 import "./livro.css";
 
 // Caminho do PDF e capa personalizada
-const PDF_FILE = "/livro.pdf";
-const CAPA_IMG = "/capa.jpg";
+const PDF_FILE = "/arquivo/Alice-no-Pais-das-Maravilhas.pdf";
+const CAPA_IMG = "/assets/capa-alice2.png";
 
 function Livro() {
   const [paginas, setPaginas] = useState([]);
@@ -43,7 +43,7 @@ function Livro() {
       </div>
 
       {/* Livro */}
-      <HTMLFlipBook width={500} height={700} ref={flipBookRef} className="livro">
+      <HTMLFlipBook width={345} height={500} ref={flipBookRef} className="livro">
         {/* Capa personalizada */}
         <div className="pagina">
           <img src={CAPA_IMG} alt="Capa" className="pagina-fundo" />
@@ -51,11 +51,14 @@ function Livro() {
 
         {/* Demais páginas */}
         {paginas.map(function (pagina, index) {
+          // escala proporcional para caber no flipbook
+          const escalaX = 400 / pagina.width;
+          const escalaY = 580 / pagina.height;
+
           return (
             <div
               key={index}
               className="pagina"
-              style={{ width: pagina.width, height: pagina.height }}
             >
               {/* Fundo */}
               <img
@@ -69,15 +72,13 @@ function Livro() {
                 return (
                   <span
                     key={i}
-                    className="palavra"
+                    className={`palavra`}
                     style={{
-                      top: palavra.y + "px",
-                      left: palavra.x + "px",
-                      fontSize: palavra.fontSize + "px",
+                      top: palavra.y * escalaY + "px",
+                      left: palavra.x * escalaX + "px",
+                      fontSize: palavra.fontSize * escalaX + "px",
                     }}
-                    onClick={function () {
-                      handleWordClick(palavra.texto);
-                    }}
+                    onClick={() => handleWordClick(palavra.texto)}
                   >
                     {palavra.texto}
                   </span>
