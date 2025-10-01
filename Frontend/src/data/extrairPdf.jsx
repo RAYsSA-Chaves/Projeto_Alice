@@ -25,7 +25,7 @@ export async function extrairPDF(caminhoPDF) {
     // Renderiza página no canvas
     await page.render({ canvasContext: context, viewport: viewport }).promise;
 
-    // Converte canvas em imagem base64
+    // Converte canvas em imagem
     const backgroundImage = canvas.toDataURL();
 
     // Extrai conteúdo de texto
@@ -33,7 +33,7 @@ export async function extrairPDF(caminhoPDF) {
     let palavras = [];
 
     textContent.items.forEach(function (item) {
-      const transform = item.transform;
+      const transform = item.transform; // coloca na posição, tamanho, etc exatos do pdf
 
       // Pega posição e tamanho
       const x = transform[4];
@@ -48,7 +48,7 @@ export async function extrairPDF(caminhoPDF) {
       });
     });
 
-    // Guarda esta página
+    // Guarda a página
     paginasExtraidas.push({
       backgroundImage: backgroundImage,
       width: viewport.width,
