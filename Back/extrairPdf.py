@@ -24,14 +24,14 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
         # extrair palavras
         palavras_brutas = pagina.get_text("words")
         
-        # cada palavra é: [x0, y0, x1, y1, texto, bloco, linha]
+        # cada palavra é: [x0, y0, x1, y1, texto, bloco, linha, palavra_index]
         # x e y = coordenadas dos 4 cantos da palavra
         # bloco = número do bloco de texto ao qual a palavra pertence (parágrafo)
         # linha = linha dentro do bloco
         
         palavras = []
         for palavra in palavras_brutas:
-            x0, y0, x1, y1, texto = palavra
+            x0, y0, x1, y1, texto, _, _, _ = palavra
             palavras.append({
                 "text": texto,
                 "x": x0,
@@ -63,8 +63,8 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
                 file.write(conteudo_img)
 
             # posição da imagem na página (bbox)
-            for detalhe in pagina.get_image_info(xref):
-                x0, y0, x1, y1 = detalhe["bbox"]
+            for rect in pagina.get_image_rects(xref):
+                x0, y0, x1, y1 = rect
                 imagens.append({
                     "x": x0,
                     "y": y0,
@@ -73,7 +73,7 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
                     "src": caminho_arquivo
                 })
 
-            numero_imagem += 1
+            num_imagem += 1
 
         # salvar dados da página
         dados["pages"].append({
@@ -84,6 +84,8 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
             "images": imagens
         })
 
+        num_pagina += 1
+
     # exportar para JSON
     with open(saida_json, "w", encoding="utf-8") as file:
         json.dump(dados, file, indent=4, ensure_ascii=False)
@@ -91,4 +93,4 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
     print(f"✅ Extração concluída! JSON salvo em {saida_json}")
 
 
-pdf_para_json("Alice-no-Pais-das-Maravilhas.pdf", "imagens_pdf")
+pdf_para_json("./uploads/Alice-no-Pais-das-Maravilhas.pdf", "imagens_pdf")
