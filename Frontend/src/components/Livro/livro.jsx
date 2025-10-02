@@ -1,95 +1,73 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
-import { extrairPDF } from "../../data/extrairPdf"; // importa a função
 import "./livro.css";
 
-// Caminho do PDF e capa personalizada
-const PDF_FILE = "/arquivo/Alice-no-Pais-das-Maravilhas.pdf";
-const CAPA_IMG = "/assets/capa-alice2.png";
-
-function Livro() {
+export default function Livro() {
   const [paginas, setPaginas] = useState([]);
-  const flipBookRef = useRef();
 
-  // Carrega PDF ao montar o componente
-  useEffect(function () {
-    async function carregar() {
-      const paginasExtraidas = await extrairPDF(PDF_FILE);
+  // Carregar o json com as páginas
+  useEffect(() => {
+    fetch("/data/paginas.json").then((res) => 
+      res.json()).then((data) => 
+        setPaginas(data));
+    }, []);
 
-      // Remove a primeira página (capa do PDF)
-      paginasExtraidas.shift();
+    return (
+      // Conteúdo principal (livro)
+      <main className="bookContainer">
+        <HTMLFlipBook 
+          width={550} 
+          height={700} 
+          showCover={true} 
+          className="flipbookk"
+        >
+          {/* Capa */}
+          <article className="pagina capa"> 
+            <figure>
+              <img src="/assets/capa-alice.png" alt="Capa do livro"/>
+            </figure>
+          </article>
 
-      setPaginas(paginasExtraidas);
-    }
-
-    carregar();
-  }, []);
-
-  // Clique em palavra
-  function handleWordClick(word) {
-    alert("Você clicou na palavra: " + word);
-  }
-
-  return (
-    <div className="container-livro">
-      {/* Botões */}
-      <div className="botoes">
-        <button onClick={() => flipBookRef.current.pageFlip().flipPrev()}>
-          ◀ Anterior
-        </button>
-        <button onClick={() => flipBookRef.current.pageFlip().flipNext()}>
-          Próxima ▶
-        </button>
-      </div>
-
-      {/* Livro */}
-      <HTMLFlipBook width={345} height={500} ref={flipBookRef} className="livro">
-        {/* Capa personalizada */}
-        <div className="pagina">
-          <img src={CAPA_IMG} alt="Capa" className="pagina-fundo" />
-        </div>
-
-        {/* Demais páginas */}
-        {paginas.map(function (pagina, index) {
-          // escala proporcional para caber no flipbook
-          const escalaX = 400 / pagina.width;
-          const escalaY = 580 / pagina.height;
-
-          return (
-            <div
-              key={index}
-              className="pagina"
+          {/* Páginas */}
+          {paginas.map((pagina) => (
+            <article
+              key={pagina.number}
+              className= {`pagina $ {pagina.number === paginas.length ? "contracapa" : ""}`}
+              style={{ width: pagina.width, height: pagina.height }}
             >
-              {/* Fundo */}
-              <img
-                src={pagina.backgroundImage}
-                alt={"Página " + (index + 2)}
-                className="pagina-fundo"
-              />
+              {/* Imagens da página */}
+              <section className="imagens">
+                {pagina.images.map((img, index) => (
+                  <img 
+                    key={index} 
+                    src={`/assets/imagens_pdf/${img.src}`} 
+                    alt="Ilustração" 
+                    className="paginaImagem"
+                    style={{ left: img.x, top: img.y, width: img.w, height:img.h, }}/>
+                ))}
+              </section>
 
-              {/* Palavras clicáveis */}
-              {pagina.palavras.map(function (palavra, i) {
-                return (
+              {/* Palavra da página */}
+              <section className="palavras">
+                {pagina.words.map((p, idx) => (
                   <span
-                    key={i}
-                    className={`palavra`}
-                    style={{
-                      top: palavra.y * escalaY + "px",
-                      left: palavra.x * escalaX + "px",
-                      fontSize: palavra.fontSize * escalaX + "px",
-                    }}
-                    onClick={() => handleWordClick(palavra.texto)}
+                    key={idx}
+                    className="palavra"
+                    style={{ left: p.x, top: p.y, fontSize: p.tamanho, }}
                   >
-                    {palavra.texto}
+                    {p.texto}
                   </span>
-                );
-              })}
-            </div>
-          );
-        })}
-      </HTMLFlipBook>
-    </div>
-  );
+                ))}
+              </section>
+            </article>
+          ))}
+        </HTMLFlipBook>
+      </main>
+    );
 }
-
-export default Livro;
+        // <button onClick={() => flipBookRef.current.pageFlip().flipPrev()}>
+        //   ◀ Anterior
+        // </button>
+        // <button onClick={() => flipBookRef.current.pageFlip().flipNext()}>
+        //   Próxima ▶
+        // </button>

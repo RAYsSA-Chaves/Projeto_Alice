@@ -1,41 +1,51 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Container do livro */
+.bookContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.container-livro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .botoes {
-    margin-bottom: 15px;
-  }
-  
-  .livro {
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-  
-  .pagina {
-    position: relative;
-    width: 500px;
-    height: 700px;
-    overflow: hidden;
-  }
-  
-  .pagina-fundo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .palavra {
-    position: absolute;
-    color: transparent; /* deixa invisível */
-    background: rgba(255,255,0,0.3); /* debug: amarelo */
-    cursor: pointer;
-  }
-  
+/* Flipbook */
+.flipbook {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Páginas */
+.pagina {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container de imagens */
+.pagina .imagens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pagina .paginaImagem {
+  position: absolute;
+}
+
+/* Container de palavras */
+.pagina .palavras {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pagina .palavra {
+  position: absolute;
+  white-space: nowrap;
+  cursor: default;
+}
+
+/* Capa e contracapa */
+.capa img, .contracapa img  {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
