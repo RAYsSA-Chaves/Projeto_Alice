@@ -17,39 +17,51 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
 
     num_pagina = 1  # começa na página 1
     for pagina in doc:
-        # tamanho da página
-        largura = pagina.rect.width # rect = rectangle
-        altura = pagina.rect.height
-
         # extrair palavras
         palavras_brutas = pagina.get_text("words")
         
         # cada palavra é: [x0, y0, x1, y1, texto, bloco, linha, palavra_index]
         # x e y = coordenadas dos 4 cantos da palavra
+        # texto = texto em si
         # bloco = número do bloco de texto ao qual a palavra pertence (parágrafo)
         # linha = linha dentro do bloco
+        # palavra_index = posição na linha
         
-        palavras = []
+        blocos_dict = {}
+        
+        # extrair infos de cada palavra
         for palavra in palavras_brutas:
-            x0, y0, x1, y1, texto, _, _, _ = palavra
-            palavras.append({
+            x0, y0, x1, y1, texto, bloco, linha, _ = palavra
+            palavra_info = {
                 "text": texto,
-                "x": x0,
-                "y": y0,
-                "w": x1 - x0,
-                "h": y1 - y0
-            })
+                "w": round(x1 - x0, 2),
+                "h": round(y1 - y0, 2)
+            }
+            
+        # guarda palavra dentro da linha e dentro do bloco corretos
+        if bloco not in blocos_dict:
+            blocos_dict[bloco] = {}
+        if linha not in blocos_dict[bloco]:
+            blocos_dict[bloco][linha] = []
+        blocos_dict[bloco][linha].append(palavra_info)
+        
+        # transforma em lista aninhada: blocos → linhas → palavras
+        blocos = []
+        for bloco_key in sorted(blocos_dict.keys()):
+            linhas = []
+            for linha_key in sorted(blocos_dict[bloco_key].keys()):
+                linhas.append(blocos_dict[bloco_key][linha_key])
+            blocos.append(linhas)
 
         imagens = []
+        
         # pega todas as imagens da página atual
         imagens_da_pagina = pagina.get_images(full=True)
 
         # percorre cada imagem
-        num_imagem = 0
+        num_imagem = 0 # começa na imagem 0
         for imagem in imagens_da_pagina:
-            # identificador interno da imagem no PDF
-            xref = imagem[0]
-
+            xref = imagem[0] # identificador interno da imagem no PDF
             # extrai os bytes da imagem
             img_extraida = doc.extract_image(xref)
             conteudo_img = img_extraida["image"]
@@ -61,26 +73,14 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
             # salva a imagem
             with open(caminho_arquivo, "wb") as file:
                 file.write(conteudo_img)
-
-            # posição da imagem na página (bbox)
-            for rect in pagina.get_image_rects(xref):
-                x0, y0, x1, y1 = rect
-                imagens.append({
-                    "x": x0,
-                    "y": y0,
-                    "w": x1 - x0,
-                    "h": y1 - y0,
-                    "src": caminho_arquivo
-                })
+            imagens.append(caminho_arquivo)
 
             num_imagem += 1
 
         # salvar dados da página
         dados["pages"].append({
             "number": num_pagina,
-            "width": largura,
-            "height": altura,
-            "words": palavras,
+            "blocks": blocos,
             "images": imagens
         })
 
