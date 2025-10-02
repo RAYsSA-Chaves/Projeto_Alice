@@ -1,51 +1,105 @@
-/* Container do livro */
+/* Container principal */
 .bookContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin: auto;
 }
 
-/* Flipbook */
+/* livro */
 .flipbook {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin: auto;
 }
 
-/* Páginas */
+/* Página */
 .pagina {
-  position: relative;
-  background-color: #fff;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Container de imagens */
-.pagina .imagens {
-  position: relative;
+.imagens {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagem única centralizada verticalmente */
+.imagem-centralizada {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+/* Imagem no topo */
+.imagem-topo {
   width: 100%;
-  height: 100%;
+  margin-bottom: 10px;
 }
 
-.pagina .paginaImagem {
-  position: absolute;
+/* Container de texto */
+.texto {
+  flex: 1;
 }
 
-/* Container de palavras */
-.pagina .palavras {
-  position: relative;
-  width: 100%;
-  height: 100%;
+/* Parágrafo do bloco */
+.paragrafo {
+  text-indent: 1.5em;
+  margin: 5px 0;
+  line-height: 1.4;
 }
 
-.pagina .palavra {
-  position: absolute;
-  white-space: nowrap;
-  cursor: default;
+/* Linha dentro do parágrafo quebra naturalmente */
+.linha {
+  display: block;
 }
 
-/* Capa e contracapa */
-.capa img, .contracapa img  {
+/* Palavra grande (título) */
+.palavra-grande {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+
+/* Palavra normal */
+.palavra-normal {
+  font-size: 1em;
+}
+
+/* Palavra capitular */
+.capitular {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* Primeira letra da palavra capitular */
+.capitular::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+/* Capa */
+.capa img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Contracapa */
+.contracapa {
+  width: 100%;
+  height: 100%;
+}
+
+.contracapa {
+  background-color: #dcdcdc;
 }

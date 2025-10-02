@@ -38,12 +38,12 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
                 "h": round(y1 - y0, 2)
             }
             
-        # guarda palavra dentro da linha e dentro do bloco corretos
-        if bloco not in blocos_dict:
-            blocos_dict[bloco] = {}
-        if linha not in blocos_dict[bloco]:
-            blocos_dict[bloco][linha] = []
-        blocos_dict[bloco][linha].append(palavra_info)
+            # guarda palavra dentro da linha e dentro do bloco corretos
+            if bloco not in blocos_dict:
+                blocos_dict[bloco] = {}
+            if linha not in blocos_dict[bloco]:
+                blocos_dict[bloco][linha] = []
+            blocos_dict[bloco][linha].append(palavra_info)
         
         # transforma em lista aninhada: blocos → linhas → palavras
         blocos = []
