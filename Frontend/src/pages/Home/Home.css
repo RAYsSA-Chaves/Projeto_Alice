@@ -1,8 +1,9 @@
 /* Conteúdo principal */
 #mainLivro {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background-color: powderblue;
+    padding: 0 10px;
 }

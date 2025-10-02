@@ -1,6 +1,11 @@
 /* Container principal */
 .bookContainer {
-  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* livro */
@@ -12,39 +17,40 @@
 .pagina {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: red;
 }
 
 /* Container de imagens */
 .imagens {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  flex: 1;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 /* Imagem única centralizada verticalmente */
 .imagemCentralizada {
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
+  max-width: 60%; 
+  position: absolute;
+  top: 10rem;
 }
 
 /* Imagem no topo */
 .imagemTopo {
-  width: 100%;
+  width: 50%;
   margin-bottom: 10px;
 }
 
 /* Container de texto */
 .texto {
   flex: 1;
+  overflow: auto;  
+  padding-top: 20px;
 }
 
 /* Parágrafo do bloco */
@@ -61,20 +67,19 @@
 
 /* Palavra grande (título) */
 .titulo {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
-  display: inline-block;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
 }
 
 /* Palavra normal */
 .palavraNormal {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 /* Palavra capitular */
 .capitular {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: normal;
 }
 
@@ -85,6 +90,20 @@
   float: left;
   line-height: 1;
   margin-right: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagina.capa {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  width: 100vw; /* Garantir que ocupa toda a largura da tela */
+  height: 100vh; /* Garantir que ocupa toda a altura da tela */
+  position: absolute; /* Coloca a capa no topo */
 }
 
 /* Capa */
@@ -92,6 +111,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Contracapa */
