@@ -19,7 +19,7 @@ export default function Livro() {
           width={550} 
           height={700} 
           showCover={true} 
-          className="flipbookk"
+          className="flipbook"
         >
           {/* Capa */}
           <article className="pagina capa"> 
@@ -32,8 +32,8 @@ export default function Livro() {
           {paginas.map((pagina) => (
             <article
               key={pagina.number}
-              className= {`pagina $ {pagina.number === paginas.length ? "contracapa" : ""}`}
-              style={{ width: pagina.width, height: pagina.height }}
+              className= {`pagina ${pagina.number === paginas.length ? "contracapa" : ""}`}
+              style={{ width: 550.width, height: 700.height }}
             >
               {/* Imagens da página */}
               <section className="imagens">
