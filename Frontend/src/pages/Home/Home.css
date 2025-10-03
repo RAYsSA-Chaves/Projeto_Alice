@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --fonte-primaria: 'Poppins';
+    --fonte-primaria: 'Poppins', sans-serif;
     --cor-branco: #FFFFFF;
     --azul-escuro: #1B3778;
 }
@@ -25,20 +25,20 @@
 }
 
 .titulos {
-    font-size: 2.2rem;
+    font-family: var(--fonte-primaria);
+    font-size: 3.5rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.06;
     text-transform: uppercase;
     text-align: justify;
-    margin-left: 20.10vh;
+    margin-left: 12%;
 }
 
 .fada img {
-    max-width: 80%;
+    max-width: 85%;
     margin-top: -15vh;
     height: 150vh;
     object-fit: contain;
-    display: block;
     float: left;
 }
 
@@ -47,7 +47,7 @@
     width: 100vh;
     height: 12vh;
     top: 30vh;
-    left: -30vh;
+    left: -40vh;
 }
 
 .estrela2 {
@@ -156,6 +156,33 @@
     transform: scale(1.2);
 }
 
-.secaoCards {
-    background: var(--cor-branco);
+.card {
+    background: linear-gradient(to bottom, #1B3778, #3266DE);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.btnCard {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }

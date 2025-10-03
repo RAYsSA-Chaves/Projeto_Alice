@@ -12,17 +12,19 @@ function Home() {
             <main>
                 {/* Seção onde ficará a fada e as animações principais */}
                 <section className='paginaPrincipal'>
-                    <hgroup className='titulos'>
-                        <h1>Bem-vindo,</h1>
-                        <h1>Pequeno leitor</h1>
-                    </hgroup>
+                    <div className='titulos'>
+                        <h1>Bem-vindo,<br />
+                            Pequeno leitor
+                        </h1>
+                    </div>
+
                     {/* <button className='scroll'>
                         ↓
                     </button> */}
                     <figure className='fada'>
                         <img src={Fada} alt='imagem da mascote da fada' />
                     </figure>
-                    
+
                     {/* imagens de decoração */}
                     <img src={EstrelaRosa} alt='estrela rosa' className='estrela1' />
                     <img src={EstrelaBranca} alt='estrela branca' className='estrela2' />
@@ -34,16 +36,33 @@ function Home() {
                     <img src={NuvemAnimacao} alt='nuvem branca animada' className='nuvem1' />
                     <img src={NuvemAnimacao} alt='nuvem branca animada' className='nuvem2' />
 
-                    {/* Seção dos cards */}
-                        <section className='secaoCards'>
-                        <img src={Nuvem} alt='nuvem branca' className='nuvem3' />
-                        <img src={Nuvem} alt='nuvem branca' className='nuvem4' />
-                        <img src={Nuvem} alt='nuvem branca' className='nuvem5' />
-                        </section>
+                    <img src={Nuvem} alt='nuvem branca' className='nuvem3' />
+                    <img src={Nuvem} alt='nuvem branca' className='nuvem4' />
+                    <img src={Nuvem} alt='nuvem branca' className='nuvem5' />
+
+                    <div className='cards'>
+                        <article className='card'>
+                            <figure>
+                                <img src='' alt='fadinha do card jogar' />
+                            </figure>
+                            <button className='btnCard'>
+                                ▶ Jogar
+                            </button>
+                        </article>
+                    </div>
+
+                    <div className='card'>
+                        <figure>
+                            <img src='' alt='fadinha do card ler' />
+                            <button className='btnCard'>
+                                Ler
+                            </button>
+                        </figure>
+                    </div>
                 </section>
             </main>
         </>
     )
 }
 
-export default Home;
+export default Home
