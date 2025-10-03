@@ -1,9 +1,10 @@
 /* Conteúdo principal */
 #mainLivro {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgb(220, 176, 230);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: powderblue;
-    padding: 0 10px;
 }

@@ -1,28 +1,14 @@
-/* Container principal */
-.bookContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* livro */
-.flipbook {
-  margin: auto;
-}
-
 /* Página */
 .pagina {
   width: 100%;
   height: 100%;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 4rem 3rem ;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
   position: relative;
-  background-color: red;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Container de imagens */
@@ -30,93 +16,84 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 /* Imagem única centralizada verticalmente */
 .imagemCentralizada {
-  max-width: 60%; 
+  max-width: 80%; 
   position: absolute;
-  top: 10rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Imagem no topo */
 .imagemTopo {
-  width: 50%;
-  margin-bottom: 10px;
+  width: 60%;
+  margin-bottom: 1rem;
 }
 
 /* Container de texto */
 .texto {
-  flex: 1;
-  overflow: auto;  
-  padding-top: 20px;
+  height: 100%;
+  overflow: hidden;  
 }
 
-/* Parágrafo do bloco */
+/* Parágrafo */
 .paragrafo {
   text-indent: 1.5em;
-  margin: 5px 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* Linhas dentro do parágrafo quebram */
+/* Linhas dentro do parágrafo (devem quebrar) */
 .linha {
   display: block;
 }
 
 /* Palavra grande (título) */
 .titulo {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
-  margin-bottom: 0.5em;
+}
+
+.linha:has(.titulo) {
+  margin-bottom: 1rem;
 }
 
 /* Palavra normal */
 .palavraNormal {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-family: Times, serif !important;
 }
 
 /* Palavra capitular */
 .capitular {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: normal;
+  font-family: Times, serif !important;
 }
 
 /* Primeira letra da palavra capitular */
 .capitular::first-letter {
   font-size: 2em;
   font-weight: bold;
-  float: left;
-  line-height: 1;
-  margin-right: 0.1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pagina.capa {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  width: 100vw; /* Garantir que ocupa toda a largura da tela */
-  height: 100vh; /* Garantir que ocupa toda a altura da tela */
-  position: absolute; /* Coloca a capa no topo */
 }
 
 /* Capa */
+.pagina.capa {
+  border-radius: 0 5px 5px 0;
+  padding: 0;
+}
+
 .capa img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  border-radius: 0 5px 5px 0;
 }
 
 /* Contracapa */
 .contracapa {
   width: 100%;
   height: 100%;
-  background-color: #dcdcdc;
+  background-color: #277e96;
 }

@@ -1,7 +1,7 @@
 import Livro from "../../components/Livro/livro";
-import "./Home.css";
+import "./Leitura.css";
 
-function Home() {
+function LeituraPage() {
     return (
         <main id="mainLivro">
             <Livro/>
@@ -9,4 +9,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default LeituraPage;
