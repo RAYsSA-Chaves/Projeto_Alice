@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --fonte-primaria: 'Poppins', sans-serif;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-primaria);
+}
+
+.paginaPrincipal {
+    background: linear-gradient(to bottom, #1B3778, #3266DE);
+    color: var(--cor-branco);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+}
+
+.titulos {
+    font-family: var(--fonte-primaria);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.06;
+    text-transform: uppercase;
+    text-align: justify;
+    margin-left: 12%;
+}
+
+.fada img {
+    max-width: 85%;
+    margin-top: -15vh;
+    height: 150vh;
+    object-fit: contain;
+    float: left;
+}
+
+.estrela1 {
+    position: absolute;
+    width: 100vh;
+    height: 12vh;
+    top: 30vh;
+    left: -40vh;
+}
+
+.estrela2 {
+    position: absolute;
+    width: 80vh;
+    height: 5vh;
+    top: 50vh;
+    left: -10vh;  
+}
+
+.estrela3 {
+    position: absolute;
+    width: 10vh;
+    height: 3vh;
+    top: 60vh;
+}
+
+.estrela4 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 90vh;
+    left: -30vh;
+}
+
+.estrela5 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 30vh;
+    right: 50vh;
+}
+
+.estrela6 {
+    position: absolute;
+    width: 90vh;
+    height: 3vh;
+    top: 10vh;
+    right: 10vh;
+}
+
+.nuvem1 {
+    position: absolute;
+    width: 10vh;
+    height: 100vh;
+    top: 15vh;
+    left: 0;
+}
+
+.nuvem2 {
+    position: absolute;
+    width: 10vh;
+    height: 100vh;
+    top: -10vh;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.nuvem3 {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    align-self: flex-end; 
+    bottom: -50.5vh;
+    left: 0;
+}
+
+.nuvem4 {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    align-self: flex-end; 
+    top: 90vh;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.nuvem5 {
+    position: absolute;
+    width: 100vh;
+    height: 70vh;
+    bottom: -50vh;
+    top: 118vh;
+    left: 75vh;
+}
+
+.bolinha1 {
+    position: absolute;
+    
+}
+
+.scroll {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: var(--cor-branco);
+    background: var(--azul-escuro);
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+    display: block;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.scroll:hover {
+    transform: scale(1.2);
+}
+
+.card {
+    background: linear-gradient(to bottom, #1B3778, #3266DE);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.btnCard {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}

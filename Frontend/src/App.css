@@ -1,28 +1,21 @@
-.app {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom, #E0CEDC, #3266DE);
-  position: relative;
-  
+/* Firefox */
+html {
+    overflow-x: hidden !important;
+    /* scrollbar-width: thin;
+    scrollbar-color: #1B3778 transparent; */
 }
 
-
-.app h1 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 8px;
+::-webkit-scrollbar {
+    width: 0.9vh;
+    background: transparent;
 }
 
-.app h2 {
-  font-size: 20px;
-  margin-bottom: 30px;
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(to bottom, #1B3778, #3266DE);
+    background: linear-gradient(#1B3778, #3266DE);
+    border-radius: 6px;
 }
 
-.buttons-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+::-webkit-scrollbar-track {
+    background: transparent;
 }
