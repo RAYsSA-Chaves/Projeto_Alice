@@ -9,8 +9,8 @@ import BolinhaBranca from '../../assets/imagens/BolinhaBranca.svg'
 function Home() {
     return (
         <>
+        {/* Finalizar e arrumar a pagina Home | adicionar componentes */}
             <main>
-                {/* Seção onde ficará a fada e as animações principais */}
                 <section className='paginaPrincipal'>
                     <div className='titulos'>
                         <h1>Bem-vindo,<br />
@@ -18,9 +18,9 @@ function Home() {
                         </h1>
                     </div>
 
-                    {/* <button className='scroll'>
-                        ↓
-                    </button> */}
+                    <button className='scroll'>
+                      ↓
+                    </button> 
                     <figure className='fada'>
                         <img src={Fada} alt='imagem da mascote da fada' />
                     </figure>
@@ -40,25 +40,6 @@ function Home() {
                     <img src={Nuvem} alt='nuvem branca' className='nuvem4' />
                     <img src={Nuvem} alt='nuvem branca' className='nuvem5' />
 
-                    <div className='cards'>
-                        <article className='card'>
-                            <figure>
-                                <img src='' alt='fadinha do card jogar' />
-                            </figure>
-                            <button className='btnCard'>
-                                ▶ Jogar
-                            </button>
-                        </article>
-                    </div>
-
-                    <div className='card'>
-                        <figure>
-                            <img src='' alt='fadinha do card ler' />
-                            <button className='btnCard'>
-                                Ler
-                            </button>
-                        </figure>
-                    </div>
                 </section>
             </main>
         </>

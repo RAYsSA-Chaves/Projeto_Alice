@@ -2,8 +2,7 @@
 
 :root {
     --fonte-primaria: 'Poppins', sans-serif;
-    --cor-branco: #FFFFFF;
-    --azul-escuro: #1B3778;
+    --branco: #FFFFFF;
 }
 
 * {
