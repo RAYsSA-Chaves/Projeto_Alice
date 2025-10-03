@@ -1,4 +1,4 @@
-.action-button {
+/* .action-button {
   background-color: #1f3fbf;
   color: white;
   font-weight: 600;
@@ -7,10 +7,9 @@
   border-radius: 999px;
   padding: 10px 24px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .action-button:hover {
   background-color: #16329a;
   transform: scale(1.05);
-}
+} */
