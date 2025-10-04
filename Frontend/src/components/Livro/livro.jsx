@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
-import { ChevronLeft, ChevroRight } from "lucid-react";
+import { ChevronLeft, ChevroRight } from "lucide-react";
 
 export default function Livro() {
   const [paginas, setPaginas] = useState([]);
@@ -16,9 +16,9 @@ export default function Livro() {
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
   }, []);
 
-  // Renderizar palavras de uma linha
-  const renderWords = (linha, capitular) => {
-    return linha.map((palavra, idx) => {
+  // Renderizar palavras de um parágrafo
+  const renderWords = (palavras, capitular) => {
+    return palavras.map((palavra, idx) => {
       const isLarge = palavra.h >= tamanhoTitulo;
       let classe = "palavraNormal";
 
@@ -26,43 +26,35 @@ export default function Livro() {
       else if (capitular && idx === 0) classe = "capitular";
 
       return (
-        <span className={classe} key={idx}>
+        <span className={classe} key={idx} onClick{(e) => {alert(palavra.text)}}>
           {palavra.text}{" "}
         </span>
       );
     });
   };
 
-  // Renderizar um bloco como um único <p> com várias linhas
+  // Renderizar um parágrafo como <p> com várias palavras
   const renderBloco = (bloco, capitularProximo, paginaIndex, blocoIndex) => {
     return (
       <p className="paragrafo" key={`p-${paginaIndex}-${blocoIndex}`}>
-        {bloco.map((linha, linhaIdx) => (
-          <span
-            className="linha"
-            key={linhaIdx}
-          >
-            {renderWords(linha, capitularProximo)}
-          </span>
-        ))}
+        {renderWords(bloco, capitularProximo)}
       </p>
     );
   };
 
-  // Renderizar todos os blocos da página
+  // Renderizar todos os parágrafos da página
   const renderParagrafos = (blocos, numeroPagina) => {
     let capitularProximo = false;
     const aplicarCapitular = numeroPagina >= 9 && numeroPagina <= 127;
 
-    return blocos.map((bloco) => {
-      const paragrafo = renderBloco(bloco, capitularProximo);
+    return blocos.map((bloco, blocoIndex) => {
+      const paragrafo = renderBloco(bloco, capitularProximo, numeroPagina, blocoIndex);
 
       // reseta capitular (vale só para o primeiro bloco depois do título)
       capitularProximo = false;
 
-
       // se o bloco atual for título, marca o próximo como capitular
-      if (aplicarCapitular && bloco.some((linha) => linha.some((p) => p.h >= tamanhoTitulo))) {
+      if (aplicarCapitular && bloco.some((p) => p.h >= tamanhoTitulo)) {
         capitularProximo = true;
       }
 
@@ -70,11 +62,11 @@ export default function Livro() {
     });
   };
 
-  // Renderizar imagens (se blocks vazio -> centralizar, senão -> colocar no topo)
+  // Renderizar imagens (se blocos vazio -> centralizar, senão -> colocar no topo)
   const renderImagens = (pagina) => {
     if (!pagina.images || pagina.images.length === 0) return null;
 
-    const soImagem = !pagina.blocks || pagina.blocks.length === 0;
+    const soImagem = !pagina.paragraphs || pagina.paragraphs.length === 0;
 
     return pagina.images.map((img, idx) => {
       const imgSrc = img.replace(/\\/g, "/");
@@ -95,7 +87,6 @@ export default function Livro() {
     return <h2 className="loading">Carregando livro...</h2>;
   }
 
-
   // Conteúdo principal (livro)
   return (
     <HTMLFlipBook
@@ -104,30 +95,38 @@ export default function Livro() {
       maxShadowOpacity={0.5}
       showCover={true}
       drawShadow={true}
-      size='fixed'
+      size="fixed"
       disableFlipByClick={true}
-      swipeDistance={1}
+      flipOnClick={false}
+      clickToFlip={false}
     >
       {/* Capa */}
       <article className="pagina capa">
-        <img src={capaPath} alt="Capa infantil do livro Alice no País das Maravilhas" className="capa" />
+        <img
+          src={capaPath}
+          alt="Capa infantil do livro Alice no País das Maravilhas"
+          className="capa"
+        />
       </article>
+
+      {/* Página branca *\}
+      <article className="pagina contracapa" />
 
       {/* Páginas */}
       {paginas.slice(1).map((pagina, paginaIndex) => (
         <article key={paginaIndex} className="pagina">
-          <section className="imagens">
-            {renderImagens(pagina)}
-          </section>
+          <section className="imagens">{renderImagens(pagina)}</section>
 
           <section className="texto">
-            {pagina.blocks && pagina.blocks.length > 0 ? renderParagrafos(pagina.blocks, pagina.number) : null}
+            {pagina.paragraphs && pagina.paragraphs.length > 0
+              ? renderParagrafos(pagina.paragraphs, pagina.number)
+              : null}
           </section>
         </article>
       ))}
 
       {/* Contracapa */}
-      <article className="pagina contracapa"/>
+      <article className="pagina contracapa" />
     </HTMLFlipBook>
   );
 }
