@@ -1,7 +1,6 @@
-import fitz      # biblioteca PyMuPDF
-import json      # salvar os dados extraídos
-import os        # criar pasta de imagens
-
+import fitz # biblioteca PyMuPDF
+import json # salvar os dados extraídos
+import os # criar pasta de imagens
 
 # função principal
 def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
@@ -31,27 +30,22 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
         
         # extrair infos de cada palavra
         for palavra in palavras_brutas:
-            x0, y0, x1, y1, texto, bloco, linha, _ = palavra
+            x0, y0, x1, y1, texto, bloco, _, _ = palavra
             palavra_info = {
                 "text": texto,
                 "w": round(x1 - x0, 2),
                 "h": round(y1 - y0, 2)
             }
             
-            # guarda palavra dentro da linha e dentro do bloco corretos
+            # guarda palavra dentro do bloco correto
             if bloco not in blocos_dict:
-                blocos_dict[bloco] = {}
-            if linha not in blocos_dict[bloco]:
-                blocos_dict[bloco][linha] = []
-            blocos_dict[bloco][linha].append(palavra_info)
+                blocos_dict[bloco] = []
+            blocos_dict[bloco].append(palavra_info)
         
-        # transforma em lista aninhada: blocos → linhas → palavras
+        # transforma em lista: blocos → palavras
         blocos = []
         for bloco_key in sorted(blocos_dict.keys()):
-            linhas = []
-            for linha_key in sorted(blocos_dict[bloco_key].keys()):
-                linhas.append(blocos_dict[bloco_key][linha_key])
-            blocos.append(linhas)
+            blocos.append(blocos_dict[bloco_key])
 
         imagens = []
         
@@ -68,6 +62,7 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
 
             # nome do arquivo para salvar
             nome_arquivo = f"pagina{num_pagina}_img{num_imagem}.png"
+            
             caminho_arquivo = os.path.join(pasta_imagens, nome_arquivo)
 
             # salva a imagem
@@ -80,7 +75,7 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
         # salvar dados da página
         dados["pages"].append({
             "number": num_pagina,
-            "blocks": blocos,
+            "paragraphs": blocos,
             "images": imagens
         })
 
@@ -92,5 +87,5 @@ def pdf_para_json(arquivo_pdf, pasta_imagens, saida_json="paginas.json"):
 
     print(f"✅ Extração concluída! JSON salvo em {saida_json}")
 
-
+# rodar a função
 pdf_para_json("./uploads/Alice-no-Pais-das-Maravilhas.pdf", "imagens_pdf")
