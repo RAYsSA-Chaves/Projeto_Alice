@@ -2,7 +2,7 @@
 .pagina {
   width: 100%;
   height: 100%;
-  padding: 4rem 3rem ;
+  padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -29,7 +29,7 @@
 /* Imagem no topo */
 .imagemTopo {
   width: 60%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Container de texto */
@@ -44,19 +44,11 @@
   line-height: 1.5;
 }
 
-/* Linhas dentro do parágrafo (devem quebrar) */
-.linha {
-  display: block;
-}
-
 /* Palavra grande (título) */
 .titulo {
   font-size: 1.3em;
   font-weight: bold;
-}
-
-.linha:has(.titulo) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* separa visualmente títulos das próximas palavras */
 }
 
 /* Palavra normal */
