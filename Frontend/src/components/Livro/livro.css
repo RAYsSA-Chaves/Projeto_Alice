@@ -51,6 +51,10 @@
   font-weight: bold;
 }
 
+.p:has(> span.titulo) {
+  text-indent: 0 !important;
+}
+
 /* Palavra normal */
 .palavraNormal {
   font-size: 1em;
