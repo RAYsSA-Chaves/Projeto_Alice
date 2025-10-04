@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
-import { ChevronLeft, ChevroRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Livro() {
   const [paginas, setPaginas] = useState([]);
@@ -26,7 +26,7 @@ export default function Livro() {
       else if (capitular && idx === 0) classe = "capitular";
 
       return (
-        <span className={classe} key={idx} onClick{(e) => {alert(palavra.text)}}>
+        <span className={classe} key={idx} onClick={(e) => {alert(palavra.text)}}>
           {palavra.text}{" "}
         </span>
       );
@@ -109,7 +109,7 @@ export default function Livro() {
         />
       </article>
 
-      {/* Página branca *\}
+      {/* Página branca */}
       <article className="pagina contracapa" />
 
       {/* Páginas */}
