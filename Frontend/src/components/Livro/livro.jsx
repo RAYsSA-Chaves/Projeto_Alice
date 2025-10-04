@@ -6,24 +6,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function Livro() {
   const [paginas, setPaginas] = useState([]);
   const tamanhoTitulo = 32; // altura considerada "título"
-  const capaPath = "/assets/capa-alice.png";
+  const capaPath = "/assets/capa_alice.png";
 
   // Carregar o json com as páginas
   useEffect(() => {
-    fetch("/data/paginas.json")
+    fetch("/data/paginas_corrigido.json")
       .then((res) => res.json())
       .then((data) => setPaginas(data.pages))
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
   }, []);
 
   // Renderizar palavras de um parágrafo
-  const renderWords = (palavras, capitular) => {
+  const renderWords = (palavras) => {
     return palavras.map((palavra, idx) => {
       const isLarge = palavra.h >= tamanhoTitulo;
       let classe = "palavraNormal";
-
       if (isLarge) classe = "titulo";
-      else if (capitular && idx === 0) classe = "capitular";
 
       return (
         <span className={classe} key={idx} onClick={(e) => {alert(palavra.text)}}>
@@ -34,29 +32,18 @@ export default function Livro() {
   };
 
   // Renderizar um parágrafo como <p> com várias palavras
-  const renderBloco = (bloco, capitularProximo, paginaIndex, blocoIndex) => {
+  const renderBloco = (bloco, paginaIndex, blocoIndex) => {
     return (
       <p className="paragrafo" key={`p-${paginaIndex}-${blocoIndex}`}>
-        {renderWords(bloco, capitularProximo)}
+        {renderWords(bloco)}
       </p>
     );
   };
 
   // Renderizar todos os parágrafos da página
   const renderParagrafos = (blocos, numeroPagina) => {
-    let capitularProximo = false;
-    const aplicarCapitular = numeroPagina >= 9 && numeroPagina <= 127;
-
     return blocos.map((bloco, blocoIndex) => {
-      const paragrafo = renderBloco(bloco, capitularProximo, numeroPagina, blocoIndex);
-
-      // reseta capitular (vale só para o primeiro bloco depois do título)
-      capitularProximo = false;
-
-      // se o bloco atual for título, marca o próximo como capitular
-      if (aplicarCapitular && bloco.some((p) => p.h >= tamanhoTitulo)) {
-        capitularProximo = true;
-      }
+      const paragrafo = renderBloco(bloco, numeroPagina, blocoIndex);
 
       return paragrafo;
     });

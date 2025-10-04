@@ -813,14 +813,7 @@
                         "text": "história",
                         "w": 51.96,
                         "h": 15.0
-                    }
-            ],
-            "images": []
-        },
-        {
-            "number": 5,
-            "paragraghps": [
-                [
+                    },
                     {
                         "text": "recomeçava.",
                         "w": 83.37,
@@ -978,7 +971,7 @@
             "images": []
         },
         {
-            "number": 6,
+            "number": 5,
             "paragraphs": [
                 [
                     {
@@ -1243,13 +1236,7 @@
                         "w": 21.95,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 7,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Vezes",
@@ -1398,7 +1385,13 @@
                         "w": 37.2,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 6,
+            "paragraphs": [
                 [
                     {
                         "text": "Assim",
@@ -1496,13 +1489,7 @@
                         "w": 74.39,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 7,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Onde",
@@ -1681,13 +1668,7 @@
                         "w": 13.35,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 8,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Pediam",
@@ -1944,7 +1925,13 @@
                         "w": 45.79,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 7,
+            "paragraphs": [
                 [
                     {
                         "text": "Feito",
@@ -1993,8 +1980,15 @@
             "images": []
         },
         {
-            "number": 10,
+            "number": 8,
             "paragraphs": [
+                [
+                    {
+                        "text": "A",
+                        "w": 45.43,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "DENTRO",
@@ -2024,7 +2018,7 @@
                 ],
                 [
                     {
-                        "text": "Alice",
+                        "text": "lice",
                         "w": 23.41,
                         "h": 15.0
                     },
@@ -2594,13 +2588,7 @@
                         "w": 57.37,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 11,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -3116,7 +3104,7 @@
             "images": []
         },
         {
-            "number": 11,
+            "number": 9,
             "paragraphs": [
                 [
                     {
@@ -3798,13 +3786,7 @@
                         "w": 29.93,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 12,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "De",
@@ -4447,7 +4429,7 @@
             "images": []
         },
         {
-            "number": 12,
+            "number": 10,
             "paragraphs": [
                 [
                     {
@@ -5126,13 +5108,7 @@
                         "w": 52.17,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 13,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -5797,10 +5773,10 @@
                     }
                 ]
             ],
-            "images": [],
+            "images": []
         },
         {
-            "number": 13,
+            "number": 11,
             "paragraphs": [
                 [
                     {
@@ -6316,13 +6292,7 @@
                         "w": 65.49,
                         "h": 15.0
                     }
-                
-            ],
-            "images": []
-        },
-        {
-            "number": 14,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Então,",
@@ -6950,14 +6920,8 @@
                         "w": 30.01,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": [],
-        },
-        {
-        "number": 14,
-        "paragraphs": [
-            [
+                ],
+                [
                     {
                         "text": "Havia",
                         "w": 39.31,
@@ -7113,7 +7077,13 @@
                         "w": 28.5,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 12,
+            "paragraphs": [
                 [
                     {
                         "text": "De",
@@ -7596,12 +7566,6 @@
                         "h": 15.0
                     }
                 ],
-        ],
-        "images": []
-        }, 
-        {
-            "number": 14,
-            "paragraphs": [
                 [
                     {
                         "text": "Abriu",
@@ -8101,12 +8065,6 @@
                         "h": 15.0
                     }
                 ],
-            ],
-            "images": []
-        },
-        {
-            "number": 13,
-            "paragraphs": [
                 [
                     {
                         "text": "Parecia",
@@ -8440,7 +8398,13 @@
                         "w": 63.74,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 13,
+            "paragraphs": [
                 [
                     {
                         "text": "Tudo",
@@ -8527,13 +8491,7 @@
                         "w": 45.74,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 15,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "“Não,",
@@ -9011,12 +8969,6 @@
                         "h": 15.0
                     }
                 ],
-            ],
-            "images": []
-        },
-        {
-            "number": 11,
-            "paragraphs": [
                 [
                     {
                         "text": "Essa",
@@ -9604,13 +9556,7 @@
                         "w": 29.28,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 11,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "“Pode",
@@ -9722,7 +9668,13 @@
                         "w": 49.33,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 14,
+            "paragraphs": [
                 [
                     {
                         "text": "Tentou",
@@ -10181,13 +10133,7 @@
                         "w": 51.9,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 16,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -10716,13 +10662,7 @@
                         "w": 82.27,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 17,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Logo",
@@ -11061,7 +11001,13 @@
                         "w": 31.5,
                         "h": 15.0
                     }
-                ],
+                ]
+            ],
+            "images": []
+        },
+        {
+            "number": 15,
+            "paragraphs": [
                 [
                     {
                         "text": "Comeu",
@@ -11353,12 +11299,7 @@
                         "w": 52.79,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            [
+                ],
                 [
                     {
                         "text": "Então,",
@@ -11449,10 +11390,18 @@
                     }
                 ]
             ],
+            "images": []
         },
         {
-            "number": 18,
+            "number": 16,
             "paragraphs": [
+                [
+                    {
+                        "text": "E",
+                        "w": 38.0,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "UMA",
@@ -11477,7 +11426,7 @@
                 ],
                 [
                     {
-                        "text": "Está",
+                        "text": "stá",
                         "w": 18.87,
                         "h": 15.0
                     },
@@ -12330,7 +12279,7 @@
             "images": []
         },
         {
-            "number": 19,
+            "number": 17,
             "paragraphs": [
                 [
                     {
@@ -13611,7 +13560,7 @@
             "images": []
         },
         {
-            "number": 20,
+            "number": 18,
             "paragraphs": [
                 [
                     {
@@ -15020,7 +14969,7 @@
             "images": []
         },
         {
-            "number": 21,
+            "number": 19,
             "paragraphs": [
                 [
                     {
@@ -16238,7 +16187,7 @@
             "images": []
         },
         {
-            "number": 22,
+            "number": 20,
             "paragraphs": [
                 [
                     {
@@ -17544,7 +17493,7 @@
             "images": []
         },
         {
-            "number": 23,
+            "number": 21,
             "paragraphs": [
                 [
                     {
@@ -18522,13 +18471,7 @@
                         "w": 38.94,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 24,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -18625,7 +18568,7 @@
             "images": []
         },
         {
-            "number": 25,
+            "number": 22,
             "paragraphs": [
                 [
                     {
@@ -19948,7 +19891,7 @@
             "images": []
         },
         {
-            "number": 26,
+            "number": 23,
             "paragraphs": [
                 [
                     {
@@ -20778,8 +20721,15 @@
             "images": []
         },
         {
-            "number": 27,
+            "number": 24,
             "paragraphs": [
+                [
+                    {
+                        "text": "F",
+                        "w": 36.99,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "A",
@@ -20819,7 +20769,7 @@
                 ],
                 [
                     {
-                        "text": "Formavam",
+                        "text": "ormavam",
                         "w": 64.38,
                         "h": 15.0
                     },
@@ -21787,7 +21737,7 @@
             "images": []
         },
         {
-            "number": 28,
+            "number": 25,
             "paragraphs": [
                 [
                     {
@@ -22890,7 +22840,7 @@
             "images": []
         },
         {
-            "number": 29,
+            "number": 26,
             "paragraphs": [
                 [
                     {
@@ -24108,7 +24058,7 @@
             "images": []
         },
         {
-            "number": 30,
+            "number": 27,
             "paragraphs": [
                 [
                     {
@@ -24831,13 +24781,7 @@
                         "w": 63.2,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 31,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -25162,7 +25106,7 @@
             "images": []
         },
         {
-            "number": 32,
+            "number": 28,
             "paragraphs": [
                 [
                     {
@@ -26300,7 +26244,7 @@
             "images": []
         },
         {
-            "number": 33,
+            "number": 29,
             "paragraphs": [
                 [
                     {
@@ -26553,13 +26497,7 @@
                         "w": 23.19,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 34,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "e",
@@ -26756,7 +26694,7 @@
             "images": []
         },
         {
-            "number": 35,
+            "number": 30,
             "paragraphs": [
                 [
                     {
@@ -27344,13 +27282,7 @@
                         "w": 39.43,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 36,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Mas",
@@ -27740,7 +27672,7 @@
             "images": []
         },
         {
-            "number": 37,
+            "number": 31,
             "paragraphs": [
                 [
                     {
@@ -28888,7 +28820,7 @@
             "images": []
         },
         {
-            "number": 38,
+            "number": 32,
             "paragraphs": [
                 [
                     {
@@ -28986,8 +28918,15 @@
             "images": []
         },
         {
-            "number": 39,
+            "number": 33,
             "paragraphs": [
+                [
+                    {
+                        "text": "L",
+                        "w": 36.59,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "BILL,",
@@ -29007,7 +28946,7 @@
                 ],
                 [
                     {
-                        "text": "Lá",
+                        "text": "á",
                         "w": 7.32,
                         "h": 15.0
                     },
@@ -30155,7 +30094,7 @@
             "images": []
         },
         {
-            "number": 40,
+            "number": 34,
             "paragraphs": [
                 [
                     {
@@ -31542,7 +31481,7 @@
             "images": []
         },
         {
-            "number": 41,
+            "number": 35,
             "paragraphs": [
                 [
                     {
@@ -32955,7 +32894,7 @@
             "images": []
         },
         {
-            "number": 42,
+            "number": 36,
             "paragraphs": [
                 [
                     {
@@ -34196,7 +34135,7 @@
             "images": []
         },
         {
-            "number": 43,
+            "number": 37,
             "paragraphs": [
                 [
                     {
@@ -34874,13 +34813,7 @@
                         "w": 49.46,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 44,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Alice",
@@ -35179,7 +35112,7 @@
             "images": []
         },
         {
-            "number": 45,
+            "number": 38,
             "paragraphs": [
                 [
                     {
@@ -36443,7 +36376,7 @@
             "images": []
         },
         {
-            "number": 46,
+            "number": 39,
             "paragraphs": [
                 [
                     {
@@ -37211,13 +37144,7 @@
                         "w": 41.22,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 47,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Houve",
@@ -37477,7 +37404,7 @@
             "images": []
         },
         {
-            "number": 48,
+            "number": 40,
             "paragraphs": [
                 [
                     {
@@ -38763,7 +38690,7 @@
             "images": []
         },
         {
-            "number": 49,
+            "number": 41,
             "paragraphs": [
                 [
                     {
@@ -39998,7 +39925,7 @@
             "images": []
         },
         {
-            "number": 50,
+            "number": 42,
             "paragraphs": [
                 [
                     {
@@ -40625,8 +40552,15 @@
             "images": []
         },
         {
-            "number": 51,
+            "number": 43,
             "paragraphs": [
+                [
+                    {
+                        "text": "A",
+                        "w": 20.19,
+                        "h": 35.16
+                    }
+                ],
                 [
                     {
                         "text": "CONSELHOS",
@@ -40642,9 +40576,7 @@
                         "text": "UMA",
                         "w": 59.82,
                         "h": 32.22
-                    }
-                ],
-                [
+                    },
                     {
                         "text": "TATURANA",
                         "w": 137.74,
@@ -40652,11 +40584,6 @@
                     }
                 ],
                 [
-                    {
-                        "text": "A",
-                        "w": 60.92,
-                        "h": 15.0
-                    },
                     {
                         "text": "Taturana",
                         "w": 60.92,
@@ -41428,13 +41355,7 @@
                         "w": 64.4,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 52,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -41556,7 +41477,7 @@
             "images": []
         },
         {
-            "number": 53,
+            "number": 44,
             "paragraphs": [
                 [
                     {
@@ -42389,13 +42310,7 @@
                         "w": 64.36,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 54,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -42768,7 +42683,7 @@
             "images": []
         },
         {
-            "number": 55,
+            "number": 45,
             "paragraphs": [
                 [
                     {
@@ -43401,13 +43316,7 @@
                         "w": 33.14,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 56,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Pois",
@@ -43743,7 +43652,7 @@
             "images": []
         },
         {
-            "number": 57,
+            "number": 46,
             "paragraphs": [
                 [
                     {
@@ -44266,13 +44175,7 @@
                         "w": 47.77,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 58,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Seu",
@@ -44725,7 +44628,7 @@
             "images": []
         },
         {
-            "number": 59,
+            "number": 47,
             "paragraphs": [
                 [
                     {
@@ -45638,13 +45541,7 @@
                         "w": 44.52,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 60,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Desta",
@@ -45923,7 +45820,7 @@
             "images": []
         },
         {
-            "number": 61,
+            "number": 48,
             "paragraphs": [
                 [
                     {
@@ -47064,7 +46961,7 @@
             "images": []
         },
         {
-            "number": 62,
+            "number": 49,
             "paragraphs": [
                 [
                     {
@@ -48227,7 +48124,7 @@
             "images": []
         },
         {
-            "number": 63,
+            "number": 50,
             "paragraphs": [
                 [
                     {
@@ -49396,7 +49293,7 @@
             "images": []
         },
         {
-            "number": 64,
+            "number": 51,
             "paragraphs": [
                 [
                     {
@@ -50725,7 +50622,7 @@
             "images": []
         },
         {
-            "number": 65,
+            "number": 52,
             "paragraphs": [
                 [
                     {
@@ -50970,8 +50867,15 @@
             "images": []
         },
         {
-            "number": 66,
+            "number": 53,
             "paragraphs": [
+                [
+                    {
+                        "text": "P",
+                        "w": 43.54,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "PORCA",
@@ -50991,7 +50895,7 @@
                 ],
                 [
                     {
-                        "text": "Por",
+                        "text": "or",
                         "w": 15.15,
                         "h": 15.0
                     },
@@ -52012,7 +51916,7 @@
             "images": []
         },
         {
-            "number": 67,
+            "number": 54,
             "paragraphs": [
                 [
                     {
@@ -53325,7 +53229,7 @@
             "images": []
         },
         {
-            "number": 68,
+            "number": 55,
             "paragraphs": [
                 [
                     {
@@ -54168,13 +54072,7 @@
                         "w": 34.41,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 69,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -54493,7 +54391,7 @@
             "images": []
         },
         {
-            "number": 70,
+            "number": 56,
             "paragraphs": [
                 [
                     {
@@ -55857,7 +55755,7 @@
             "images": []
         },
         {
-            "number": 71,
+            "number": 57,
             "paragraphs": [
                 [
                     {
@@ -56780,13 +56678,7 @@
                         "w": 60.29,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 72,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Não",
@@ -56860,7 +56752,7 @@
             "images": []
         },
         {
-            "number": 73,
+            "number": 58,
             "paragraphs": [
                 [
                     {
@@ -57518,13 +57410,7 @@
                         "w": 32.55,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 74,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "“Parece",
@@ -57713,7 +57599,7 @@
             "images": []
         },
         {
-            "number": 75,
+            "number": 59,
             "paragraphs": [
                 [
                     {
@@ -58851,13 +58737,7 @@
                         "w": 14.7,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 76,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -58929,7 +58809,7 @@
             "images": []
         },
         {
-            "number": 77,
+            "number": 60,
             "paragraphs": [
                 [
                     {
@@ -60007,13 +59887,7 @@
                         "w": 36.97,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 78,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -60065,7 +59939,7 @@
             "images": []
         },
         {
-            "number": 79,
+            "number": 61,
             "paragraphs": [
                 [
                     {
@@ -60958,13 +60832,7 @@
                         "w": 73.76,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 80,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -61232,7 +61100,7 @@
             "images": []
         },
         {
-            "number": 81,
+            "number": 62,
             "paragraphs": [
                 [
                     {
@@ -62205,13 +62073,7 @@
                         "w": 46.46,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 82,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Ao",
@@ -62345,7 +62207,7 @@
             "images": []
         },
         {
-            "number": 83,
+            "number": 63,
             "paragraphs": [
                 [
                     {
@@ -63140,8 +63002,15 @@
             "images": []
         },
         {
-            "number": 84,
+            "number": 64,
             "paragraphs": [
+                [
+                    {
+                        "text": "H",
+                        "w": 47.72,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "UM",
@@ -63176,7 +63045,7 @@
                 ],
                 [
                     {
-                        "text": "Havia",
+                        "text": "avia",
                         "w": 27.11,
                         "h": 15.0
                     },
@@ -64003,7 +63872,7 @@
             "images": []
         },
         {
-            "number": 85,
+            "number": 65,
             "paragraphs": [
                 [
                     {
@@ -64811,13 +64680,7 @@
                         "w": 42.53,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 86,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -65245,7 +65108,7 @@
             "images": []
         },
         {
-            "number": 87,
+            "number": 66,
             "paragraphs": [
                 [
                     {
@@ -66313,13 +66176,7 @@
                         "w": 81.78,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 88,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -66398,7 +66255,7 @@
             "images": []
         },
         {
-            "number": 89,
+            "number": 67,
             "paragraphs": [
                 [
                     {
@@ -67221,13 +67078,7 @@
                         "w": 62.19,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 90,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -67435,7 +67286,7 @@
             "images": []
         },
         {
-            "number": 91,
+            "number": 68,
             "paragraphs": [
                 [
                     {
@@ -68703,13 +68554,7 @@
                         "w": 46.5,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 92,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Brilha,",
@@ -68731,7 +68576,7 @@
             "images": []
         },
         {
-            "number": 93,
+            "number": 69,
             "paragraphs": [
                 [
                     {
@@ -69239,13 +69084,7 @@
                         "w": 56.65,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 94,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -69697,7 +69536,7 @@
             "images": []
         },
         {
-            "number": 95,
+            "number": 70,
             "paragraphs": [
                 [
                     {
@@ -70570,13 +70409,7 @@
                         "w": 47.37,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 96,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -70730,7 +70563,7 @@
             "images": []
         },
         {
-            "number": 97,
+            "number": 71,
             "paragraphs": [
                 [
                     {
@@ -71518,13 +71351,7 @@
                         "w": 39.18,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 98,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "A",
@@ -71794,7 +71621,7 @@
             "images": []
         },
         {
-            "number": 99,
+            "number": 72,
             "paragraphs": [
                 [
                     {
@@ -73007,7 +72834,7 @@
             "images": []
         },
         {
-            "number": 100,
+            "number": 73,
             "paragraphs": [
                 [
                     {
@@ -74210,7 +74037,7 @@
             "images": []
         },
         {
-            "number": 101,
+            "number": 74,
             "paragraphs": [
                 [
                     {
@@ -74741,8 +74568,15 @@
             "images": []
         },
         {
-            "number": 102,
+            "number": 75,
             "paragraphs": [
+                [
+                    {
+                        "text": "H",
+                        "w": 47.72,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "O",
@@ -74767,7 +74601,7 @@
                 ],
                 [
                     {
-                        "text": "Havia",
+                        "text": "avia",
                         "w": 27.11,
                         "h": 15.0
                     },
@@ -75524,13 +75358,7 @@
                         "w": 64.96,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 103,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -75704,7 +75532,7 @@
             "images": []
         },
         {
-            "number": 104,
+            "number": 76,
             "paragraphs": [
                 [
                     {
@@ -76844,7 +76672,7 @@
             "images": []
         },
         {
-            "number": 105,
+            "number": 77,
             "paragraphs": [
                 [
                     {
@@ -77672,13 +77500,7 @@
                         "w": 50.56,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 106,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Perceba:",
@@ -78054,7 +77876,7 @@
             "images": []
         },
         {
-            "number": 107,
+            "number": 78,
             "paragraphs": [
                 [
                     {
@@ -78682,13 +78504,7 @@
                         "w": 35.15,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 108,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -79136,7 +78952,7 @@
             "images": []
         },
         {
-            "number": 109,
+            "number": 79,
             "paragraphs": [
                 [
                     {
@@ -79824,13 +79640,7 @@
                         "w": 63.0,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 110,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Ele",
@@ -80222,7 +80032,7 @@
             "images": []
         },
         {
-            "number": 111,
+            "number": 80,
             "paragraphs": [
                 [
                     {
@@ -81645,7 +81455,7 @@
             "images": []
         },
         {
-            "number": 112,
+            "number": 81,
             "paragraphs": [
                 [
                     {
@@ -82996,7 +82806,7 @@
             "images": []
         },
         {
-            "number": 113,
+            "number": 82,
             "paragraphs": [
                 [
                     {
@@ -84059,13 +83869,7 @@
                         "w": 36.81,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 114,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -84309,7 +84113,7 @@
             "images": []
         },
         {
-            "number": 115,
+            "number": 83,
             "paragraphs": [
                 [
                     {
@@ -85513,7 +85317,7 @@
             "images": []
         },
         {
-            "number": 116,
+            "number": 84,
             "paragraphs": [
                 [
                     {
@@ -86021,8 +85825,15 @@
             "images": []
         },
         {
-            "number": 117,
+            "number": 85,
             "paragraphs": [
+                [
+                    {
+                        "text": "V",
+                        "w": 44.15,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "A",
@@ -86057,7 +85868,7 @@
                 ],
                 [
                     {
-                        "text": "Você",
+                        "text": "ocê",
                         "w": 23.13,
                         "h": 15.0
                     },
@@ -87078,7 +86889,7 @@
             "images": []
         },
         {
-            "number": 118,
+            "number": 86,
             "paragraphs": [
                 [
                     {
@@ -88359,7 +88170,7 @@
             "images": []
         },
         {
-            "number": 119,
+            "number": 87,
             "paragraphs": [
                 [
                     {
@@ -89697,7 +89508,7 @@
             "images": []
         },
         {
-            "number": 120,
+            "number": 88,
             "paragraphs": [
                 [
                     {
@@ -91008,7 +90819,7 @@
             "images": []
         },
         {
-            "number": 121,
+            "number": 89,
             "paragraphs": [
                 [
                     {
@@ -91936,7 +91747,7 @@
             "images": []
         },
         {
-            "number": 122,
+            "number": 90,
             "paragraphs": [
                 [
                     {
@@ -92475,7 +92286,7 @@
             ]
         },
         {
-            "number": 123,
+            "number": 91,
             "paragraphs": [
                 [
                     {
@@ -93578,13 +93389,7 @@
                         "w": 65.17,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 124,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Mas",
@@ -93606,7 +93411,7 @@
             "images": []
         },
         {
-            "number": 125,
+            "number": 92,
             "paragraphs": [
                 [
                     {
@@ -94814,7 +94619,7 @@
             "images": []
         },
         {
-            "number": 126,
+            "number": 93,
             "paragraphs": [
                 [
                     {
@@ -95547,13 +95352,7 @@
                         "w": 46.51,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 127,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -95928,7 +95727,7 @@
             "images": []
         },
         {
-            "number": 128,
+            "number": 94,
             "paragraphs": [
                 [
                     {
@@ -97041,13 +96840,7 @@
                         "w": 78.32,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 129,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Ambos",
@@ -97186,7 +96979,7 @@
             "images": []
         },
         {
-            "number": 130,
+            "number": 95,
             "paragraphs": [
                 [
                     {
@@ -97763,8 +97556,15 @@
             "images": []
         },
         {
-            "number": 131,
+            "number": 96,
             "paragraphs": [
+                [
+                    {
+                        "text": "O",
+                        "w": 20.7,
+                        "h": 35.16
+                    }
+                ],
                 [
                     {
                         "text": "A",
@@ -97788,11 +97588,6 @@
                     }
                 ],
                 [
-                    {
-                        "text": "O",
-                        "w": 39.39,
-                        "h": 15.0
-                    },
                     {
                         "text": "Jabuti",
                         "w": 39.39,
@@ -98586,13 +98381,7 @@
                         "w": 33.21,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 132,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -98796,7 +98585,7 @@
             "images": []
         },
         {
-            "number": 133,
+            "number": 97,
             "paragraphs": [
                 [
                     {
@@ -99429,13 +99218,7 @@
                         "w": 60.9,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 134,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -99954,7 +99737,7 @@
             "images": []
         },
         {
-            "number": 135,
+            "number": 98,
             "paragraphs": [
                 [
                     {
@@ -100602,13 +100385,7 @@
                         "w": 40.24,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 136,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Caramujo",
@@ -100818,7 +100595,7 @@
             "images": []
         },
         {
-            "number": 137,
+            "number": 99,
             "paragraphs": [
                 [
                     {
@@ -102006,7 +101783,7 @@
             "images": []
         },
         {
-            "number": 138,
+            "number": 100,
             "paragraphs": [
                 [
                     {
@@ -102779,13 +102556,7 @@
                         "w": 29.28,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 139,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -103076,7 +102847,7 @@
             "images": []
         },
         {
-            "number": 140,
+            "number": 101,
             "paragraphs": [
                 [
                     {
@@ -104159,13 +103930,7 @@
                         "w": 40.45,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 141,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -104292,7 +104057,7 @@
             "images": []
         },
         {
-            "number": 142,
+            "number": 102,
             "paragraphs": [
                 [
                     {
@@ -104960,13 +104725,7 @@
                         "w": 57.1,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 143,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Lagosta",
@@ -105274,7 +105033,7 @@
             "images": []
         },
         {
-            "number": 144,
+            "number": 103,
             "paragraphs": [
                 [
                     {
@@ -105917,13 +105676,7 @@
                         "w": 48.63,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 145,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "No",
@@ -106173,7 +105926,7 @@
             "images": []
         },
         {
-            "number": 146,
+            "number": 104,
             "paragraphs": [
                 [
                     {
@@ -106811,13 +106564,7 @@
                         "w": 51.24,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 147,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Beeeee…",
@@ -106942,7 +106689,7 @@
             "images": []
         },
         {
-            "number": 148,
+            "number": 105,
             "paragraphs": [
                 [
                     {
@@ -107505,13 +107252,7 @@
                         "w": 47.98,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 149,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Conforme",
@@ -107637,8 +107378,15 @@
             "images": []
         },
         {
-            "number": 150,
+            "number": 106,
             "paragraphs": [
+                [
+                    {
+                        "text": "O",
+                        "w": 20.7,
+                        "h": 35.16
+                    }
+                ],
                 [
                     {
                         "text": "QUEM",
@@ -107662,11 +107410,6 @@
                     }
                 ],
                 [
-                    {
-                        "text": "O",
-                        "w": 22.28,
-                        "h": 15.0
-                    },
                     {
                         "text": "Rei",
                         "w": 22.28,
@@ -108680,7 +108423,7 @@
             "images": []
         },
         {
-            "number": 151,
+            "number": 107,
             "paragraphs": [
                 [
                     {
@@ -108900,7 +108643,7 @@
             ]
         },
         {
-            "number": 152,
+            "number": 108,
             "paragraphs": [
                 [
                     {
@@ -110154,7 +109897,7 @@
             "images": []
         },
         {
-            "number": 153,
+            "number": 109,
             "paragraphs": [
                 [
                     {
@@ -110707,13 +110450,7 @@
                         "w": 69.54,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 154,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -111180,7 +110917,7 @@
             "images": []
         },
         {
-            "number": 155,
+            "number": 110,
             "paragraphs": [
                 [
                     {
@@ -112228,13 +111965,7 @@
                         "w": 22.47,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 156,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -112351,7 +112082,7 @@
             "images": []
         },
         {
-            "number": 157,
+            "number": 111,
             "paragraphs": [
                 [
                     {
@@ -113479,13 +113210,7 @@
                         "w": 68.19,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 158,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -113612,7 +113337,7 @@
             "images": []
         },
         {
-            "number": 159,
+            "number": 112,
             "paragraphs": [
                 [
                     {
@@ -114255,13 +113980,7 @@
                         "w": 64.93,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 160,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "O",
@@ -114686,7 +114405,7 @@
             "images": []
         },
         {
-            "number": 161,
+            "number": 113,
             "paragraphs": [
                 [
                     {
@@ -115579,13 +115298,7 @@
                         "w": 25.73,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 162,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Era",
@@ -115834,7 +115547,7 @@
             "images": []
         },
         {
-            "number": 163,
+            "number": 114,
             "paragraphs": [
                 [
                     {
@@ -116587,13 +116300,7 @@
                         "w": 82.83,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 164,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "E",
@@ -116851,7 +116558,7 @@
             "images": []
         },
         {
-            "number": 165,
+            "number": 115,
             "paragraphs": [
                 [
                     {
@@ -116956,8 +116663,15 @@
             "images": []
         },
         {
-            "number": 166,
+            "number": 116,
             "paragraphs": [
+                [
+                    {
+                        "text": "E",
+                        "w": 38.0,
+                        "h": 79.1
+                    }
+                ],
                 [
                     {
                         "text": "AS",
@@ -116982,7 +116696,7 @@
                 ],
                 [
                     {
-                        "text": "Estou",
+                        "text": "stou",
                         "w": 28.94,
                         "h": 15.0
                     },
@@ -118061,7 +117775,7 @@
             "images": []
         },
         {
-            "number": 167,
+            "number": 117,
             "paragraphs": [
                 [
                     {
@@ -119094,7 +118808,7 @@
             "images": []
         },
         {
-            "number": 168,
+            "number": 118,
             "paragraphs": [
                 [
                     {
@@ -119832,13 +119546,7 @@
                         "w": 56.37,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 169,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -120221,7 +119929,7 @@
             "images": []
         },
         {
-            "number": 170,
+            "number": 119,
             "paragraphs": [
                 [
                     {
@@ -121039,13 +120747,7 @@
                         "w": 57.45,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 171,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Uma",
@@ -121224,7 +120926,7 @@
             "images": []
         },
         {
-            "number": 172,
+            "number": 120,
             "paragraphs": [
                 [
                     {
@@ -121692,13 +121394,7 @@
                         "w": 17.51,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 173,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "(Sabemos",
@@ -121916,7 +121612,7 @@
             "images": []
         },
         {
-            "number": 174,
+            "number": 121,
             "paragraphs": [
                 [
                     {
@@ -122274,13 +121970,7 @@
                         "w": 38.15,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 175,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -122856,7 +122546,7 @@
             "images": []
         },
         {
-            "number": 176,
+            "number": 122,
             "paragraphs": [
                 [
                     {
@@ -123984,13 +123674,7 @@
                         "w": 24.17,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 177,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "—",
@@ -124074,7 +123758,7 @@
             "images": []
         },
         {
-            "number": 178,
+            "number": 123,
             "paragraphs": [
                 [
                     {
@@ -125102,13 +124786,7 @@
                         "w": 38.44,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": []
-        },
-        {
-            "number": 179,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "Alice",
@@ -125277,7 +124955,7 @@
             "images": []
         },
         {
-            "number": 180,
+            "number": 124,
             "paragraphs": [
                 [
                     {
@@ -126721,7 +126399,7 @@
             "images": []
         },
         {
-            "number": 181,
+            "number": 125,
             "paragraphs": [
                 [
                     {
@@ -127191,7 +126869,7 @@
             "images": []
         },
         {
-            "number": 182,
+            "number": 126,
             "paragraphs": [
                 [
                     {
@@ -128247,7 +127925,7 @@
             "images": []
         },
         {
-            "number": 183,
+            "number": 127,
             "paragraphs": [
                 [
                     {
@@ -128682,14 +128360,14 @@
             ]
         },
         {
-            "number": 184,
+            "number": 128,
             "paragraphs": [],
             "images": [
                 "imagens_pdf\\pagina128_img0.png"
             ]
         },
         {
-            "number": 185,
+            "number": 129,
             "paragraphs": [
                 [
                     {
@@ -129067,14 +128745,14 @@
             "images": []
         },
         {
-            "number": 186,
+            "number": 130,
             "paragraphs": [],
             "images": [
                 "imagens_pdf\\pagina130_img0.png"
             ]
         },
         {
-            "number": 187,
+            "number": 131,
             "paragraphs": [
                 [
                     {
@@ -129785,7 +129463,9 @@
                         "text": "DE",
                         "w": 18.34,
                         "h": 17.58
-                    },
+                    }
+                ],
+                [
                     {
                         "text": "TODOS.",
                         "w": 50.62,
@@ -129837,7 +129517,9 @@
                         "text": "DO",
                         "w": 19.8,
                         "h": 17.58
-                    },
+                    }
+                ],
+                [
                     {
                         "text": "DOMÍNIO",
                         "w": 61.1,
@@ -129853,7 +129535,7 @@
             "images": []
         },
         {
-            "number": 188,
+            "number": 132,
             "paragraphs": [
                 [
                     {
@@ -129885,7 +129567,9 @@
                         "text": "[AO]",
                         "w": 35.82,
                         "h": 24.9
-                    },
+                    }
+                ],
+                [
                     {
                         "text": "PÚBLICO",
                         "w": 84.16,
@@ -130684,7 +130368,7 @@
             "images": []
         },
         {
-            "number": 189,
+            "number": 133,
             "paragraphs": [
                 [
                     {
@@ -131365,7 +131049,7 @@
             "images": []
         },
         {
-            "number": 190,
+            "number": 134,
             "paragraphs": [
                 [
                     {
@@ -131771,14 +131455,14 @@
             "images": []
         },
         {
-            "number": 191,
+            "number": 135,
             "paragraphs": [],
             "images": [
                 "imagens_pdf\\pagina135_img0.png"
             ]
         },
         {
-            "number": 192,
+            "number": 136,
             "paragraphs": [
                 [
                     {
@@ -131800,7 +131484,9 @@
                         "text": "COMUNICAÇÃO",
                         "w": 147.7,
                         "h": 24.9
-                    },
+                    }
+                ],
+                [
                     {
                         "text": "INTERCULTURAL:",
                         "w": 163.2,
@@ -132212,7 +131898,7 @@
             "images": []
         },
         {
-            "number": 193,
+            "number": 137,
             "paragraphs": [
                 [
                     {
@@ -132499,7 +132185,7 @@
             "images": []
         },
         {
-            "number": 194,
+            "number": 138,
             "paragraphs": [
                 [
                     {
@@ -132985,7 +132671,7 @@
             "images": []
         },
         {
-            "number": 195,
+            "number": 139,
             "paragraphs": [
                 [
                     {
@@ -133311,15 +132997,7 @@
                         "w": 89.47,
                         "h": 15.0
                     }
-                ]
-            ],
-            "images": [
-                "imagens_pdf\\pagina139_img0.png"
-            ]
-        },
-        {
-            "number": 196,
-            "paragraphs": [
+                ],
                 [
                     {
                         "text": "LICENÇA",
@@ -133336,7 +133014,15 @@
                         "w": 78.39,
                         "h": 24.9
                     }
-                ],
+                ]
+            ],
+            "images": [
+                "imagens_pdf\\pagina139_img0.png"
+            ]
+        },
+        {
+            "number": 140,
+            "paragraphs": [
                 [
                     {
                         "text": "Roboto",

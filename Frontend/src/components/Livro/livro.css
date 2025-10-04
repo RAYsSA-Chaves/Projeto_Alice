@@ -20,7 +20,7 @@
 
 /* Imagem única centralizada verticalmente */
 .imagemCentralizada {
-  max-width: 60%; 
+  max-width: 50%; 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -28,7 +28,7 @@
 
 /* Imagem no topo */
 .imagemTopo {
-  width: 60%;
+  width: 50%;
   margin-bottom: 2rem;
 }
 
@@ -51,27 +51,10 @@
   font-weight: bold;
 }
 
-.p:has(> span.titulo) {
-  text-indent: 0 !important;
-}
-
 /* Palavra normal */
 .palavraNormal {
   font-size: 1em;
   font-family: Times, serif !important;
-}
-
-/* Palavra capitular */
-.capitular {
-  font-size: 1em;
-  font-weight: normal;
-  font-family: Times, serif !important;
-}
-
-/* Primeira letra da palavra capitular */
-.capitular::first-letter {
-  font-size: 2em;
-  font-weight: bold;
 }
 
 /* Capa */
