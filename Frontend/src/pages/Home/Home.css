@@ -14,7 +14,7 @@
 
 .paginaPrincipal {
     background: linear-gradient(to bottom, #1B3778, #3266DE);
-    color: var(--cor-branco);
+    color: var(--branco);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -105,32 +105,25 @@
     transform: scaleX(-1);
 }
 
-.nuvem3 {
+.nuvem3,
+.nuvem4,
+.nuvem5 {
     position: absolute;
-    width: 100vh;
-    height: 100vh;
-    align-self: flex-end; 
-    bottom: -50.5vh;
-    left: 0;
+    bottom: -1px;
+    width: auto;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
 }
 
-.nuvem4 {
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    align-self: flex-end; 
-    top: 90vh;
-    right: 0;
+.nuvem3 {
+    left: 0;
     transform: scaleX(-1);
 }
 
-.nuvem5 {
-    position: absolute;
-    width: 100vh;
-    height: 70vh;
-    bottom: -50vh;
-    top: 118vh;
-    left: 75vh;
+.nuvem4 {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bolinha1 {
@@ -155,33 +148,72 @@
     transform: scale(1.2);
 }
 
-.card {
-    background: linear-gradient(to bottom, #1B3778, #3266DE);
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.card figure {
-    margin: 0;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.btnCard {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid white;
-    border-radius: 1.5rem;
-    background: transparent;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.secaoCard {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
+    position: relative;
+    background-color: var(--branco);
+    padding-bottom: 100px;
+}
+
+.nuvens {
+    position: relative;
+    width: 100%;
+    margin-top: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nuvens img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+}
+
+#nuvemSecao1 {
+    position: relative;
+    transform: scaleY(-1);
+}
+
+#nuvemSecao2 {
+    position: relative;
+    transform: scaleY(-1) rotate(5deg); 
+}
+
+#nuvemSecao3 {
+    transform: scaleY(-1) rotate(-5deg);
+}   
+
+.paginaFada {
+    background: linear-gradient(to bottom, #FFD4D1, #FFB3C8, #D97AA2);
+}
+
+#fadaPerfil {
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 10vh;
+    width: 80vh;
+    height: 40vh;
+}
+
+#decoracaoTexto {
+    display: block;
+    margin-top: 10vh;
+    margin-left: 2vh;
+    position: relative;
+    width: 250vh;
+    height: 100vh;
+}
+
+.caixaTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    gap: 8px;
+    width: 90vh;
+    height: 20vh;
+    background: var(--branco);
+    border-radius: 16px;
 }
