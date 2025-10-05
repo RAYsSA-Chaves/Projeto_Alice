@@ -11,6 +11,11 @@
     justify-content: center;
     align-items: center;
     gap: min(2rem);
+    transition: cursor 0.3s;
+}
+
+.modoGrifar {
+  cursor: text;
 }
 
 #mainLivro h2 {
@@ -132,4 +137,8 @@
 /* Palavra destacada */
 .highlight {
   background-color: pink;
+}
+
+.modoGrifar span:hover {
+  background-color: rgb(239, 198, 205);
 }

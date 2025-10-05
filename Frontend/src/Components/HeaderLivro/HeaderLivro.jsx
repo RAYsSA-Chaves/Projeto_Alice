@@ -1,7 +1,34 @@
 import './HeaderLivro.css'
 import { PencilLine, Search, ArrowLeft } from 'lucide-react';
+import { useState } from "react";
 
-export default function HeaderLivro({ busca, setBusca }) {
+export default function HeaderLivro({ 
+        busca, setBusca, modoGrifar, setModoGrifar, inputTexto, setInputTexto, inputNum, setInputNum, 
+    }) {
+            // Função grifar
+            function ativarModoGrifar() {
+                setBusca({ tipo: "", valor: "" });
+                setInputTexto("");
+                setInputNum("")
+                setModoGrifar(!modoGrifar);
+            }
+
+            // Função buscar palavra
+            function BuscarTexto() {
+                if (input.Texto.trim() === "") return;
+
+                setBusca({ tipo: "texto", valor: inputTexto.trim() });
+                setModoGrifar(false);
+            }
+
+            // Busca por número de letras
+            function buscarTamanho(e) {
+                const valor = e.target.value;
+                setInputNum(valor);
+                setBusca({ tipo: "tamanho", valor })
+                setModoGrifar(false);
+            }
+
     return (
         <header className="HeaderLivro">
             {/* Botão voltar */}
@@ -11,19 +38,19 @@ export default function HeaderLivro({ busca, setBusca }) {
 
             {/* Pesquisa palavra */}
             <div className='InputPalavra'>
-                <input type="text" placeholder='Procure uma palavra' value={busca} onChange={(e) => setBusca(e.target.value)}/>
-                <button className="SearchButton">
+                <input type="text" placeholder='Procure uma palavra' value={inputTexto} onChange={(e) => setInputTexto(e.target.value)}/>
+                <button className="SearchButton" onClick={buscarTexto}>
                     <Search/>   
                 </button>
             </div>
 
             {/* Pesquisa número de letras */}
             <div className='InputNum'>
-                <p>Procure uma palavra com</p><input type="text" placeholder='0' className='Numero'/><p>letras</p>
+                <p>Procure uma palavra com</p><input type="number" placeholder='0' className='Numero' value={inputNum} onChange={buscarTamanho}/><p>letras</p>
             </div>
             
             {/* Marca texto */}
-            <button className="PencilButton" title="Grifar palavra">
+            <button className={`PencilButton ${modoGrifar ? "ativo" : ""}`} title="Grifar palavra" onClick={ativarModoGrifar}>
                 <PencilLine className="PencilIcon" title="Grifar palavra"/>
             </button>
         </header>

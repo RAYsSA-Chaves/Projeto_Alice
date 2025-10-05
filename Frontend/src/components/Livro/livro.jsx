@@ -3,7 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export default function Livro({ busca }) {
+export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const [paginas, setPaginas] = useState([]);
   const tamanhoTitulo = 32; // altura considerada "título"
   const capaPath = "/assets/capa_alice.png";
@@ -17,6 +17,34 @@ export default function Livro({ busca }) {
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
   }, []);
 
+  // Consider palavaras acompanhadas por pontuação (ex: "Alice" = "Alice,")
+  const limparPontuacao = (palavra) => {
+    return palavra.replace(/[.,!?:;()]/g, "");
+  };
+
+  // Definir se a palavra deve ser destacada
+  function destacarPalavra(palavra) {
+    const palavraLimpa = limparPontuacao(palavra);
+    if (busca.tipo === "texto") {
+      return palavraLimpa.trim().toLowerCase() === busca.valor.toLowerCase();
+    }
+    else if (busca.tipo === "tamanho") {
+      return palavraLimpa.trim().length === parseInt(busca.valor);
+    }
+    else if (busca.tipo === "grifo") {
+      return palavraLimpar.trim().toLowerCase() === busca.valor.toLowerCase();
+    }
+    return false;
+  }
+
+  // Função do modo grifar
+  function handleClickPalavra(palavra) {
+    if (!modoGrifar) return;
+    const palavraLimpa = limparPontuacao(palavra);
+    setBusca({ tipo: "grifo", valor: palavraLimpa });
+    setModoGrifar(false);
+  }
+
   // Renderizar palavras de um parágrafo
   const renderWords = (palavras) => {
     return palavras.map((palavra, idx) => {
@@ -24,13 +52,8 @@ export default function Livro({ busca }) {
       let classe = "palavraNormal";
       if (isLarge) classe = "titulo";
 
-      // Destacar palavras
-      if (busca.trim() !== "" && palavra.text.toLowerCase() === busca.toLowerCase()) {
-        classe += " highlight";
-      }
-
       return (
-        <span className={classe} key={idx} onClick={(e) => {alert(palavra.text)}}>
+        <span className={destacarPalavra(palavra) ? "highlight" : classe} key={idx} onClick={() => handleClickPalavra(palavra)}>
           {palavra.text}{" "}
         </span>
       );
@@ -97,7 +120,7 @@ export default function Livro({ busca }) {
 
   // Conteúdo principal (livro)
   return (
-    <main id="mainLivro">
+    <main id="mainLivro" className={modoGrifar ? "modoGrifar" : ""}>
       <button onClick={prevPage} className="btnLivro"><ArrowLeft/></button>
 
       {/* Só monta o FlipBook depois que as páginas estiverem carregadas */}
