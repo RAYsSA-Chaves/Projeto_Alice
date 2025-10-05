@@ -1,0 +1,25 @@
+.fadaContainer {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  right: 50vh;
+}
+
+.fada {
+  width: 300%;
+  height: auto;
+  display: block;
+  animation: pulinhoFada 1.2s infinite ease-in-out;
+}
+
+@keyframes pulinhoFada {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}

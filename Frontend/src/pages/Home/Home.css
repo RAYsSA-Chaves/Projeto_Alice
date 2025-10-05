@@ -31,16 +31,10 @@
     text-transform: uppercase;
     text-align: justify;
     margin-left: 12%;
-    margin-bottom: 50vh;
+    margin-right: 10%;
+    margin-bottom: 30vh;
 }
 
-.fada img {
-    max-width: 100%;
-    margin-top: 4vh;
-    margin-right: 50vh;
-    height: 150vh;
-    object-fit:fill;
-}
 
 .estrela1 {
     position: absolute;
@@ -55,7 +49,7 @@
     width: 80vh;
     height: 5vh;
     top: 50vh;
-    left: -20vh;  
+    left: -20vh;
 }
 
 .estrela3 {
@@ -95,6 +89,7 @@
     height: 100vh;
     top: 15vh;
     left: 0;
+    animation: flutuar 10s ease-in-out infinite alternate;
 }
 
 .nuvem2 {
@@ -103,9 +98,36 @@
     height: 100vh;
     top: -10vh;
     right: 0;
-    transform: scaleX(-1);
+    animation: flutuarDireita 10s ease-in-out infinite alternate;
 }
 
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuarDireita {
+    0% {
+        transform: translateY(0) scaleX(-1);
+    }
+
+    50% {
+        transform: translateY(-20px) scaleX(-1);
+    }
+
+    100% {
+        transform: translateY(0) scaleX(-1);
+    }
+}
 
 .bolinha1 {
     position: absolute;
@@ -123,7 +145,7 @@
     width: 60px;
     height: 60px;
     left: 50%;
-    top: 65%;
+    top: 85%;
     transform: translateX(-50%);
     border-radius: 50%;
     border: 2px solid var(--branco);
@@ -149,23 +171,23 @@
 }
 
 #nuvemSecao1 {
-  display: flex;
-  position: absolute;
-  transform: scaleX(-1);
-  left: -60vh;
-  top: -35vh;
-  width: 100%;
-  height: 120%;
+    display: flex;
+    position: absolute;
+    transform: scaleX(-1);
+    left: -60vh;
+    top: -35vh;
+    width: 100%;
+    height: 120%;
 }
 
 #nuvemSecao2 {
-  display: flex;
-  position: absolute;
-  transform: scaleX(-1);
-  right: -50vh;
-  top: -40vh;
-  width: 100%;
-  height: 120%;
+    display: flex;
+    position: absolute;
+    transform: scaleX(-1);
+    right: -50vh;
+    top: -40vh;
+    width: 100%;
+    height: 120%;
 }
 
 #nuvemSecao3 {
@@ -200,7 +222,7 @@
     left: -60vh;
     right: 150vh;
 }
- 
+
 
 .paginaFada {
     background: linear-gradient(to bottom, #FFD4D1, #FFB3C8, #D97AA2);
@@ -216,10 +238,18 @@
 
 #fadaPerfil2 {
     position: absolute;
-    top: 400vh;       /* controla vertical */
-    right: 30vh;      /* em vez de margin-left */
+    top: 400vh;
+    right: 25vh;
     width: 80vh;
     height: 40vh;
+}
+
+#fadaPerfil3 {
+    position: absolute;
+    width: 80vh;
+    height: 40vh;
+    margin-left: 18vh;
+    margin-top: 40vh;
 }
 
 #decoracaoTexto {
@@ -235,11 +265,19 @@
 #decoracaoTexto2 {
     display: flex;
     margin-top: -30vh;
-    margin-left: -50vh;
+    margin-left: -20vh;
     position: relative;
-    width: 200vh;
-    height: 90vh;
+    width: 150vh;
+    height: 80vh;
     top: 40vh;
+}
+
+#decoracaoTexto3 {
+    position: relative;
+    width: 150vh;
+    height: 100vh;
+    margin-top: 20vh;
+    right: -70vh;
 }
 
 
@@ -260,4 +298,50 @@
     font-size: 16px;
     bottom: 25vh;
     left: 35vh;
+}
+
+.caixaTexto2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: auto;
+    gap: 2px;
+    padding: 50px;
+    width: 70vh;
+    height: 30vh;
+    background: var(--branco);
+    border-radius: 16px;
+    z-index: 100;
+    font-size: 16px;
+    bottom: 12vh;
+    left: -45vh;
+}
+
+.caixaTexto3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: auto;
+    gap: 2px;
+    padding: 50px;
+    width: 70vh;
+    height: 30vh;
+    background: var(--branco);
+    border-radius: 16px;
+    font-size: 16px;
+    top: -62vh;
+    right: -45vh;
+}
+
+.footer {
+    display: flex;
+}
+
+#footerOndas {
+    height: 100%;
+    width: 100%;
 }
