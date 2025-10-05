@@ -1,14 +1,11 @@
-import '../InicioJogo/Container.css'
-import Fada_rindo from '../../Assets/Images/Fada_rindo.png'
+import './Container.css';
 
-export default function Container({ children }) {
-  return (
-    <section className="containerBranco" >
-      {children}
-      
-      <img src={Fada_rindo} alt="Fada" />
-    </section >
-  );
-
+function Container({ children }) {
+    return (
+        <div className="white-container">
+            {children}
+        </div>
+    );
 }
 
+export default Container;

@@ -1,13 +1,27 @@
 import "./App.css";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from './pages/Instrucoes_Jogo/Inicio.jsx'
+import ComoJogar1 from './pages/Instrucoes_Jogo/ComoJogar1.jsx'
+import ComoJogar2 from './pages/Instrucoes_Jogo/ComoJogar2.jsx'
+// import ModalSair from "./Components/InicioJogo/ModalSair.jsx";
 
 
 
-function App() {
+
+export default function App() {
   return (
-    <Inicio/>
-    
+    <Router>
+      <Routes>
+        <Route path="/iniciojogo" element={<Inicio />} />
+        <Route path="/comojogar1" element={<ComoJogar1 />} />
+        <Route path="/comojogar2" element={<ComoJogar2 />} />
+
+
+      </Routes>
+    </Router>
+
+
   );
 }
 
-export default App;

@@ -1,10 +1,12 @@
-// import "../css/ActionButton.css";
+import './ActionButton.css';
 
-// export default function ActionButton(children) {
-//   return (
+function ActionButton({ children, onClick, icon }) {
+    return (
+        <button className="action-button" onClick={onClick}>
+            {icon && <span className="action-button-icon">{icon}</span>}
+            {children}
+        </button>
+    );
+}
 
-//     <button className="action-button">
-
-//     </button>
-//   );
-// }
+export default ActionButton;
