@@ -1,9 +1,9 @@
 import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Inicio from './pages/Instrucoes_Jogo/Inicio.jsx'
-import ComoJogar1 from './pages/Instrucoes_Jogo/ComoJogar1.jsx'
-import ComoJogar2 from './pages/Instrucoes_Jogo/ComoJogar2.jsx'
+import Inicio from './pages/PlayJogo/Inicio.jsx'
+import ComoJogar1 from './pages/Regras1/ComoJogar1.jsx'
+import ComoJogar2 from './pages/Regras2/ComoJogar2.jsx'
 // import ModalSair from "./Components/InicioJogo/ModalSair.jsx";
 
 
