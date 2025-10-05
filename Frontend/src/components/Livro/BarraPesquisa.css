@@ -1,0 +1,143 @@
+.BarraPesquisa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.ArrowButton {
+  background-color: aliceblue;
+  border: 1px solid black;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.ArrowIcon {
+  stroke-width: 1.5;
+  width: 30px;
+  height: 40px;
+  transition: transform 0.3s;
+  color: inherit;
+}
+
+.ArrowButton:hover .ArrowIcon {
+  transform: scale(1.2); /* só o ícone cresce */
+}
+
+
+.InputPalavra {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 30px;
+  overflow: hidden;
+  border: black 1px solid;
+  box-shadow: 5px 4px black;
+}
+
+.InputLetra {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 30px;
+  overflow: hidden;
+  border: black 1px solid;
+  box-shadow: 5px 4px black;
+  width: 360px;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding-left: 18px;
+  width: 300px;
+  height: 50px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.SearchButton {
+  background-color: #4B5B96;
+  border: none;
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.SearchButton:hover {
+  background-color: #2a3357;
+}
+
+.SearchIcon {
+  color: white;
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.5;
+  transition: transform 0.3s;
+}
+
+.SearchButton:hover .SearchIcon {
+  transform: scale(1.2);
+}
+
+.Numero{
+  background-color: #CC536F;
+  color: white;
+  text-align: center;
+  border: none;
+  width: 70px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Numero:hover{
+    background-color: #8b3247;
+}
+
+P{
+    padding: 0px 15px 0px;
+}
+
+.PencilButton {
+  background-color: #4B5B96;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.PencilButton:hover {
+  background-color: #2a3357;
+}
+
+.PencilIcon {
+  color: white;
+  stroke-width: 1.5;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.PencilButton:hover .PencilIcon {
+  transform: scale(1.2); /* só o ícone cresce */
+}
