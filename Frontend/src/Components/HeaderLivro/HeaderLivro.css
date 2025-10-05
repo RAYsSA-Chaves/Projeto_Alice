@@ -1,0 +1,144 @@
+/* Container do header */
+.HeaderLivro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: min(1rem);
+  padding: 1rem 3rem;
+}
+
+/* Botão voltar */
+.ArrowButton {
+  background-color: #fff;
+  border: 2px solid black;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.ArrowButton svg {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.ArrowButton:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.ArrowButton:hover svg {
+  transform: scale(1.2);
+}
+
+/* Barras de pesquisa */
+.InputPalavra, .InputNum {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  border: black 1px solid;
+  box-shadow: 5px 4px black;
+  width: fit-content;
+}
+
+.InputPalavra input {
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 50px;
+}
+
+.InputNum input {
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+}
+
+.InputNum input::placeholder {
+  color: #fff;
+}
+
+.SearchButton {
+  background-color: #4B5B96;
+  border: none;
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.SearchButton svg {
+  color: white;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s;
+}
+
+.SearchButton:hover {
+  background-color: #394470;
+}
+
+.SearchButton:hover svg {
+  transform: scale(1.2);
+}
+
+.InputNum p {
+  font-size: 13px;
+  color: gray;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.Numero {
+  background-color: #CC536F;
+  text-align: center;
+  border: none;
+  transition: background 0.3s;
+}
+
+.Numero:hover {
+    background-color: #8b3247;
+}
+
+/* Marca texto */
+.PencilButton {
+  background-color: #4B5B96;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+  box-shadow: 2px 3px black;
+}
+
+.PencilButton:hover {
+  background-color: #394470;
+}
+
+.PencilButton svg {
+  width: 25px;
+  height: 25px;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.PencilButton:hover svg {
+  transform: scale(1.2);
+}

@@ -1,11 +1,20 @@
 import Livro from "../../components/Livro/livro";
-import "./Leitura.css";
+import HeaderLivro from "../../components/HeaderLivro/HeaderLivro";
+import { useState } from "react";
 
 function LeituraPage() {
+    const [busca, setBusca] = useState("");
+
     return (
-        <main id="mainLivro">
-            <Livro/>
-        </main>
+        <>
+            <HeaderLivro
+                busca={busca}
+                setBusca={setBusca}
+            />
+            <Livro 
+                busca={busca}
+            />
+        </>
     )
 }
 
