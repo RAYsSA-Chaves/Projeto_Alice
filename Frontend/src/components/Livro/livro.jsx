@@ -32,7 +32,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
       return palavraLimpa.trim().length === parseInt(busca.valor);
     }
     else if (busca.tipo === "grifo") {
-      return palavraLimpar.trim().toLowerCase() === busca.valor.toLowerCase();
+      return palavraLimpa.trim().toLowerCase() === busca.valor.toLowerCase();
     }
     return false;
   }
@@ -53,7 +53,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
       if (isLarge) classe = "titulo";
 
       return (
-        <span className={destacarPalavra(palavra) ? "highlight" : classe} key={idx} onClick={() => handleClickPalavra(palavra)}>
+        <span className={destacarPalavra(palavra.text) ? "highlight" : classe} key={idx} onClick={() => handleClickPalavra(palavra.text)}>
           {palavra.text}{" "}
         </span>
       );

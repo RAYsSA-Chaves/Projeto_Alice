@@ -14,8 +14,8 @@ export default function HeaderLivro({
             }
 
             // Função buscar palavra
-            function BuscarTexto() {
-                if (input.Texto.trim() === "") return;
+            function buscarTexto() {
+                if (inputTexto.trim() === "") return;
 
                 setBusca({ tipo: "texto", valor: inputTexto.trim() });
                 setModoGrifar(false);
@@ -24,6 +24,7 @@ export default function HeaderLivro({
             // Busca por número de letras
             function buscarTamanho(e) {
                 const valor = e.target.value;
+                setInputText("");
                 setInputNum(valor);
                 setBusca({ tipo: "tamanho", valor })
                 setModoGrifar(false);
