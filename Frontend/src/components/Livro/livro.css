@@ -99,6 +99,10 @@
   font-weight: bold;
 }
 
+p:has(.titulo) {
+  text-indent: none;
+}
+
 /* Palavra normal */
 .palavraNormal {
   font-size: 1em;
@@ -136,9 +140,9 @@
 
 /* Palavra destacada */
 .highlight {
-  background-color: #6f81c3;
+  background-color: #dda0ae;
 }
 
 .modoGrifar span:hover {
-  background-color: #919cc6;
+  background-color: #e2c7cd;
 }

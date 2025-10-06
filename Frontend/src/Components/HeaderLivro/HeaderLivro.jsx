@@ -24,7 +24,7 @@ export default function HeaderLivro({
             // Busca por número de letras
             function buscarTamanho(e) {
                 const valor = e.target.value;
-                setInputText("");
+                setInputTexto("");
                 setInputNum(valor);
                 setBusca({ tipo: "tamanho", valor })
                 setModoGrifar(false);
@@ -39,7 +39,7 @@ export default function HeaderLivro({
 
             {/* Pesquisa palavra */}
             <div className='InputPalavra'>
-                <input type="text" placeholder='Procure uma palavra' value={inputTexto} onChange={(e) => setInputTexto(e.target.value)}/>
+                <input type="text" placeholder='Procure uma palavra' value={inputTexto} onChange={(e) => setInputTexto(e.target.value)} onKeyDown={buscarTexto}/>
                 <button className="SearchButton" onClick={buscarTexto}>
                     <Search/>   
                 </button>
