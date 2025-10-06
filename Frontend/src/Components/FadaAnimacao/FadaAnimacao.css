@@ -32,3 +32,12 @@
     margin-left: 100%;
   }
 }
+
+@media (min-width: 660px) {
+  .fada {
+    width: 300%;
+    height: auto;
+    display: block;
+    margin-left: 80%;
+  }
+}

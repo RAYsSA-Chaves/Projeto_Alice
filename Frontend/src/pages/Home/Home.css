@@ -345,3 +345,59 @@
         margin-bottom: 30vh;
     }
 }
+
+@media (min-width: 660px) {
+    .paginaPrincipal {
+        padding: 1rem 10%
+    }
+
+    .titulos {
+        font-size: 2.5rem;
+        margin-left: 3%;
+        margin-bottom: 30vh;
+    }
+
+    .estrela1 {
+        position: absolute;
+        width: 100vh;
+        height: 15vh;
+        top: 20vh;
+        left: -30vh;
+    }
+
+    #fadaPerfil {
+        position: absolute;
+        margin-top: 60vh;
+        margin-left: 20vh;
+        width: 80vh;
+        height: 40vh;
+    }
+
+    #fadaPerfil2 {
+        position: absolute;
+        margin-top: 20vh;
+        margin-left: 20vh;
+        width: 80vh;
+        height: 40vh;
+    }
+
+    .caixaTexto {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin: auto;
+        gap: 2px;
+        padding: 50px;
+        width: 70vh;
+        height: 35vh;
+        background: var(--branco);
+        border-radius: 16px;
+        z-index: 100;
+        font-size: 16px;
+        bottom: 27vh;
+        left: 35vh;
+    }
+
+}

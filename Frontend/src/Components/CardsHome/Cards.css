@@ -71,3 +71,9 @@
 .btnCard:hover {
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.7);
 }
+
+@media (min-width: 660px) {
+    .cards {
+        margin-left: 60%;
+    }
+}
