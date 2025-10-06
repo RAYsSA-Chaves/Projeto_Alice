@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../Assets/Colors/Colors.css');
+@import url('../../Assets/Fonts/Fonts.css');
 
 :root {
     --fonte-primaria: 'Poppins', sans-serif;
@@ -30,9 +32,10 @@
     line-height: 1.06;
     text-transform: uppercase;
     text-align: justify;
-    margin-left: 12%;
+    margin: 0 10% 10%;
+    /* margin-left: 12%;
     margin-right: 10%;
-    margin-bottom: 30vh;
+    margin-bottom: 30vh; */
 }
 
 
@@ -77,7 +80,7 @@
 
 .estrela6 {
     position: absolute;
-    width: 90vh;
+    min-width: 90vh;
     height: 3vh;
     top: 10vh;
     right: 10vh;
@@ -89,7 +92,7 @@
     height: 100vh;
     top: 15vh;
     left: 0;
-    animation: flutuar 10s ease-in-out infinite alternate;
+    animation: flutuar 8s ease-in-out infinite alternate;
 }
 
 .nuvem2 {
@@ -98,35 +101,19 @@
     height: 100vh;
     top: -10vh;
     right: 0;
-    animation: flutuarDireita 10s ease-in-out infinite alternate;
+    animation: flutuarDireita 8s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes flutuarDireita {
-    0% {
-        transform: translateY(0) scaleX(-1);
-    }
-
-    50% {
-        transform: translateY(-20px) scaleX(-1);
-    }
-
-    100% {
-        transform: translateY(0) scaleX(-1);
-    }
+    0% { transform: translateY(0) scaleX(-1); }
+    50% { transform: translateY(-20px) scaleX(-1); }
+    100% { transform: translateY(0) scaleX(-1); }
 }
 
 .bolinha1 {
@@ -344,4 +331,17 @@
 #footerOndas {
     height: 100%;
     width: 100%;
+}
+
+@media (min-width: 1440px) {
+    .paginaPrincipal {
+        padding: 2rem 15%;
+    }
+
+    .titulos {
+        font-size: 3.5rem;
+        margin-left: 5%;
+        margin-right: 18%;
+        margin-bottom: 30vh;
+    }
 }

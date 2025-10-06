@@ -23,3 +23,12 @@
     transform: translateY(-15px);
   }
 }
+
+@media (min-width: 1440px) {
+  .fada {
+    width: 500%;
+    height: auto;
+    display: block;
+    margin-left: 100%;
+  }
+}

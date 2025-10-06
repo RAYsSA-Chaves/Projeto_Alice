@@ -13,7 +13,7 @@ import Nuvem from '../../assets/Images/Nuvem.svg'
 import Footer from '../../assets/Images/Footer.svg'
 import { ArrowDown } from 'phosphor-react'
 import Cards from '../../Components/CardsHome/Cards'
-import FadaAnimacao from '../../Components/FadaAnimacao/FadaAnimacao';
+import FadaAnimacao from '../../Components/FadaAnimacao/FadaAnimacao'
 
 function Home() {
     return (
