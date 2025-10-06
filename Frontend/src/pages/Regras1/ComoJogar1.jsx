@@ -39,7 +39,7 @@ function ComoJogar1() {
       {/* Conteúdo principal */}
       <Container>
         <section className="content">
-          <h1 className="title">Como Jogar?</h1>
+          <h1 className="title2">Como Jogar?</h1>
 
           {/* Texto explicativo */}
           <p className="paragrafo">

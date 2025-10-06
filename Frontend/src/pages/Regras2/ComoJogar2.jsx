@@ -39,10 +39,10 @@ function ComoJogar2() {
       {/* Conteúdo principal do container branco */}
       <Container>
         <div className="content">
-          <h1 className="title">Como Jogar?</h1>
+          <h1 className="title2">Como Jogar?</h1>
 
           {/* Texto explicativo */}
-          <p className="paragrafo2">
+          <p className="paragrafo">
             Escreva quem são os personagens nas cartas
             e veja quantos acertos você consegue fazer!
           </p>
