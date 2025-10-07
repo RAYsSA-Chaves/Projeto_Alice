@@ -12,10 +12,8 @@
     align-items: center;
     gap: min(2rem);
     transition: cursor 0.3s;
-}
-
-.modoGrifar {
-  cursor: text;
+    padding: 4rem 0;
+    position: relative;
 }
 
 #mainLivro h2 {
@@ -31,7 +29,7 @@
   flex-direction: column;
   background-color: #fff;
   position: relative;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .pagina.pagDireita, .pagina.capa {
@@ -139,10 +137,106 @@ p:has(.titulo) {
 }
 
 /* Palavra destacada */
+.modoGrifar {
+  cursor: text;
+}
+
 .highlight {
   background-color: #dda0ae;
 }
 
 .modoGrifar span:hover {
   background-color: #e2c7cd;
+}
+
+/* Total do resultado de busca */
+.resultadoBusca {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  height: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  z-index: 9999;
+  color: #682837;
+}
+
+.resultadoBusca img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.resultadoBusca p {
+  position: absolute;
+  margin: 0;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.resultadoBusca.texto {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slideFromLeft 0.5s ease forwards;
+}
+
+.resultadoBusca.tamanho {
+  bottom: 20px;
+  right: 20px;
+  animation: slideFromRight 0.5s ease forwards;
+}
+
+.resultadoBusca.grifo {
+  top: 20px;
+  left: 20px;
+  animation: slideFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.resultadoBusca .btnFecharResultado {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: transparent;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.resultadoBusca .btnFecharResultado svg {
+  color: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.resultadoBusca .btnFecharResultado:hover {
+  transform: scale(1.2);
 }

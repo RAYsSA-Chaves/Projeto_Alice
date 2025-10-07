@@ -38,7 +38,7 @@ export default function HeaderLivro({
             </a>
 
             {/* Pesquisa palavra */}
-            <div className='InputPalavra'>
+            <div className='InputPalavra' id="pesquisaPalavra">
                 <input type="text" placeholder='Procure uma palavra' value={inputTexto} onChange={(e) => setInputTexto(e.target.value)} onKeyDown={buscarTexto}/>
                 <button className="SearchButton" onClick={buscarTexto}>
                     <Search/>   
@@ -46,12 +46,12 @@ export default function HeaderLivro({
             </div>
 
             {/* Pesquisa número de letras */}
-            <div className='InputNum'>
+            <div className='InputNum' id="pesquisaNum">
                 <p>Procure uma palavra com</p><input type="number" placeholder='0' className='Numero' value={inputNum} onChange={buscarTamanho}/><p>letras</p>
             </div>
             
             {/* Marca texto */}
-            <button className={`PencilButton ${modoGrifar ? "ativo" : ""}`} title="Grifar palavra" onClick={ativarModoGrifar}>
+            <button className={`PencilButton ${modoGrifar ? "ativo" : ""}`} id="bntGrifar" title="Grifar palavra" onClick={ativarModoGrifar}>
                 <PencilLine className="PencilIcon" title="Grifar palavra"/>
             </button>
         </header>

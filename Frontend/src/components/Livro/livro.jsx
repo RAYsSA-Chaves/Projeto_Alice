@@ -1,13 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
+import Nuvem from "../../Assets/Images/Nuvem_msg.png";
 
 export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const [paginas, setPaginas] = useState([]);
   const tamanhoTitulo = 32; // altura considerada "título"
   const capaPath = "/assets/capa_alice.png";
   const bookRef = useRef(null); // referencia o Flipbook
+  const [totalEncontradas, setTotalEncontradas] = useState(0); // guardar contagem de palavras
+  const [mostrarResultado, setMostrarResultado] = useState(true); // Mostrar o resultado ou parar de mostrar
 
   // Carregar o json com as páginas
   useEffect(() => {
@@ -44,6 +47,26 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
     setBusca({ tipo: "grifo", valor: palavraLimpa });
     setModoGrifar(false);
   }
+
+  // Contagem de palavras sempre que a busca mudar
+  useEffect(() => {
+    if (!paginas || paginas.length === 0 || !busca.tipo) {
+      setTotalEncontradas(0);
+      setMostrarResultado(false);
+      return;
+    }
+    let contagem = 0;
+    paginas.forEach((pagina) => {
+      if (!pagina.paragraphs) return;
+      pagina.paragraphs.forEach((bloco) => {
+        bloco.forEach((palavra) => {
+          if(destacarPalavra(palavra.text)) contagem++;
+      });
+    });
+  });
+  setTotalEncontradas(contagem);
+  setMostrarResultado(true);
+  }, [busca, paginas]);
 
   // Renderizar palavras de um parágrafo
   const renderWords = (palavras) => {
@@ -123,13 +146,22 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
     <main id="mainLivro" className={modoGrifar ? "modoGrifar" : ""}>
       <button onClick={prevPage} className="btnLivro"><ArrowLeft/></button>
 
+      {/* Resultado de quantidade de palavras encontradas */}
+      {busca.tipo && totalEncontradas > 0 && mostrarResultado (
+        <div className={`resultadoBusca ${busca.tipo}`}>
+          <img src={Nuvem} className="imgResultado"/>
+          <p>{totalEncontradas} palavras encontradas</p>
+          <button className="btnFecharResutado" onClick={() => setMostrarResultado(false)}><X/></button>
+        </div>
+      )}
+
       {/* Só monta o FlipBook depois que as páginas estiverem carregadas */}
       {(!paginas || paginas.length === 0) ? (
         <h2>Carregando livro...</h2>
       ) : (
           <HTMLFlipBook
           width={430}
-          height={600}
+          height={650}
           maxShadowOpacity={0.5}
           showCover={true}
           drawShadow={true}
