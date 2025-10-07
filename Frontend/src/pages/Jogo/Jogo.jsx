@@ -138,6 +138,7 @@ const Jogo = () => {
 
     
     
+    <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
       <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
 
       <div className="jogo-card">
@@ -188,7 +189,7 @@ const Jogo = () => {
         <button onClick={handleSubmit} className="submit-button">{botaoTexto}</button>
       </div>
 
-      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
+      
     </div>
   );
 };
