@@ -4,7 +4,11 @@ import './FadaAnimacao.css';
 function FadaAnimacao() { 
   return (
   <figure className="fadaContainer"> 
-  <img src={FadaMascote}  className="fada" /> 
+    <img 
+        src={FadaMascote} 
+        alt="gif da mascote fada" 
+        className="fada" 
+      /> 
   </figure>
   
 ); 

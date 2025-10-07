@@ -24,20 +24,20 @@
   }
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .fada {
     width: 500%;
     height: auto;
     display: block;
     margin-left: 100%;
   }
-}
+} */
 
 @media (min-width: 660px) {
   .fada {
-    width: 300%;
+    width: 350%;
     height: auto;
     display: block;
-    margin-left: 80%;
+    margin-left: 60%;
   }
 }

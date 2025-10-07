@@ -6,9 +6,9 @@ import EstrelaRosa from '../../assets/Images/EstrelaRosa.svg'
 import EstrelaBranca from '../../assets/Images/EstrelaBranca.svg'
 import NuvemAnimacao from '../../assets/Images/NuvemAnimacao.svg'
 import BolinhaBranca from '../../assets/Images/BolinhaBranca.svg'
-import DecoracaoTexto from '../../assets/Images/DecoracaoTexto.svg'
-import DecoracaoTexto2 from '../../assets/Images/DecoracaoTexto2.svg'
-import DecoracaoTexto3 from '../../assets/Images/DecoracaoTexto3.svg'
+import DecoracaoAzul from '../../assets/Images/DecoracaoAzul.svg'
+import DecoracaoRosaAzul from '../../assets/Images/DecoracaoRosaAzul.svg'
+import DecoracaoAzul2 from '../../assets/Images/DecoracaoAzul2.svg'
 import Nuvem from '../../assets/Images/Nuvem.svg'
 import Footer from '../../assets/Images/Footer.svg'
 import { ArrowDown } from 'phosphor-react'
@@ -63,9 +63,9 @@ function Home() {
             </section>
 
             <section className='paginaFada'>
-                <img src={PerfilFada} alt='perfil da fada' id='fadaPerfil' />
-                <img src={DecoracaoTexto} alt='decoração da caixa de texto' id='decoracaoTexto' />
-                <div class='caixaTexto'>
+                    <img src={PerfilFada} alt='perfil da fada' id='fadaPerfil' />
+                <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
+                <div className='caixaTexto'>
                     <h2>Olá,</h2>
                     <h2>eu sou a Bina!</h2>
                     <p>Eu sou uma fada e sua melhor amiga!</p>
@@ -75,8 +75,8 @@ function Home() {
                 </div>
 
                 <img src={PerfilFada2} alt='perfil da fada' id='fadaPerfil2' />
-                <img src={DecoracaoTexto2} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
-                <div class='caixaTexto2'>
+                <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
+                <div className='caixaTexto2'>
                     <h2>O que você pode fazer?</h2>
                     <p>Nesse site, você pode tanto jogar
                         quanto aproveitar um tempinho
@@ -85,8 +85,8 @@ function Home() {
                 </div>
 
                 <img src={PerfilFada3} alt='perfil da fada' id='fadaPerfil3' />
-                <img src={DecoracaoTexto3} alt='decoração da terceira caixa de texto' id='decoracaoTexto3' />
-                <div class='caixaTexto3'>
+                <img src={DecoracaoAzul2} alt='decoração da terceira caixa de texto' id='decoracaoTexto3' />
+                <div className='caixaTexto3'>
                     <h2>Aproveite essa experiência</h2>
                     <p>Se divirta nesse momento de leitura
                         e jogos, eu vou estar aqui
@@ -95,7 +95,7 @@ function Home() {
                 </div>
 
                 <footer className='footer'>
-                    <img src={Footer} alt='ondas do footer' id='footerOnda'/>
+                    <img src={Footer} alt='ondas do footer' id='footerOnda' />
                 </footer>
             </section>
         </>

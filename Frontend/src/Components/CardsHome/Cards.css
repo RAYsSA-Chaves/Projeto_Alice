@@ -1,3 +1,6 @@
+@import url('../../Assets/Colors/Colors.css');
+@import url('../../Assets/Fonts/Fonts.css');
+
 .cards {
     display: flex;
     justify-content: space-between;
@@ -20,6 +23,30 @@
     overflow: visible;
     transition: transform 0.5s ease;
     z-index: 100;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    border: 2px solid var(--azul-claro);
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 20px 0 0;
+    transform: scaleX(-1);
+    top: -10%;
+    left: -10%;
+}
+
+.card::before {
+    top: 80%;
+    transform: scaleY(-1);
+    left: 80%;
+    border: 2px solid var(--azul-escuro);
+    border-left: none;
+    border-bottom: none;
 }
 
 .card:hover {
@@ -76,4 +103,14 @@
     .cards {
         margin-left: 60%;
     }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    margin-top: 6rem;
+    margin-left: 48%;
+}
 }

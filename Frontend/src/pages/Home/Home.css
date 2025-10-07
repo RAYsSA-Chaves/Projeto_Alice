@@ -33,18 +33,15 @@
     text-transform: uppercase;
     text-align: justify;
     margin: 0 10% 10%;
-    /* margin-left: 12%;
-    margin-right: 10%;
-    margin-bottom: 30vh; */
 }
 
 
 .estrela1 {
     position: absolute;
-    width: 100vh;
-    height: 12vh;
-    top: 30vh;
-    left: -40vh;
+    width: 80%;
+    height: auto;
+    top: 20%;
+    left: -10%;
 }
 
 .estrela2 {
@@ -105,15 +102,31 @@
 }
 
 @keyframes flutuar {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes flutuarDireita {
-    0% { transform: translateY(0) scaleX(-1); }
-    50% { transform: translateY(-20px) scaleX(-1); }
-    100% { transform: translateY(0) scaleX(-1); }
+    0% {
+        transform: translateY(0) scaleX(-1);
+    }
+
+    50% {
+        transform: translateY(-20px) scaleX(-1);
+    }
+
+    100% {
+        transform: translateY(0) scaleX(-1);
+    }
 }
 
 .bolinha1 {
@@ -255,7 +268,7 @@
     margin-left: -20vh;
     position: relative;
     width: 150vh;
-    height: 80vh;
+    height: 90vh;
     top: 40vh;
 }
 
@@ -296,14 +309,14 @@
     margin: auto;
     gap: 2px;
     padding: 50px;
-    width: 70vh;
+    width: 60vh;
     height: 30vh;
     background: var(--branco);
     border-radius: 16px;
     z-index: 100;
     font-size: 16px;
-    bottom: 12vh;
-    left: -45vh;
+    bottom: 20vh;
+    left: -48vh;
 }
 
 .caixaTexto3 {
@@ -333,26 +346,14 @@
     width: 100%;
 }
 
-@media (min-width: 1440px) {
-    .paginaPrincipal {
-        padding: 2rem 15%;
-    }
-
-    .titulos {
-        font-size: 3.5rem;
-        margin-left: 5%;
-        margin-right: 18%;
-        margin-bottom: 30vh;
-    }
-}
-
+/* Responsividade para telas menores */
 @media (min-width: 660px) {
     .paginaPrincipal {
         padding: 1rem 10%
     }
 
     .titulos {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-left: 3%;
         margin-bottom: 30vh;
     }
@@ -401,3 +402,20 @@
     }
 
 }
+
+/* Responsividade para telas maiores
+@media (min-width: 1014px) and (max-width: 1439px) {
+    .paginaPrincipal {
+        padding: 2rem 15%;
+    }
+
+    .titulos {
+        font-family: var(--fonte-primaria);
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.06;
+        text-transform: uppercase;
+        text-align: justify;
+        margin: 0 10% 10%;
+    }
+} */
