@@ -4,7 +4,7 @@ import ButtonTop from "../../Components/ButtonTop/ButtonTop.jsx";
 import ActionButton from "../../Components/ActionButtons/ActionButton.jsx";
 import Container from "../../Components/ContainerBranco/Container.jsx";
 
-import Nuvens from "../../Assets/Images/Nuvens.png";
+import Nuvens from "../../Assets/Images/Nuvens.svg";
 import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
 import SetaVoltar from "../../Assets/Images/SetaVoltar.png";
 import FadaApontando from "../../Assets/Images/FadaApontando.png";
@@ -22,7 +22,9 @@ import "../PlayJogo/Inicio.css";
 function ComoJogar1() {
   return (
     <section className="container">
-      {/* Fundo com estrelas */}
+      
+      {/* Fundo */}
+      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
       <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
 
       {/* Botão de voltar (seta no canto superior esquerdo) */}
@@ -68,7 +70,7 @@ function ComoJogar1() {
         alt="fada apontando"
         className="fadaSorrindo"
       />
-      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
+      
     </section>
   );
 }
