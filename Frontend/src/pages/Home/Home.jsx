@@ -1,4 +1,4 @@
-import './Home.css'
+// import './Home.css'
 import Fada from '../../Assets/Images/Fada.svg'
 import EstrelaRosa from '../../Assets/Images/EstrelaRosa.svg'
 import EstrelaBranca from '../../Assets/Images/EstrelaBranca.svg'
@@ -46,4 +46,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;

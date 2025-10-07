@@ -42,9 +42,12 @@ function Inicio() {
       <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
 
       {/* Botão superior (home) */}
-      <ButtonTop >
-        <img src={iconCasa} alt="ícone home" />
-      </ButtonTop>
+      <Link to="/">
+        <ButtonTop >
+          <img src={iconCasa} alt="ícone home" />
+        </ButtonTop>
+      </Link>
+
 
       {/* Conteúdo principal do container */}
       <Container>
@@ -54,12 +57,15 @@ function Inicio() {
 
           {/* Botões principais */}
           <section className="buttons-container">
-            <ActionButton
-              icon={<Play size={28} color="white" />}
-              onClick={() => console.log("Jogar clicado")}
-            >
-              JOGAR
-            </ActionButton>
+            <Link to="/jogo">
+              <ActionButton
+                icon={<Play size={28} color="white" />}
+                onClick={() => console.log("Jogar clicado")}
+              >
+                JOGAR
+              </ActionButton>
+            </Link>
+
 
             <Link to="/comojogar1">
               <ActionButton onClick={() => console.log("Como jogar clicado")}>

@@ -1,16 +1,12 @@
 import './ButtonTop.css';
-import { ArrowLeft, Home } from 'lucide-react';
+import iconCasa from '../../Assets/Images/iconCasa.png';
 
-function ButtonTop({ onReturnClick, onHomeClick }) {
+function ButtonTop({ onHomeClick }) {
   return (
     <div className="button-top-container">
 
-      <button className="return-button top-button" onClick={onReturnClick}>
-        <ArrowLeft />
-      </button>
-
       <button className="home-button top-button" onClick={onHomeClick}>
-        <Home />
+        <img src={iconCasa} alt='home icone'/>
       </button>
       
     </div>
