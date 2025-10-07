@@ -1,0 +1,43 @@
+.button-top-container {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: flex-start; /* os deixa no mesmo nível horizontal */
+  position: absolute;
+  top: 3.2rem;
+  left: 6rem;
+  gap: 20px;
+  z-index: 10;
+}
+
+.top-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+
+.top-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.top-button:active {
+  transform: scale(0.95);
+}
+
+.top-button svg {
+  width: 40px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  display: block;
+}

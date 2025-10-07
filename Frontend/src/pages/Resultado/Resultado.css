@@ -1,0 +1,109 @@
+body {
+  background: linear-gradient(to top, #2155e0, #b0aed8);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.resultado-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.resultado {
+  background-color: white;
+  text-align: center;
+  padding-top: 20vh;
+  width: 1000px;
+  height: 600px;
+  border-radius: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.resultado-container h1 {
+  font-size: 3.2rem;
+}
+
+.resultado-container p {
+  font-size: 1.6rem;
+  margin-bottom: 6vh;
+}
+
+/* --- Botões --- */
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;  
+}
+
+.btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  gap: 10px;
+  background-color: #1F2D7B;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.btns button:hover {
+  background-color: #08144e;
+  transform: scale(1.05);
+}
+
+.btns button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- Imagens de fundo --- */
+.estrelas-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; /* impede bloqueio de clique */
+}
+
+.nuvens-bg {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fada {
+  position: absolute;
+  right: -120px; /* distância da lateral do card */
+  bottom: 100px; /* altura da fada em relação à base do card */
+  width: 250px; /* tamanho ajustável */
+  z-index: 3;
+  pointer-events: none; /* não bloqueia clique */
+  animation: flutuar 3s ease-in-out infinite; /* animação suave */
+}
+
+/* Animação opcional para dar movimento à fada */
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

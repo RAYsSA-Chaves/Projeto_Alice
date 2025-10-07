@@ -1,11 +1,16 @@
 import './App.css';
-import LeituraPage from './pages/Leitura/Leitura';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Jogo from '../src/pages/Jogo/Jogo';
+import Resultado from '../src/pages/Resultado/Resultado';
 
 function App() {
   return (
-    <>
-      <LeituraPage />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Jogo />} />
+        <Route path="/resultado" element={<Resultado />} />
+      </Routes>
+    </Router>
   )
 }
 
