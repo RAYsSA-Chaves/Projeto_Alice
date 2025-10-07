@@ -66,6 +66,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   });
   setTotalEncontradas(contagem);
   setMostrarResultado(true);
+  console.log(contagem);
   }, [busca, paginas]);
 
   // Renderizar palavras de um parágrafo
@@ -147,11 +148,11 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
       <button onClick={prevPage} className="btnLivro"><ArrowLeft/></button>
 
       {/* Resultado de quantidade de palavras encontradas */}
-      {busca.tipo && totalEncontradas > 0 && mostrarResultado (
+      {busca.tipo && totalEncontradas > 0 && mostrarResultado && (
         <div className={`resultadoBusca ${busca.tipo}`}>
           <img src={Nuvem} className="imgResultado"/>
-          <p>{totalEncontradas} palavras encontradas</p>
-          <button className="btnFecharResutado" onClick={() => setMostrarResultado(false)}><X/></button>
+          <p>{totalEncontradas}<br/>palavras encontradas</p>
+          <button className="btnFecharResultado" onClick={() => setMostrarResultado(false)}><X/></button>
         </div>
       )}
 

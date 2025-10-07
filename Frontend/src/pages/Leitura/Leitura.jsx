@@ -15,7 +15,7 @@ function LeituraPage() {
         const jaViu = localStorage.getItem("tutorialVisto");
         if (!jaViu) {
             setRunTutorial(true);
-            localSotorage.setItem("tutorialVisto", "true");
+            localStorage.setItem("tutorialVisto", "true");
         }
     }, []);
 
@@ -23,15 +23,16 @@ function LeituraPage() {
     const steps = [
         {
             target: "#pesquisaPalavra",
-            content: "Você pode buscar palavras dentro do livro!"
+            content: "Aqui você pode pesquisar palavras no livro!",
+            title: "Bem-vindo, pequenino!"
         },
         {
             target: "#pesquisaNum",
-            content: "Busque por palavras com alguma quantidade de letras!"
+            content: "Aqui você pode buscar por palavras com alguma quantidade de letras!"
         },
         {
             target: "#bntGrifar",
-            content: "Ou grife uma palavra no livro para localizar todas as outras iguais a ela!"
+            content: "E também pode grifar uma palavra no livro para encontrar todas as outras iguais a ela!"
         },
     ];
 
@@ -42,6 +43,13 @@ function LeituraPage() {
             run={runTutorial}
             continuous
             showSkipButton
+            locale={{
+                back: 'Voltar',
+                close: 'Fechar',
+                last: 'Finalizar',
+                next: 'Próximo',
+                skip: 'Pular',
+            }}
         />
             <HeaderLivro
                 busca={busca}

@@ -158,10 +158,10 @@ p:has(.titulo) {
   width: 450px;
   height: 100px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
+  z-index: 1;
+  color: #000000;
   text-align: center;
-  z-index: 9999;
-  color: #682837;
 }
 
 .resultadoBusca img {
@@ -174,26 +174,26 @@ p:has(.titulo) {
 .resultadoBusca p {
   position: absolute;
   margin: 0;
-  bottom: 12px;
-  left: 50%;
+  bottom: 5px;
+  left: 48%;
   transform: translateX(-50%);
 }
 
 .resultadoBusca.texto {
   top: 20px;
-  left: 50%;
+  left: 5%;
   transform: translateX(-50%);
   animation: slideFromLeft 0.5s ease forwards;
 }
 
 .resultadoBusca.tamanho {
-  bottom: 20px;
+  bottom: 200px;
   right: 20px;
   animation: slideFromRight 0.5s ease forwards;
 }
 
 .resultadoBusca.grifo {
-  top: 20px;
+  top: 300px;
   left: 20px;
   animation: slideFromLeft 0.5s ease forwards;
 }
@@ -219,22 +219,23 @@ p:has(.titulo) {
 .resultadoBusca .btnFecharResultado {
   position: absolute;
   top: 4px;
-  right: 4px;
+  right: 50px;
   background: transparent;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border: solid 2px #fff;
 }
 
 .resultadoBusca .btnFecharResultado svg {
   color: #fff;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .resultadoBusca .btnFecharResultado:hover {
