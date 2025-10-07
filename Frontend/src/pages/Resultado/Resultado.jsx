@@ -14,6 +14,7 @@ export default function Resultado() {
 
   return (
     <div className="resultado-container">
+      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
       <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
 
       <div className="resultado">
@@ -34,7 +35,7 @@ export default function Resultado() {
         <img src={fada} alt="Fada" className="fada" />
       </div>
 
-      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
+      
     </div>
   );
 }

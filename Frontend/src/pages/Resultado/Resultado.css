@@ -17,7 +17,7 @@ body {
 .resultado {
   background-color: white;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 20vh;
   width: 1000px;
   height: 600px;
   border-radius: 70px;
@@ -26,28 +26,28 @@ body {
 }
 
 .resultado-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
 }
 
 .resultado-container p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  margin-bottom: 6vh;
 }
 
 /* --- Botões --- */
 .btns {
   display: flex;
-  flex-direction: column; /* um em cima do outro */
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 15px;  
 }
 
 .btns button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* espaçamento entre ícone e texto */
+  width: 300px;
+  gap: 10px;
   background-color: #1F2D7B;
   color: white;
   border: none;
