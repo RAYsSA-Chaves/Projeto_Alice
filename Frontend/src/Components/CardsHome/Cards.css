@@ -101,16 +101,8 @@
 
 @media (min-width: 660px) {
     .cards {
+        margin-top: 15%;
         margin-left: 60%;
     }
 }
 
-@media (min-width: 1024px) {
-    .cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 8rem;
-    margin-top: 6rem;
-    margin-left: 48%;
-}
-}

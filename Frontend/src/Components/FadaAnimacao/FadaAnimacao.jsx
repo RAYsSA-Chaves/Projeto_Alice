@@ -1,11 +1,11 @@
-import FadaMascote from '../../assets/Images/FadaMascote.svg'; 
+import FadaGif from '../../assets/Images/FadaGif.gif'; 
 import './FadaAnimacao.css'; 
 
 function FadaAnimacao() { 
   return (
   <figure className="fadaContainer"> 
     <img 
-        src={FadaMascote} 
+        src={FadaGif} 
         alt="gif da mascote fada" 
         className="fada" 
       /> 

@@ -1,15 +1,14 @@
 .fadaContainer {
-  position: relative;
-  width: 200px;
-  margin: 0 auto;
-  right: 50vh;
+  position: absolute;
+  width: 150px;
+  left: 60%;
 }
 
 .fada {
   width: 300%;
   height: auto;
   display: block;
-  animation: pulinhoFada 1.2s infinite ease-in-out;
+  animation: pulinhoFada 0.7s infinite ease-in-out;
 }
 
 @keyframes pulinhoFada {
@@ -24,20 +23,12 @@
   }
 }
 
-/* @media (min-width: 1440px) {
-  .fada {
-    width: 500%;
-    height: auto;
-    display: block;
-    margin-left: 100%;
-  }
-} */
-
 @media (min-width: 660px) {
   .fada {
-    width: 350%;
+    width: 450%;
     height: auto;
     display: block;
-    margin-left: 60%;
+    left: 50%;
+    margin: 140% -15% 10%;
   }
 }

@@ -1,7 +1,7 @@
 import './Home.css'
-import PerfilFada from '../../assets/Images/PerfilFada.svg'
-import PerfilFada2 from '../../assets/Images/PerfilFada2.svg'
-import PerfilFada3 from '../../assets/Images/PerfilFada3.svg'
+import FadaVetor from '../../assets/Images/FadaVetor.svg'
+import FadaVetor2 from '../../assets/Images/FadaVetor2.svg'
+import FadaVetor3 from '../../assets/Images/FadaVetor3.svg'
 import EstrelaRosa from '../../assets/Images/EstrelaRosa.svg'
 import EstrelaBranca from '../../assets/Images/EstrelaBranca.svg'
 import NuvemAnimacao from '../../assets/Images/NuvemAnimacao.svg'
@@ -63,7 +63,7 @@ function Home() {
             </section>
 
             <section className='paginaFada'>
-                    <img src={PerfilFada} alt='perfil da fada' id='fadaPerfil' />
+                    <img src={FadaVetor} alt='perfil da fada' id='fadaPerfil' />
                 <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
                 <div className='caixaTexto'>
                     <h2>Olá,</h2>
@@ -74,7 +74,7 @@ function Home() {
                     aprendizado!
                 </div>
 
-                <img src={PerfilFada2} alt='perfil da fada' id='fadaPerfil2' />
+                <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
                 <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
                 <div className='caixaTexto2'>
                     <h2>O que você pode fazer?</h2>
@@ -84,7 +84,7 @@ function Home() {
                     </p>
                 </div>
 
-                <img src={PerfilFada3} alt='perfil da fada' id='fadaPerfil3' />
+                <img src={FadaVetor3} alt='perfil da fada' id='fadaPerfil3' />
                 <img src={DecoracaoAzul2} alt='decoração da terceira caixa de texto' id='decoracaoTexto3' />
                 <div className='caixaTexto3'>
                     <h2>Aproveite essa experiência</h2>

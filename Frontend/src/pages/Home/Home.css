@@ -346,16 +346,20 @@
     width: 100%;
 }
 
-/* Responsividade para telas menores */
+
 @media (min-width: 660px) {
     .paginaPrincipal {
         padding: 1rem 10%
     }
 
     .titulos {
-        font-size: 3rem;
-        margin-left: 3%;
-        margin-bottom: 30vh;
+        font-family: var(--fonte-primaria);
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.06;
+        text-transform: uppercase;
+        text-align: justify;
+        margin: 0 5% 8%;
     }
 
     .estrela1 {
@@ -366,20 +370,61 @@
         left: -30vh;
     }
 
-    #fadaPerfil {
+    .estrela6 {
         position: absolute;
-        margin-top: 60vh;
-        margin-left: 20vh;
+        min-width: 90vh;
+        height: 3vh;
+        top: -10vh;
+        right: 10vh;
+    }
+
+    #nuvemSecao1 {
+        display: flex;
+        position: absolute;
+        transform: scaleX(-1);
+        left: -60vh;
+        top: -25vh;
+        width: 100%;
+        height: 110%;
+    }
+
+    #nuvemSecao2 {
+        display: flex;
+        position: absolute;
+        transform: scaleX(-1);
+        right: -40vh;
+        top: -30vh;
+        width: 100%;
+        height: 120%;
+    }
+
+    #fadaPerfil {
+        margin: 30% 10% 10%;
         width: 80vh;
         height: 40vh;
     }
 
     #fadaPerfil2 {
-        position: absolute;
+        margin: -5% -5%;
+    }
+
+    #decoracaoTexto {
+        display: flex;
         margin-top: 20vh;
-        margin-left: 20vh;
-        width: 80vh;
-        height: 40vh;
+        margin-left: -12vh;
+        position: relative;
+        width: 300vh;
+        height: 130vh;
+        top: 40vh;
+    }
+
+    #decoracaoTexto2 {
+        display: flex;
+        margin: -20% -8%;
+        position: relative;
+        width: 160vh;
+        height: 100vh;
+        top: 20vh;
     }
 
     .caixaTexto {
@@ -397,25 +442,50 @@
         border-radius: 16px;
         z-index: 100;
         font-size: 16px;
-        bottom: 27vh;
-        left: 35vh;
+        bottom: 45vh;
+        left: 40vh;
+    }
+
+    .caixaTexto2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin: auto;
+        gap: 2px;
+        padding: 50px;
+        width: 70vh;
+        height: 35vh;
+        background: var(--branco);
+        border-radius: 16px;
+        font-size: 16px;
+        margin: 8% 35%;
+        z-index: 100;
+    }
+
+    #decoracaoTexto3 {
+        position: relative;
+        width: 150vh;
+        height: 100vh;
+        margin-top: 20vh;
+        right: -70vh;
+    }
+
+    .caixaTexto3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin: auto;
+        gap: 2px;
+        padding: 50px;
+        width: 70vh;
+        height: 30vh;
+        background: var(--branco);
+        border-radius: 16px;
+        font-size: 16px;
+        top: -65vh;
+        right: -20%;
     }
 
 }
-
-/* Responsividade para telas maiores
-@media (min-width: 1014px) and (max-width: 1439px) {
-    .paginaPrincipal {
-        padding: 2rem 15%;
-    }
-
-    .titulos {
-        font-family: var(--fonte-primaria);
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 1.06;
-        text-transform: uppercase;
-        text-align: justify;
-        margin: 0 10% 10%;
-    }
-} */
