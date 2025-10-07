@@ -7,7 +7,7 @@ import ActionButton from "../../Components/ActionButtons/ActionButton.jsx";
 import Container from "../../Components/ContainerBranco/Container.jsx";
 import ModalSair from "../../Components/ModalSair/ModalSair.jsx";
 
-import Nuvens from "../../Assets/Images/Nuvens.png";
+import Nuvens from "../../Assets/Images/Nuvens.svg";
 import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
 import iconCasa from "../../Assets/Images/iconCasa.png";
 import Fada_rindo from "../../Assets/Images/Fada_rindo.png";
