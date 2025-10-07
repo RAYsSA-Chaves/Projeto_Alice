@@ -1,10 +1,10 @@
 import './Home.css'
-import Fada from '../../assets/imagens/Fada.svg'
-import EstrelaRosa from '../../assets/imagens/EstrelaRosa.svg'
-import EstrelaBranca from '../../assets/imagens/EstrelaBranca.svg'
-import NuvemAnimacao from '../../assets/imagens/NuvemAnimacao.svg'
-import Nuvem from '../../assets/imagens/Nuvem.svg'
-import BolinhaBranca from '../../assets/imagens/BolinhaBranca.svg'
+import Fada from '../../Assets/Images/Fada.svg'
+import EstrelaRosa from '../../Assets/Images/EstrelaRosa.svg'
+import EstrelaBranca from '../../Assets/Images/EstrelaBranca.svg'
+import NuvemAnimacao from '../../Assets/Images/NuvemAnimacao.svg'
+import Nuvem from '../../Assets/Images/Nuvem.svg'
+import BolinhaBranca from '../../Assets/Images/BolinhaBranca.svg'
 
 function Home() {
     return (
