@@ -1,4 +1,4 @@
-/* Conteúdo principal */
+/* Conteúdo principal do livro */
 #mainLivro {
     min-height: 100dvh;
     width: 100%;
@@ -86,7 +86,7 @@
 
 /* Parágrafo */
 .paragrafo {
-  text-indent: 1.5em;
+  text-indent: 0;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -95,10 +95,6 @@
 .titulo {
   font-size: 1.3em;
   font-weight: bold;
-}
-
-p:has(.titulo) {
-  text-indent: none;
 }
 
 /* Palavra normal */
@@ -240,4 +236,13 @@ p:has(.titulo) {
 
 .resultadoBusca .btnFecharResultado:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 1440px) {
+    .btnFecharResultado {
+        border: solid 2px #000;
+    }
+    .btnFecharResultado svg {
+        color: #000;
+    }
 }
