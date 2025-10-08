@@ -3,12 +3,14 @@ import ActionButton from "../ActionButtons/ActionButton.jsx";
 import "./ModalSair.css";
 
 /**
- * Componente Modal - Exibe uma janela de confirmação para o usuário decidir se realmente deseja sair da tela atual
+ * Componente ModalSair
+ * Exibe uma janela de confirmação para o usuário decidir
+ * se realmente deseja sair da tela atual.
  *
- * @param {boolean} isOpen - Define se o modal deve estar visível
- * @param {Function} onClose - Fecha o modal sem executar ação
- * @param {Function} onConfirm - Confirma a saída
- * @returns {JSX.Element|null} Modal de confirmação de saída
+ * @param {boolean} isOpen - Define se o modal deve estar visível.
+ * @param {Function} onClose - Fecha o modal sem executar ação.
+ * @param {Function} onConfirm - Confirma a saída (executa a ação principal).
+ * @returns {JSX.Element|null} Modal de confirmação de saída.
  */
 
 export default function ModalSair({ isOpen, onClose, onConfirm }) {
@@ -16,11 +18,11 @@ export default function ModalSair({ isOpen, onClose, onConfirm }) {
   if (!isOpen) return null;
 
   return (
-    <section className="modalOverlay">
-      <section className="modalContent">
+    <section className="modal-overlay">
+      <section className="modal-content">
         <h1 className="title1">Tem certeza que deseja sair?</h1>
 
-        <section className="buttonsContainer">
+        <section className="buttons-container">
           {/* Botão de cancelar — fecha o modal */}
           <ActionButton onClick={onClose}>
             CANCELAR

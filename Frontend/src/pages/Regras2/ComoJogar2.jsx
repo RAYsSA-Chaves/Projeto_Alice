@@ -12,16 +12,18 @@ import FadaApontando from "../../Assets/Images/FadaApontando.png";
 
 import "../PlayJogo/Inicio.css";
 
-/** Página "Como Jogar? - Etapa 2" - segunda parte das instruções antes de iniciar o jogo
-*
-* @returns {JSX.Element} Página de instruções com botão "Jogar"
-*/
+/**
+ * Página "Como Jogar? - Etapa 2"
+ * Mostra a segunda parte das instruções antes de iniciar o jogo.
+ *
+ * @returns {JSX.Element} Página de instruções com botão "Jogar".
+ */
 
 function ComoJogar2() {
   return (
     <section className="container">
       {/* Fundo de estrelas */}
-      <img src={Estrelas_fundo} alt="estrelas" className="estrelasBg" />
+      <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
 
       {/* Botão de voltar (seta no canto superior esquerdo) */}
       <Link to="/comojogar1">
@@ -46,16 +48,13 @@ function ComoJogar2() {
           </p>
 
           {/* Botão principal "Jogar" */}
-          <div className="buttonsContainer">
-            <Link to='/jogo'>
-              <ActionButton
-                icon={<Play size={28} color="white" />}
-                onClick={() => console.log("Jogar clicado")}
-              >
-                JOGAR
-              </ActionButton>
-            </Link>
-
+          <div className="buttons-container">
+            <ActionButton
+              icon={<Play size={28} color="white" />}
+              onClick={() => console.log("Jogar clicado")}
+            >
+              JOGAR
+            </ActionButton>
           </div>
         </div>
       </Container>
@@ -66,7 +65,7 @@ function ComoJogar2() {
         alt="fada apontando"
         className="fadaSorrindo"
       />
-      <img src={Nuvens} alt="nuvens" className="nuvensBg" />
+      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
     </section>
   );
 }

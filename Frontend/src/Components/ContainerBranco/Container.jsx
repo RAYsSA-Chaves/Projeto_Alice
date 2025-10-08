@@ -1,15 +1,17 @@
 import "./Container.css";
 
 /**
- * Componente Container para agrupar e centralizar conteúdo
+ * Componente Container
+ * Responsável por agrupar e centralizar o conteúdo principal
+ * dentro de um contêiner branco estilizado.
  *
- * @param {React.ReactNode} children - Conteúdo interno a ser renderizado dentro do contêiner
- * @returns {JSX.Element} Estrutura do contêiner
+ * @param {React.ReactNode} children - Conteúdo interno a ser renderizado dentro do contêiner.
+ * @returns {JSX.Element} Estrutura de contêiner.
  */
 
 function Container({ children }) {
   return (
-    <div className="whiteContainer">
+    <div className="white-container">
       {/* Renderiza o conteúdo passado como filho */}
       {children}
     </div>

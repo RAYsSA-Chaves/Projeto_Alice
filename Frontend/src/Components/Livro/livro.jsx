@@ -3,18 +3,18 @@ import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import Nuvem from "../../Assets/Images/Nuvem_msg.png";
-import Capa from "../../Assets/Images/capa_livro.png"
 
 export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const [paginas, setPaginas] = useState([]);
   const tamanhoTitulo = 32; // altura considerada "título"
+  const capaPath = "/assets/capa_alice.png";
   const bookRef = useRef(null); // referencia o Flipbook
-  const [totalEncontradas, setTotalEncontradas] = useState(0); // guarda contagem de palavras
-  const [mostrarResultado, setMostrarResultado] = useState(true); // mostrar o resultado ou para de mostrar
+  const [totalEncontradas, setTotalEncontradas] = useState(0); // guardar contagem de palavras
+  const [mostrarResultado, setMostrarResultado] = useState(true); // Mostrar o resultado ou parar de mostrar
 
   // Carregar o json com as páginas
   useEffect(() => {
-    fetch("/data/paginas_corrigido.json")
+    fetch("/data/paginas.json")
       .then((res) => res.json())
       .then((data) => setPaginas(data.pages))
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
@@ -115,7 +115,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         <img
           key={idx}
           src={`/assets/${imgSrc}`}
-          alt={`Ilustração-${idx}`}
+          alt={`imagem-${idx}`}
           className={soImagem ? "imagemCentralizada" : "imagemTopo"}
         />
       );
@@ -145,13 +145,12 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   // Conteúdo principal (livro)
   return (
     <main id="mainLivro" className={modoGrifar ? "modoGrifar" : ""}>
-      {/* Botão voltar página*/}
       <button onClick={prevPage} className="btnLivro"><ArrowLeft/></button>
 
       {/* Resultado de quantidade de palavras encontradas */}
       {busca.tipo && totalEncontradas > 0 && mostrarResultado && (
         <div className={`resultadoBusca ${busca.tipo}`}>
-          <img src={Nuvem} className="imgResultado" alt="Nuvem com resultado de palavras encontradas"/>
+          <img src={Nuvem} className="imgResultado"/>
           <p>{totalEncontradas}<br/>palavras encontradas</p>
           <button className="btnFecharResultado" onClick={() => setMostrarResultado(false)}><X/></button>
         </div>
@@ -162,20 +161,24 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         <h2>Carregando livro...</h2>
       ) : (
           <HTMLFlipBook
-            width={430}
-            height={650}
-            maxShadowOpacity={0.5}
-            showCover={true}
-            drawShadow={true}
-            size="fixed"
-            disableFlipByClick={true}
-            flipOnClick={false}
-            clickToFlip={false}
-            ref={bookRef}
-          >
+          width={430}
+          height={650}
+          maxShadowOpacity={0.5}
+          showCover={true}
+          drawShadow={true}
+          size="fixed"
+          disableFlipByClick={true}
+          flipOnClick={false}
+          clickToFlip={false}
+          ref={bookRef}
+        >
           {/* Capa */}
           <article className="pagina capa">
-            <img src={Capa} alt="Capa infantil do livro Alice no País das Maravilhas" className="capa" />
+            <img
+              src={capaPath}
+              alt="Capa infantil do livro Alice no País das Maravilhas"
+              className="capa"
+            />
           </article>
 
           {/* Página branca */}
@@ -199,7 +202,6 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         </HTMLFlipBook>
       )}
 
-      {/* Botão próxima página */}
       <button onClick={nextPage} className="btnLivro"><ArrowRight/></button>
     </main>
   );

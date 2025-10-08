@@ -1,53 +1,56 @@
-/* Estilo do botão (ActionButton) com ícone opcional */
+/* ===============================
+   Componente: ActionButton
+   Estilo do botão principal com ícone opcional
+   =============================== */
 
-.actionButton {
-  /* Cores e fundo */
-  background: #1f2d7b;
-  color: white;
-
-  /* Tipografia */
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  /* Espaçamento e forma */
-  padding: 1rem 2rem;
-  border: none;
-  width: 280px;
-  border-radius: 50px;
-
-  /* Layout interno */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-
-  /* Interações e transições */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-
-  /* Sombras */
-  box-shadow: 0 6px 20px rgba(42, 74, 158, 0.4);
-}
-
-/* Efeito ao passar o mouse */
-.actionButton:hover {
-  background: #1e3a7e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(42, 74, 158, 0.5);
-}
-
-/* Efeito ao clicar */
-.actionButton:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 15px rgba(42, 74, 158, 0.4);
-}
-
-/* Ícone dentro do botão */
-.actionButtonIcon {
-  display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-}
+   .action-button {
+    /* Cores e fundo */
+    background: #1f2d7b; /* azul principal */
+    color: white;
+  
+    /* Tipografia */
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  
+    /* Espaçamento e forma */
+    padding: 1rem 2rem;
+    border: none;
+    width: 280px;
+    border-radius: 50px;
+  
+    /* Layout interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  
+    /* Interações e transições */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+  
+    /* Sombras */
+    box-shadow: 0 6px 20px rgba(42, 74, 158, 0.4);
+  }
+  
+  /* Efeito ao passar o mouse */
+  .action-button:hover {
+    background: #1e3a7e; /* tom de azul mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(42, 74, 158, 0.5);
+  }
+  
+  /* Efeito ao clicar */
+  .action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(42, 74, 158, 0.4);
+  }
+  
+  /* Ícone dentro do botão */
+  .action-button-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+  }

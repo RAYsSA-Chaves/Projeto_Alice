@@ -1,8 +1,17 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ 
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
   background: linear-gradient(to top, #2155e0, #b0aed8);
 }
  
-.jogoContainer {
+.jogo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +21,7 @@ body {
   overflow: hidden;
 }
  
-.letras {
+.Letras {
   background-color: aliceblue;
   margin-top: 20px;
   width: 600px;
@@ -22,12 +31,12 @@ body {
   z-index: 5;
 }
  
-.letras p{
+.Letras p{
   font-size: 22px;
   margin-bottom: -5px;
 }
  
-.inputContainer {
+.input-container {
   display: flex;
   gap: 10px;
   margin-top: 20px;
@@ -35,7 +44,7 @@ body {
   border-radius: 20px;
 }
  
-.inputField {
+.input-field {
   width: 40px;
   height: 45px;
   font-size: 20px;
@@ -45,7 +54,7 @@ body {
   box-shadow: 4px 3px black;
 }
  
-.submitButton {
+.submit-button {
   padding: 10px 20px;
   background-color: #1F2D7B;
   color: white;
@@ -58,37 +67,37 @@ body {
  
 }
  
-.submitButton:hover {
+.submit-button:hover {
   background-color: #111a4a;
 }
  
-.inputField.letraCorreta {
+.input-field.letra-correta {
   background-color: #c8f7c5;
   border: 2px solid #2ecc71;
 }
  
-.inputField.letraCorreta {
+.input-field.letra-correta {
   background-color: #c8f7c5;
   border: 2px solid #2ecc71;
 }
  
-.inputField.letraIncorreta {
+.input-field.letra-incorreta {
   background-color: #f7c5c5;
   border: 2px solid #e74c3c;
 }
  
-.feedbackImg {
+.feedback-img {
   width: 50px;
   height: 50px;
 }
  
-.feedbackImagemContainer {
+.feedback-imagem-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
  
-.feedbackImgOverlay {
+.feedback-img-overlay {
   position: absolute;
   bottom: 0;  
   left: 240px;  
@@ -99,7 +108,7 @@ body {
   z-index: 10;
 }
 
-.feedbackTop {
+.feedback-top {
   margin-top: 10px;
   text-align: center;
   font-weight: 600;
@@ -110,7 +119,7 @@ body {
 }
  
 
-.jogoCard {
+.jogo-card {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -119,7 +128,7 @@ body {
   z-index: 5;
 }
 
-.estrelasBg {
+.estrelas-bg {
   display: flex;
   position: absolute;
   width: 100%;
@@ -127,7 +136,7 @@ body {
   z-index: 10;
 }
  
-.nuvensBg {
+.nuvens-bg {
   display: flex;
   position: relative;
   width: 100%;

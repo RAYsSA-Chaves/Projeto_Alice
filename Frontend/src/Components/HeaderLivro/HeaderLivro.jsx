@@ -3,14 +3,7 @@ import { PencilLine, Search, ArrowLeft } from 'lucide-react';
 import { useState } from "react";
 
 export default function HeaderLivro({ 
-    busca, 
-    setBusca, 
-    modoGrifar, 
-    setModoGrifar, 
-    inputTexto, 
-    setInputTexto, 
-    inputNum, 
-    setInputNum, 
+    busca, setBusca, modoGrifar, setModoGrifar, inputTexto, setInputTexto, inputNum, setInputNum, 
 }) {
     // Função grifar
     function ativarModoGrifar() {
@@ -45,28 +38,28 @@ export default function HeaderLivro({
     }
 
     return (
-        <header className="headerLivro">
-            {/* Botão voltar */}  
-            <a href="/" className="arrowButton">
+        <header className="HeaderLivro">
+            {/* Botão voltar */}
+            <a href="" className="ArrowButton">
                 <ArrowLeft/>
             </a>
 
             {/* Pesquisa palavra */}
-            <div className='inputPalavra' id="pesquisaPalavra">
+            <div className='InputPalavra' id="pesquisaPalavra">
                 <input type="text" placeholder='Procure uma palavra' value={inputTexto} onChange={(e) => setInputTexto(e.target.value)} onKeyDown={handleKeyDown}/>
-                <button className="searchButton" onClick={buscarTexto}>
+                <button className="SearchButton" onClick={buscarTexto}>
                     <Search/>   
                 </button>
             </div>
 
             {/* Pesquisa número de letras */}
-            <div className='inputNum' id="pesquisaNum">
-                <p>Procure uma palavra com</p><input type="number" placeholder='0' className='numero' value={inputNum} onChange={buscarTamanho}/><p>letras</p>
+            <div className='InputNum' id="pesquisaNum">
+                <p>Procure uma palavra com</p><input type="number" placeholder='0' className='Numero' value={inputNum} onChange={buscarTamanho}/><p>letras</p>
             </div>
             
             {/* Marca texto */}
-            <button className={`pencilButton ${modoGrifar ? "ativo" : ""}`} id="bntGrifar" title="Grifar palavra" onClick={ativarModoGrifar}>
-                <PencilLine className="pencilIcon" title="Grifar palavra"/>
+            <button className={`PencilButton ${modoGrifar ? "ativo" : ""}`} id="bntGrifar" title="Grifar palavra" onClick={ativarModoGrifar}>
+                <PencilLine className="PencilIcon" title="Grifar palavra"/>
             </button>
         </header>
     );

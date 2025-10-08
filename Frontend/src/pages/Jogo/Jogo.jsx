@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import estrelas from '../../Assets/Images/estrelas.png';
 import Nuvem from '../../Assets/Images/nuvens.svg';
+import iconCasa from '../../Assets/Images/iconCasa.png'
 
 import ButtonTop from "../../Components/ButtonTop/ButtonTop";
 import Card from '../../Components/Card-Jogo/Card';
 import "./Jogo.css";
-import ModalSair from "../../Components/ModalSair/ModalSair";
 
 // Imagens
 import Rainha from '../../Assets/Images/rainha.png';
@@ -24,12 +24,10 @@ import Chave from '../../Assets/Images/chave.png';
 import Relogio from '../../Assets/Images/relogio.png';
 import Xicara from '../../Assets/Images/xicara.png';
 import Chapeu from '../../Assets/Images/chapeu.png';
-// Ícones
-import iconCasa from '../../Assets/Images/iconCasa.png';
+
 import CorretoImg from '../../Assets/Images/certo.png';
 import ErradoImg from '../../Assets/Images/errado.png';
 
-// Lista de palavras com a imagem associada para os cards
 const palavras = [
   { palavra: "rainha", imagem: Rainha },
   { palavra: "gato", imagem: Gato },
@@ -49,45 +47,41 @@ const palavras = [
 ];
 
 const Jogo = () => {
-  const [indice, setIndice] = useState(0); // índice atual na lista de palavras
-  const [resposta, setResposta] = useState([]); // resposta (ex: ['g', 'a', 't', 'o'])
-  const [feedback, setFeedback] = useState(""); // mensagem de feedback
-  const [letrasCorretas, setLetrasCorretas] = useState([]); // acertos por letra
-  const [showFeedbackImage, setShowFeedbackImage] = useState(null); // controla qual imagem de feedback mostrar (correto ou errado)
+  const [indice, setIndice] = useState(0);
+  const [resposta, setResposta] = useState([]);
+  const [feedback, setFeedback] = useState("");
+  const [letrasCorretas, setLetrasCorretas] = useState([]);
+  const [showFeedbackImage, setShowFeedbackImage] = useState(null);
   const [pontos, setPontos] = useState(0);
-  const [bloquearInputs, setBloquearInputs] = useState(false); // bloqueia inputs após envio
-  const [botaoTexto, setBotaoTexto] = useState("Enviar"); // texto do botão
-  const [isModalOpen, setIsModalOpen] = useState(false); // controla o modal
-  const navigate = useNavigate(); // navegação
+  const [bloquearInputs, setBloquearInputs] = useState(false);
+  const [botaoTexto, setBotaoTexto] = useState("Enviar");
 
+  const navigate = useNavigate();
   const palavraAtual = palavras[indice].palavra;
 
-  // Sempre foca no primeiro input
   useEffect(() => {
-    const firstInput = document.getElementById("input0");
+    const firstInput = document.getElementById("input-0");
     if (firstInput && !bloquearInputs) firstInput.focus();
   }, [indice, bloquearInputs]);
 
-  // Função chamada quando o usuário digita nos inputs para guardar o valor
   const handleInputChange = (index, event) => {
     if (bloquearInputs) return;
     const value = event.target.value;
     if (value.length > 1) return;
 
-    // Clona array de resposta e guarda cada letra digitada
     const newResposta = [...resposta];
     newResposta[index] = value;
     setResposta(newResposta);
 
-    // Foco automático no próximo input
+    // Foco automático
     if (value && index < palavraAtual.length - 1) {
-      const nextInput = document.getElementById(`input${index + 1}`);
+      const nextInput = document.getElementById(`input-${index + 1}`);
       if (nextInput) nextInput.focus();
     }
   };
 
-  // Função do botão principal (envia ou avança para o próximo card)
   const handleSubmit = () => {
+    // Botão Próximo
     if (botaoTexto === "Próximo") {
       if (indice < palavras.length - 1) {
         setIndice(indice + 1);
@@ -97,44 +91,39 @@ const Jogo = () => {
         setShowFeedbackImage(null);
         setBloquearInputs(false);
         setBotaoTexto("Enviar");
-      } 
-      // Se for a última palavra, vai para a tela de resultado
-      else {
+      } else {
         navigate("/resultado", { state: { pontos } });
       }
       return;
     }
 
-    // Verifica se todos os campos estão preenchidos
+    // Verifica se todos os campos foram preenchidos
     if (resposta.length < palavraAtual.length || resposta.some(l => !l)) {
       setFeedback("Complete todos os campos!");
       setShowFeedbackImage("errado");
       return;
     }
 
-    // Considera acentos e transforma em lower case para comparação 
+    // Normaliza acentos e compara
     const respostaNormalizada = resposta.join('')
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     const palavraCorretaNormalizada = palavraAtual
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-    // Montando feedback letra a letra
-      const letrasFeedback = palavraAtual.split('').map((letra, i) => {
+    // Feedback letra a letra
+    const letrasFeedback = palavraAtual.split('').map((letra, i) => {
       const letraUser = (resposta[i] || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-      // Compara letra digitada com letra da resposta
       return letraUser === letra.toLowerCase();
     });
     setLetrasCorretas(letrasFeedback);
-    // Marca como certo
+
     if (respostaNormalizada === palavraCorretaNormalizada) {
       setShowFeedbackImage("correto");
       setBloquearInputs(true);
       setBotaoTexto("Próximo");
-      setPontos(prev => prev + 1); // soma o ponto
-    } 
-    // Se errou, informa a palavra correta e bloqueia os inputs 
-    else {
+      setPontos(prev => prev + 1); // soma ponto só uma vez
+    } else {
       setShowFeedbackImage("errado");
       setFeedback("Errado! A resposta correta era: " + palavraAtual);
       setBloquearInputs(true);
@@ -142,74 +131,55 @@ const Jogo = () => {
     }
   };
 
-  // Funções do Modal
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-  const confirmExit = () => {
-    setIsModalOpen(false);
-    navigate("/"); // redireciona pra home
-  };
-
   return (
-    <div className="jogoContainer">
-      {/* Botão Home com modal */}
-      <ButtonTop onClick={openModal}>
-        <img src={iconCasa} alt="icone home" />
-      </ButtonTop>
+    <div className="jogo-container">
 
-      {/* Modal de confirmação */}
-      <ModalSair
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        onConfirm={confirmExit}
-      />
 
-      {/* Decorações */}
-      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
-      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
+        <ButtonTop >
+          <img src={iconCasa} alt="ícone home" />
+        </ButtonTop>
 
-      <div className="jogoCard">
-        {/* Card */}
-        <div className="card" style={{ position: "relative" }}>
+
+      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
+      <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
+
+      <div className="jogo-card">
+        <div className="Card" style={{ position: "relative" }}>
           <Card image={palavras[indice].imagem} />
 
-          {/* Imagem se acertou */}
           {showFeedbackImage === "correto" && (
-            <img src={CorretoImg} alt="Correto" className="feedbackImgOverlay" />
+            <img src={CorretoImg} alt="Correto" className="feedback-img-overlay" />
           )}
-          {/* Imagem se errou */}
           {showFeedbackImage === "errado" && (
-            <img src={ErradoImg} alt="Errado" className="feedbackImgOverlay" />
+            <img src={ErradoImg} alt="Errado" className="feedback-img-overlay" />
           )}
         </div>
 
-        {/* Texto de feedback */}
+        {/* Feedback acima do input */}
         {feedback && (
-          <div className="feedbackTop">
+          <div className="feedback-top">
             <p>{feedback}</p>
           </div>
         )}
 
-        <div className="letras">
+        <div className="Letras">
           <p>Digite o nome do personagem:</p>
-          <div className="inputContainer">
-            {/* Um input para cada letra da palavra atual */}
+          <div className="input-container">
             {Array.from(palavraAtual).map((_, index) => (
               <input
                 key={index}
-                id={`input${index}`}
+                id={`input-${index}`}
                 type="text"
                 value={resposta[index] || ""}
                 onChange={(e) => handleInputChange(index, e)}
                 maxLength={1}
                 disabled={bloquearInputs}
-                className={`inputField ${
-                  letrasCorretas.length > 0
-                    ? letrasCorretas[index]
-                      ? "letraCorreta"
-                      : "letraIncorreta"
-                    : ""
-                }`}
+                className={`input-field ${letrasCorretas.length > 0
+                  ? letrasCorretas[index]
+                    ? "letra-correta"
+                    : "letra-incorreta"
+                  : ""
+                  }`}
                 placeholder=" "
                 autoComplete="off"
               />
@@ -217,11 +187,10 @@ const Jogo = () => {
           </div>
         </div>
 
-        {/* Botão próximo/enviar */}
-        <button onClick={handleSubmit} className="submitButton">
-          {botaoTexto}
-        </button>
+        <button onClick={handleSubmit} className="submit-button">{botaoTexto}</button>
       </div>
+
+
     </div>
   );
 };

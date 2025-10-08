@@ -1,248 +1,243 @@
-/* Conteúdo principal do livro */
+/* Conteúdo principal */
 #mainLivro {
-    min-height: 100dvh;
-    width: 100%;
-    background-image: url("/assets/LivroFundo.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: min(2rem);
-    transition: cursor 0.3s;
-    padding: 4rem 0;
-    position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  background-image: url("/assets/LivroFundo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(2rem);
+  transition: cursor 0.3s;
+  padding: 4rem 0;
+  position: relative;
 }
 
 #mainLivro h2 {
-  color: #fff;
+color: #fff;
 }
 
 /* Páginas */
 .pagina {
-  width: 100%;
-  height: 100%;
-  padding: 4rem 3rem;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  position: relative;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+width: 100%;
+height: 100%;
+padding: 4rem 3rem;
+display: flex;
+flex-direction: column;
+background-color: #fff;
+position: relative;
+box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .pagina.pagDireita, .pagina.capa {
-  border-radius: 0px 5px 5px 0;
+border-radius: 0px 5px 5px 0;
 }
 
 .pagina.pagEsquerda, .pagina.contracapa {
-  border-radius: 5px 0 0 5px;
+border-radius: 5px 0 0 5px;
 }
 
 .pagina.capa {
-  padding: 0;
+padding: 0;
 }
 
 .capa img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0 5px 5px 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 0 5px 5px 0;
 }
 
 .contracapa {
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
+width: 100%;
+height: 100%;
+background-color: #fff;
 }
 
-/* Imagens */
+/* Container de imagens */
 .imagens {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-/* Imagem única centralizada */
+/* Imagem única centralizada verticalmente */
 .imagemCentralizada {
-  max-width: 50%; 
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+max-width: 50%; 
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
 }
 
 /* Imagem no topo */
 .imagemTopo {
-  width: 50%;
-  margin-bottom: 2rem;
+width: 50%;
+margin-bottom: 2rem;
 }
 
 /* Container de texto */
 .texto {
-  height: 100%;
-  overflow: hidden;  
+height: 100%;
+overflow: hidden;  
 }
 
 /* Parágrafo */
 .paragrafo {
-  text-indent: 0;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+text-indent: 1.5em;
+line-height: 1.5;
+margin-bottom: 1rem;
 }
 
 /* Título */
 .titulo {
-  font-size: 1.3em;
-  font-weight: bold;
+font-size: 1.3em;
+font-weight: bold;
+}
+
+p:has(.titulo) {
+text-indent: none;
 }
 
 /* Palavra normal */
 .palavraNormal {
-  font-size: 1em;
-  font-family: Times, serif !important;
+font-size: 1em;
+font-family: Times, serif !important;
 }
 
 /* Botões do livro */
 .btnLivro {
-  background: transparent;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+background: transparent;
+border: 3px solid #fff;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .btnLivro svg {
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  transition: transform 0.2s ease;
+color: #fff;
+width: 30px;
+height: 30px;
+transition: transform 0.2s ease;
 }
 
 .btnLivro:hover {
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 .btnLivro:hover svg {
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 /* Palavra destacada */
 .modoGrifar {
-  cursor: text;
+cursor: text;
 }
 
 .highlight {
-  background-color: #dda0ae;
+background-color: #dda0ae;
 }
 
 .modoGrifar span:hover {
-  background-color: #e2c7cd;
+background-color: #e2c7cd;
 }
 
 /* Total do resultado de busca */
 .resultadoBusca {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 450px;
-  height: 100px;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 1;
-  color: #000000;
-  text-align: center;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 450px;
+height: 100px;
+font-weight: bold;
+font-size: 16px;
+z-index: 1;
+color: #000000;
+text-align: center;
 }
 
 .resultadoBusca img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: contain;
 }
 
 .resultadoBusca p {
-  position: absolute;
-  margin: 0;
-  bottom: 5px;
-  left: 48%;
-  transform: translateX(-50%);
+position: absolute;
+margin: 0;
+bottom: 5px;
+left: 48%;
+transform: translateX(-50%);
 }
 
 .resultadoBusca.texto {
-  top: 20px;
-  left: 5%;
-  transform: translateX(-50%);
-  animation: slideFromLeft 0.5s ease forwards;
+top: 20px;
+left: 5%;
+transform: translateX(-50%);
+animation: slideFromLeft 0.5s ease forwards;
 }
 
 .resultadoBusca.tamanho {
-  bottom: 200px;
-  right: 20px;
-  animation: slideFromRight 0.5s ease forwards;
+bottom: 200px;
+right: 20px;
+animation: slideFromRight 0.5s ease forwards;
 }
 
 .resultadoBusca.grifo {
-  top: 300px;
-  left: 20px;
-  animation: slideFromLeft 0.5s ease forwards;
+top: 300px;
+left: 20px;
+animation: slideFromLeft 0.5s ease forwards;
 }
 
 @keyframes slideFromLeft {
-  from {
-    transform: translateX(-100px);
-  }
-  to {
-    transform: translateX(0);
-  }
+from {
+  transform: translateX(-100px);
+}
+to {
+  transform: translateX(0);
+}
 }
 
 @keyframes slideFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+from {
+  transform: translateX(100%);
+}
+to {
+  transform: translateX(0);
+}
 }
 
 .resultadoBusca .btnFecharResultado {
-  position: absolute;
-  top: 4px;
-  right: 50px;
-  background: transparent;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  border: solid 2px #fff;
+position: absolute;
+top: 4px;
+right: 50px;
+background: transparent;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: transform 0.2s ease;
+border: solid 2px #fff;
 }
 
 .resultadoBusca .btnFecharResultado svg {
-  color: #fff;
-  width: 20px;
-  height: 20px;
+color: #fff;
+width: 20px;
+height: 20px;
 }
 
 .resultadoBusca .btnFecharResultado:hover {
-  transform: scale(1.2);
-}
-
-@media (max-width: 1440px) {
-    .btnFecharResultado {
-        border: solid 2px #000;
-    }
-    .btnFecharResultado svg {
-        color: #000;
-    }
+transform: scale(1.2);
 }
