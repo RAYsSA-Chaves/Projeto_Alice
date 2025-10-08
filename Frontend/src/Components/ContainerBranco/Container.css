@@ -1,9 +1,6 @@
-/* ============================================
-   Componente: Container
-   Contêiner branco centralizado para agrupar o conteúdo principal
-   ============================================ */
+/* Contêiner branco centralizado para agrupar conteúdo */
 
-.white-container {
+.whiteContainer {
   /* ---- Estrutura e tamanho ---- */
   position: relative;
   width: 60%;
@@ -28,10 +25,7 @@
   padding: 3rem 3rem;
 }
 
-/* ============================================
-   Responsividade
-   Ajustes de tamanho e espaçamento em telas menores
-   ============================================ */
+/* Responsividade */
 @media (max-width: 768px) {
   .white-container {
     width: 95%;
