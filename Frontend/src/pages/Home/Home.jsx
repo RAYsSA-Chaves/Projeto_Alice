@@ -64,37 +64,48 @@ function Home() {
             </section>
 
             <section className='paginaFada'>
+                <CaminhoAbelha />
+                <section className='caixinha'>
                     <img src={FadaVetor} alt='perfil da fada' id='fadaPerfil' />
-                <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
-                <div className='caixaTexto'>
-                    <h2>Olá,</h2>
-                    <h2>eu sou a Bina!</h2>
-                    <p>Eu sou uma fada e sua melhor amiga!</p>
-                    Vou te acompanhar e auxiliar nessa
-                    jornada de leitura e muito
-                    aprendizado!
-                </div>
+                    
+                    <div className='teste'>
+                        <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
+                        <div className='caixaTexto'>
+                            <h2>Olá,</h2>
+                            <h2>eu sou a Bina!</h2>
+                            <p>Eu sou uma fada e sua melhor amiga!</p>
+                            Vou te acompanhar e auxiliar nessa
+                            jornada de leitura e muito
+                            aprendizado!
+                        </div>
+                    </div>
+                </section>
+            
 
-                <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
-                <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
-                <CaminhoAbelha/> 
-                <div className='caixaTexto2'>
-                    <h2>O que você pode fazer?</h2>
-                    <p>Nesse site, você pode tanto jogar
-                        quanto aproveitar um tempinho
-                        jogando com os cards acima
-                    </p>
-                </div>
+                <section className='caixinha'>
+                    <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
+                    <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
+                    
+                    <div className='caixaTexto2'>
+                        <h2>O que você pode fazer?</h2>
+                        <p>Nesse site, você pode tanto jogar
+                            quanto aproveitar um tempinho
+                            jogando com os cards acima
+                        </p>
+                    </div>
+                </section>
 
-                <img src={FadaVetor3} alt='perfil da fada' id='fadaPerfil3' />
-                <img src={DecoracaoAzul2} alt='decoração da terceira caixa de texto' id='decoracaoTexto3' />
-                <div className='caixaTexto3'>
-                    <h2>Aproveite essa experiência</h2>
-                    <p>Se divirta nesse momento de leitura
-                        e jogos, eu vou estar aqui
-                        te acompanhando
-                    </p>
-                </div>
+                <section className='caixinha'>
+                    <img src={FadaVetor3} alt='perfil da fada' id='fadaPerfil3' />
+                    <img src={DecoracaoAzul2} alt='decoração da terceira caixa de texto' id='decoracaoTexto3' />
+                    <div className='caixaTexto3'>
+                        <h2>Aproveite essa experiência</h2>
+                        <p>Se divirta nesse momento de leitura
+                            e jogos, eu vou estar aqui
+                            te acompanhando
+                        </p>
+                    </div>
+                </section>
 
                 <footer className='footer'>
                     <img src={Footer} alt='ondas do footer' id='footerOnda' />

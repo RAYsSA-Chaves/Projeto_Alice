@@ -226,13 +226,23 @@
 
 .paginaFada {
     background: linear-gradient(to bottom, #FFD4D1, #FFB3C8, #D97AA2);
+    position: relative;
+}
+
+.caixinha {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 15rem 10rem;
+}
+
+.teste {
+    position: relative;
 }
 
 #fadaPerfil {
-    position: absolute;
-    margin-top: 50vh;
-    margin-left: 20vh;
-    width: 80vh;
+    width: fit-content;
     height: 40vh;
 }
 
@@ -242,6 +252,7 @@
     right: 25vh;
     width: 80vh;
     height: 40vh;
+    z-index: 200;
 }
 
 #fadaPerfil3 {
@@ -249,44 +260,38 @@
     width: 80vh;
     height: 40vh;
     margin-left: 18vh;
-    margin-top: 40vh;
+    margin-top: 70vh;
 }
 
-#decoracaoTexto {
+#decoracaoTexto img {
     display: flex;
-    margin-top: 20vh;
-    margin-left: -12vh;
-    position: relative;
-    width: 300vh;
-    height: 100vh;
-    top: 40vh;
+    width: 200vh;
+    height: 90vh;
 }
 
 #decoracaoTexto2 {
+    position: relative;
     display: flex;
-    margin-top: -30vh;
-    margin-left: -20vh;
+    margin: -15% 5% 5%;
     width: 150vh;
-    height: 90vh;
-    top: 40vh;
+    height: 90vh; 
 }
 
 #decoracaoTexto3 {
     position: relative;
     width: 150vh;
     height: 100vh;
-    margin-top: 20vh;
+    margin-top: 40vh;
     right: -70vh;
 }
 
 
 .caixaTexto {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    margin: auto;
     gap: 2px;
     padding: 50px;
     width: 70vh;
@@ -295,8 +300,8 @@
     border-radius: 16px;
     z-index: 100;
     font-size: 16px;
-    bottom: 25vh;
-    left: 35vh;
+    top: 0;
+    left: 0;;
 }
 
 .caixaTexto2 {
@@ -312,9 +317,9 @@
     background: var(--branco);
     border-radius: 16px;
     font-size: 16px;
-    bottom: 20vh;
-    left: -48vh;
-    z-index: 100;
+    bottom: -25vh;
+    left: -50vh;
+    z-index: 0;
 }
 
 .caixaTexto3 {
@@ -331,7 +336,7 @@
     background: var(--branco);
     border-radius: 16px;
     font-size: 16px;
-    top: -62vh;
+    top: 20vh;
     right: -45vh;
 }
 
@@ -397,8 +402,6 @@
     }
 
     #fadaPerfil {
-        margin: 30% 10% 10%;
-        width: 80vh;
         height: 40vh;
     }
 
@@ -408,12 +411,8 @@
 
     #decoracaoTexto {
         display: flex;
-        margin-top: 20vh;
-        margin-left: -12vh;
-        position: relative;
-        width: 300vh;
+        width: fit-content;
         height: 130vh;
-        top: 40vh;
     }
 
     #decoracaoTexto2 {
@@ -426,12 +425,10 @@
     }
 
     .caixaTexto {
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: left;
-        margin: auto;
         gap: 2px;
         padding: 50px;
         width: 70vh;
@@ -440,8 +437,9 @@
         border-radius: 16px;
         z-index: 100;
         font-size: 16px;
-        bottom: 45vh;
-        left: 40vh;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
     }
 
     .caixaTexto2 {
