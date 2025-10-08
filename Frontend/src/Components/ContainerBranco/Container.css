@@ -27,7 +27,7 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .white-container {
+  .whiteContainer {
     width: 95%;
     border-radius: 40px;
     padding: 2rem 3rem;
