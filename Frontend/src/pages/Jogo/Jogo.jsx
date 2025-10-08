@@ -64,7 +64,7 @@ const Jogo = () => {
 
   // Sempre foca no primeiro input
   useEffect(() => {
-    const firstInput = document.getElementById("input-0");
+    const firstInput = document.getElementById("input0");
     if (firstInput && !bloquearInputs) firstInput.focus();
   }, [indice, bloquearInputs]);
 
@@ -81,7 +81,7 @@ const Jogo = () => {
 
     // Foco automático no próximo input
     if (value && index < palavraAtual.length - 1) {
-      const nextInput = document.getElementById(`input-${index + 1}`);
+      const nextInput = document.getElementById(`input${index + 1}`);
       if (nextInput) nextInput.focus();
     }
   };
@@ -105,31 +105,36 @@ const Jogo = () => {
       return;
     }
 
-    // Verifica
+    // Verifica se todos os campos estão preenchidos
     if (resposta.length < palavraAtual.length || resposta.some(l => !l)) {
       setFeedback("Complete todos os campos!");
       setShowFeedbackImage("errado");
       return;
     }
 
+    // Considera acentos e transforma em lower case para comparação 
     const respostaNormalizada = resposta.join('')
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     const palavraCorretaNormalizada = palavraAtual
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-    const letrasFeedback = palavraAtual.split('').map((letra, i) => {
+    // Montando feedback letra a letra
+      const letrasFeedback = palavraAtual.split('').map((letra, i) => {
       const letraUser = (resposta[i] || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      // Compara letra digitada com letra da resposta
       return letraUser === letra.toLowerCase();
     });
     setLetrasCorretas(letrasFeedback);
-
+    // Marca como certo
     if (respostaNormalizada === palavraCorretaNormalizada) {
       setShowFeedbackImage("correto");
       setBloquearInputs(true);
       setBotaoTexto("Próximo");
-      setPontos(prev => prev + 1);
-    } else {
+      setPontos(prev => prev + 1); // soma o ponto
+    } 
+    // Se errou, informa a palavra correta e bloqueia os inputs 
+    else {
       setShowFeedbackImage("errado");
       setFeedback("Errado! A resposta correta era: " + palavraAtual);
       setBloquearInputs(true);
@@ -137,7 +142,7 @@ const Jogo = () => {
     }
   };
 
-  // --- Funções do Modal ---
+  // Funções do Modal
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const confirmExit = () => {
@@ -146,7 +151,7 @@ const Jogo = () => {
   };
 
   return (
-    <div className="jogo-container">
+    <div className="jogoContainer">
       {/* Botão Home com modal */}
       <ButtonTop onClick={openModal}>
         <img src={iconCasa} alt="icone home" />
@@ -159,44 +164,50 @@ const Jogo = () => {
         onConfirm={confirmExit}
       />
 
-      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
-      <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
+      {/* Decorações */}
+      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
+      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
-      <div className="jogo-card">
+      <div className="jogoCard">
+        {/* Card */}
         <div className="Card" style={{ position: "relative" }}>
           <Card image={palavras[indice].imagem} />
 
+          {/* Imagem se acertou */}
           {showFeedbackImage === "correto" && (
-            <img src={CorretoImg} alt="Correto" className="feedback-img-overlay" />
+            <img src={CorretoImg} alt="Correto" className="feedbackImgOverlay" />
           )}
+          {/* Imagem se errou */}
           {showFeedbackImage === "errado" && (
-            <img src={ErradoImg} alt="Errado" className="feedback-img-overlay" />
+            <img src={ErradoImg} alt="Errado" className="feedbackImgOverlay" />
           )}
         </div>
 
+        {/* Texto de feedback */}
         {feedback && (
-          <div className="feedback-top">
+          <div className="feedbackTop">
             <p>{feedback}</p>
           </div>
         )}
 
-        <div className="Letras">
+        <div className="letras">
           <p>Digite o nome do personagem:</p>
-          <div className="input-container">
+          <div className="inputContainer">
+            {/* Um input para cada letra da palavra atual */}
             {Array.from(palavraAtual).map((_, index) => (
               <input
                 key={index}
-                id={`input-${index}`}
+                id={`input${index}`}
                 type="text"
                 value={resposta[index] || ""}
                 onChange={(e) => handleInputChange(index, e)}
                 maxLength={1}
                 disabled={bloquearInputs}
-                className={`input-field ${
+                className={`inputField ${
                   letrasCorretas.length > 0
                     ? letrasCorretas[index]
-                      ? "letra-correta"
-                      : "letra-incorreta"
+                      ? "letraCorreta"
+                      : "letraIncorreta"
                     : ""
                 }`}
                 placeholder=" "
@@ -206,7 +217,8 @@ const Jogo = () => {
           </div>
         </div>
 
-        <button onClick={handleSubmit} className="submit-button">
+        {/* Botão próximo/enviar */}
+        <button onClick={handleSubmit} className="submitButton">
           {botaoTexto}
         </button>
       </div>
