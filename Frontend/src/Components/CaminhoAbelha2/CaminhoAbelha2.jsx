@@ -2,10 +2,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./CaminhoAbelha.css";
+import "./CaminhoAbelha2.css";
 
 // função criada para realizar a animação
-function CaminhoAbelha() {
+function CaminhoAbelha2() {
     useEffect(() => {
         AOS.init({
             duration: 100,
@@ -16,10 +16,10 @@ function CaminhoAbelha() {
     // seção e div para estilização do caminho e traços da animação
     return (
         <>
-            <section className="caminhoAbelha">
-                <div className="traços">
+            <section className="caminhoAbelha2">
+                <div className="traços2">
                     {Array(12).fill().map((_, i) => (
-                        <span key={i} className="tracinho" data-aos="zoom-in" data-aos-delay={i * 150}></span>
+                        <span key={i} className="tracinho2" data-aos="zoom-in" data-aos-delay={i * 150}></span>
                     ))}
                 </div>
             </section>
@@ -28,4 +28,4 @@ function CaminhoAbelha() {
     )
 }
 
-export default CaminhoAbelha
+export default CaminhoAbelha2

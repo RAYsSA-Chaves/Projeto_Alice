@@ -15,6 +15,7 @@ import { ArrowDown } from 'phosphor-react'
 import Cards from '../../Components/CardsHome/Cards'
 import FadaAnimacao from '../../Components/FadaAnimacao/FadaAnimacao'
 import CaminhoAbelha from '../../Components/CaminhoAbelha/CaminhoAbelha'
+import CaminhoAbelha2 from '../../Components/CaminhoAbelha2/CaminhoAbelha2'
 
 function Home() {
     return (
@@ -51,24 +52,23 @@ function Home() {
                 <div className='nuvens'>
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao1' />
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao2' />
+                    <img src={Nuvem} alt='nuvem branca' id='nuvemSecao3' />
                 </div>
 
                 <Cards />
                 {/* divs usadas para a estilização das nuvens no começo e final do section dos Cards */}
                 <div className='nuvens'>
-                    <img src={Nuvem} alt='nuvem branca' id='nuvemSecao3' />
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao4' />
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao5' />
-                    <img src={Nuvem} alt='nuvem branca' id='nuvemSecao6' />
+                    <img src={Nuvem} alt='nuvem branca' id='nuvemSecao6' /> 
                 </div>
             </section>
 
             <section className='paginaFada'>
-                <CaminhoAbelha />
                 <section className='caixinha'>
                     <img src={FadaVetor} alt='perfil da fada' id='fadaPerfil' />
-                    
-                    <div className='teste'>
+                    <CaminhoAbelha/>
+                    <div className='siteApresentacao'>
                         <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
                         <div className='caixaTexto'>
                             <h2>Olá,</h2>
@@ -84,8 +84,8 @@ function Home() {
 
                 <section className='caixinha'>
                     <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
+                    <CaminhoAbelha2/>
                     <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
-                    
                     <div className='caixaTexto2'>
                         <h2>O que você pode fazer?</h2>
                         <p>Nesse site, você pode tanto jogar

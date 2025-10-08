@@ -22,7 +22,7 @@
     padding-bottom: 2rem;
     overflow: visible;
     transition: transform 0.5s ease;
-    z-index: 100;
+    z-index: 300;
 }
 
 .card::before,
@@ -101,8 +101,8 @@
 
 @media (min-width: 660px) {
     .cards {
-        margin-top: 15%;
-        margin-left: 60%;
+        margin-top: 10%;
+        margin-left: 5%;
     }
 }
 

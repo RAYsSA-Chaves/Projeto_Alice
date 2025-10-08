@@ -1,18 +1,18 @@
-.tracinho {
+.tracinho2 {
     width: 25px;
     height: 4px;
     background: #000;
     border-radius: 2px;
 }
 
-.traços {
+.traços2 {
     display: flex;
     justify-content: space-between;
     width: 50%;
-    transform: rotate(50deg);
+    transform: rotate(130deg);
 }
 
-.caminhoAbelha {
+.caminhoAbelha2 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -20,23 +20,23 @@
     justify-content: center;
     overflow: visible;
     position: absolute;
-    top: -12%;
+    top: 10%;
     right: -5%;
 }
 
-.linhaAbelha {
+.linhaAbelha2 {
     width: 0px;
     height: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    transform: rotate(50deg);
+    transform: rotate(100deg);
     z-index: 100;
     transition: width 0.2s linear;
 }
 
-.linhaAbelha span {
+.linhaAbelha2 span {
     display: inline-block;
     width: 25px;
     height: 4px;
@@ -46,6 +46,7 @@
     animation: caminho 2.5s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.15s);
 }
+
 @keyframes caminho {
 
     0%,
