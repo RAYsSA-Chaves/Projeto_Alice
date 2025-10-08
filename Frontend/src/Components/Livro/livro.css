@@ -57,14 +57,14 @@
   background-color: #fff;
 }
 
-/* Container de imagens */
+/* Imagens */
 .imagens {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Imagem única centralizada verticalmente */
+/* Imagem única centralizada */
 .imagemCentralizada {
   max-width: 50%; 
   position: absolute;
