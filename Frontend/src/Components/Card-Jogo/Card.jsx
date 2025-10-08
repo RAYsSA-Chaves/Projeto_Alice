@@ -42,19 +42,19 @@ export default function Card({ image, title }) {
 
   return (
     // Carta
-    <div
+    <article
       ref={cardRef}
       className="card3d"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
     >
-      <div className="card-content">
+      <div className="cardContent">
         {/* Imagem da carta */}
         <img src={image} alt={title || "Imagem"} className="cardImage" />
         {/* Se houver title -> mostrar */}
         {title && <h2 className="cardTitle">{title}</h2>}
       </div>
-    </div>
+    </article>
   );
 }
