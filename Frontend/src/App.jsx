@@ -8,10 +8,6 @@ import ComoJogar1 from './pages/Regras1/ComoJogar1.jsx'
 import ComoJogar2 from './pages/Regras2/ComoJogar2.jsx'
 import Jogo from '../src/pages/Jogo/Jogo';
 import Resultado from '../src/pages/Resultado/Resultado';
-// import ModalSair from "./Components/InicioJogo/ModalSair.jsx";
-
-
-
 
 export default function App() {
   return (
@@ -28,8 +24,6 @@ export default function App() {
         <Route path="/resultado" element={<Resultado />} />
       </Routes>
     </Router>
-
-
   );
 }
 
