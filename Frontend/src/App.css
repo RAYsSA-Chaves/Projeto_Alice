@@ -1,6 +1,23 @@
+/* Barra de rolagem */ 
+
 /* Firefox */
 html {
     overflow-x: hidden !important;
     /* scrollbar-width: thin;
     scrollbar-color: #1B3778 transparent; */
+}
+
+::-webkit-scrollbar {
+    width: 0.9vh;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(to bottom, #3266DE, #1B3778,);
+    background: linear-gradient(#1B3778, #3266DE);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
 }
