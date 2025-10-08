@@ -115,7 +115,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         <img
           key={idx}
           src={`/assets/${imgSrc}`}
-          alt={`imagem-${idx}`}
+          alt={`Ilustração-${idx}`}
           className={soImagem ? "imagemCentralizada" : "imagemTopo"}
         />
       );
@@ -151,7 +151,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
       {/* Resultado de quantidade de palavras encontradas */}
       {busca.tipo && totalEncontradas > 0 && mostrarResultado && (
         <div className={`resultadoBusca ${busca.tipo}`}>
-          <img src={Nuvem} className="imgResultado"/>
+          <img src={Nuvem} className="imgResultado" alt="Nuvem com resultado de palavras encontradas"/>
           <p>{totalEncontradas}<br/>palavras encontradas</p>
           <button className="btnFecharResultado" onClick={() => setMostrarResultado(false)}><X/></button>
         </div>
@@ -162,17 +162,17 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         <h2>Carregando livro...</h2>
       ) : (
           <HTMLFlipBook
-          width={430}
-          height={650}
-          maxShadowOpacity={0.5}
-          showCover={true}
-          drawShadow={true}
-          size="fixed"
-          disableFlipByClick={true}
-          flipOnClick={false}
-          clickToFlip={false}
-          ref={bookRef}
-        >
+            width={430}
+            height={650}
+            maxShadowOpacity={0.5}
+            showCover={true}
+            drawShadow={true}
+            size="fixed"
+            disableFlipByClick={true}
+            flipOnClick={false}
+            clickToFlip={false}
+            ref={bookRef}
+          >
           {/* Capa */}
           <article className="pagina capa">
             <img src={Capa} alt="Capa infantil do livro Alice no País das Maravilhas" className="capa" />
