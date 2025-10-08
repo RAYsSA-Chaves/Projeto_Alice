@@ -1,11 +1,8 @@
-/* ===============================
-   Componente: ActionButton
-   Estilo do botão principal com ícone opcional
-   =============================== */
+/* Estilo do botão (ActionButton) com ícone opcional */
 
 .action-button {
   /* Cores e fundo */
-  background: #1f2d7b; /* azul principal */
+  background: #1f2d7b;
   color: white;
 
   /* Tipografia */
@@ -37,7 +34,7 @@
 
 /* Efeito ao passar o mouse */
 .action-button:hover {
-  background: #1e3a7e; /* tom de azul mais escuro */
+  background: #1e3a7e;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(42, 74, 158, 0.5);
 }
