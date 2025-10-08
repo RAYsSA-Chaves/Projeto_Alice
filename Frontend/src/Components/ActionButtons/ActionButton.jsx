@@ -9,9 +9,9 @@ import "./ActionButton.css";
  */
 function ActionButton({ children, onClick, icon }) {
   return (
-    <button className="action-button" onClick={onClick}>
+    <button className="actionButton" onClick={onClick}>
       {/* Renderiza o ícone apenas se for passado via prop */}
-      {icon && <span className="action-button-icon">{icon}</span>}
+      {icon && <span className="actionButtonIcon">{icon}</span>}
       
       {/* Renderiza o conteúdo do botão (texto, etc.) */}
       {children}
