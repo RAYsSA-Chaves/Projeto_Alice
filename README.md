@@ -70,7 +70,7 @@ Bibliotecas de ícones utilizadas em botões e elementos visuais:
 npm install lucide-react
 ```
 ```bash
-npm install phosphor
+npm install phosphor-react
 ```
 
 Biblioteca que cria o efeito de virar as páginas como em um livro real:
