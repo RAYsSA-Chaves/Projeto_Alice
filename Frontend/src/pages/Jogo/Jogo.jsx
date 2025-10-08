@@ -24,11 +24,12 @@ import Chave from '../../Assets/Images/chave.png';
 import Relogio from '../../Assets/Images/relogio.png';
 import Xicara from '../../Assets/Images/xicara.png';
 import Chapeu from '../../Assets/Images/chapeu.png';
-
+// Ícones
 import iconCasa from '../../Assets/Images/iconCasa.png';
 import CorretoImg from '../../Assets/Images/certo.png';
 import ErradoImg from '../../Assets/Images/errado.png';
 
+// Lista de palavras com a imagem associada para os cards
 const palavras = [
   { palavra: "rainha", imagem: Rainha },
   { palavra: "gato", imagem: Gato },
@@ -48,40 +49,44 @@ const palavras = [
 ];
 
 const Jogo = () => {
-  const [indice, setIndice] = useState(0);
-  const [resposta, setResposta] = useState([]);
-  const [feedback, setFeedback] = useState("");
-  const [letrasCorretas, setLetrasCorretas] = useState([]);
-  const [showFeedbackImage, setShowFeedbackImage] = useState(null);
+  const [indice, setIndice] = useState(0); // índice atual na lista de palavras
+  const [resposta, setResposta] = useState([]); // resposta (ex: ['g', 'a', 't', 'o'])
+  const [feedback, setFeedback] = useState(""); // mensagem de feedback
+  const [letrasCorretas, setLetrasCorretas] = useState([]); // acertos por letra
+  const [showFeedbackImage, setShowFeedbackImage] = useState(null); // controla qual imagem de feedback mostrar (correto ou errado)
   const [pontos, setPontos] = useState(0);
-  const [bloquearInputs, setBloquearInputs] = useState(false);
-  const [botaoTexto, setBotaoTexto] = useState("Enviar");
-
+  const [bloquearInputs, setBloquearInputs] = useState(false); // bloqueia inputs após envio
+  const [botaoTexto, setBotaoTexto] = useState("Enviar"); // texto do botão
   const [isModalOpen, setIsModalOpen] = useState(false); // controla o modal
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // navegação
 
   const palavraAtual = palavras[indice].palavra;
 
+  // Sempre foca no primeiro input
   useEffect(() => {
     const firstInput = document.getElementById("input-0");
     if (firstInput && !bloquearInputs) firstInput.focus();
   }, [indice, bloquearInputs]);
 
+  // Função chamada quando o usuário digita nos inputs para guardar o valor
   const handleInputChange = (index, event) => {
     if (bloquearInputs) return;
     const value = event.target.value;
     if (value.length > 1) return;
 
+    // Clona array de resposta e guarda cada letra digitada
     const newResposta = [...resposta];
     newResposta[index] = value;
     setResposta(newResposta);
 
+    // Foco automático no próximo input
     if (value && index < palavraAtual.length - 1) {
       const nextInput = document.getElementById(`input-${index + 1}`);
       if (nextInput) nextInput.focus();
     }
   };
 
+  // Função do botão principal (envia ou avança para o próximo card)
   const handleSubmit = () => {
     if (botaoTexto === "Próximo") {
       if (indice < palavras.length - 1) {
@@ -92,12 +97,15 @@ const Jogo = () => {
         setShowFeedbackImage(null);
         setBloquearInputs(false);
         setBotaoTexto("Enviar");
-      } else {
+      } 
+      // Se for a última palavra, vai para a tela de resultado
+      else {
         navigate("/resultado", { state: { pontos } });
       }
       return;
     }
 
+    // Verifica
     if (resposta.length < palavraAtual.length || resposta.some(l => !l)) {
       setFeedback("Complete todos os campos!");
       setShowFeedbackImage("errado");
