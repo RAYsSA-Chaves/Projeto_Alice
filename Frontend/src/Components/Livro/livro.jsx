@@ -9,12 +9,12 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const tamanhoTitulo = 32; // altura considerada "título"
   const capaPath = "/assets/capa_alice.png";
   const bookRef = useRef(null); // referencia o Flipbook
-  const [totalEncontradas, setTotalEncontradas] = useState(0); // guardar contagem de palavras
-  const [mostrarResultado, setMostrarResultado] = useState(true); // Mostrar o resultado ou parar de mostrar
+  const [totalEncontradas, setTotalEncontradas] = useState(0); // guarda contagem de palavras
+  const [mostrarResultado, setMostrarResultado] = useState(true); // mostrar o resultado ou para de mostrar
 
   // Carregar o json com as páginas
   useEffect(() => {
-    fetch("/data/paginas.json")
+    fetch("/data/paginas_corrigido.json")
       .then((res) => res.json())
       .then((data) => setPaginas(data.pages))
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
@@ -145,6 +145,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   // Conteúdo principal (livro)
   return (
     <main id="mainLivro" className={modoGrifar ? "modoGrifar" : ""}>
+      {/* Botão voltar página*/}
       <button onClick={prevPage} className="btnLivro"><ArrowLeft/></button>
 
       {/* Resultado de quantidade de palavras encontradas */}
@@ -202,6 +203,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         </HTMLFlipBook>
       )}
 
+      {/* Botão próxima página */}
       <button onClick={nextPage} className="btnLivro"><ArrowRight/></button>
     </main>
   );
