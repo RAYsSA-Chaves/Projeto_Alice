@@ -49,12 +49,15 @@ function ComoJogar2() {
 
           {/* Botão principal "Jogar" */}
           <div className="buttons-container">
-            <ActionButton
-              icon={<Play size={28} color="white" />}
-              onClick={() => console.log("Jogar clicado")}
-            >
-              JOGAR
-            </ActionButton>
+            <Link to="/jogo">
+              <ActionButton
+                icon={<Play size={28} color="white" />}
+                onClick={() => console.log("Jogar clicado")}
+              >
+                JOGAR
+              </ActionButton>
+            </Link>
+
           </div>
         </div>
       </Container>

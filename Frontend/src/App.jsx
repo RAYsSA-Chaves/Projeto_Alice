@@ -6,8 +6,8 @@ import LeituraPage from "./pages/Leitura/Leitura.jsx";
 import Inicio from './pages/PlayJogo/Inicio.jsx'
 import ComoJogar1 from './pages/Regras1/ComoJogar1.jsx'
 import ComoJogar2 from './pages/Regras2/ComoJogar2.jsx'
-import Jogo from '../src/pages/Jogo/Jogo';
-import Resultado from '../src/pages/Resultado/Resultado';
+import Jogo from '../src/pages/Jogo/Jogo.jsx';
+import Resultado from '../src/pages/Resultado/Resultado.jsx';
 
 export default function App() {
   return (

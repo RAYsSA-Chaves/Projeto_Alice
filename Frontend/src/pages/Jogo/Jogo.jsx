@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import estrelas from '../../Assets/Images/estrelas.png';
 import Nuvem from '../../Assets/Images/nuvens.svg';
+import iconCasa from '../../Assets/Images/iconCasa.png'
 
-
+import ButtonTop from "../../Components/ButtonTop/ButtonTop";
 import Card from '../../Components/Card-Jogo/Card';
 import "./Jogo.css";
 
@@ -134,7 +135,13 @@ const Jogo = () => {
   return (
     <div className="jogoContainer">
 
-    
+
+      <Link to="/">
+        <ButtonTop >
+          <img src={iconCasa} alt="ícone home" />
+        </ButtonTop>
+      </Link>
+
       <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
       <div className="jogoCard">
@@ -168,13 +175,12 @@ const Jogo = () => {
                 onChange={(e) => handleInputChange(index, e)}
                 maxLength={1}
                 disabled={bloquearInputs}
-                className={`inputField ${
-                  letrasCorretas.length > 0
+                className={`inputField ${letrasCorretas.length > 0
                     ? letrasCorretas[index]
                       ? "letraCorreta"
                       : "letraIncorreta"
                     : ""
-                }`}
+                  }`}
                 placeholder=" "
                 autoComplete="off"
               />

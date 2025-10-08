@@ -40,7 +40,7 @@ export default function HeaderLivro({
     return (
         <header className="HeaderLivro">
             {/* Botão voltar */}
-            <a href="" className="ArrowButton">
+            <a href="/" className="ArrowButton">
                 <ArrowLeft/>
             </a>
 

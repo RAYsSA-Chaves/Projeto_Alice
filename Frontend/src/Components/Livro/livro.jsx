@@ -3,6 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import Nuvem from "../../Assets/Images/Nuvem_msg.png";
+import Capa from "../../Assets/Images/capa_livro.png"
 
 export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const [paginas, setPaginas] = useState([]);
@@ -14,7 +15,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
 
   // Carregar o json com as páginas
   useEffect(() => {
-    fetch("/data/paginas.json")
+    fetch("/data/paginas_corrigido.json")
       .then((res) => res.json())
       .then((data) => setPaginas(data.pages))
       .catch((err) => console.log("Erro ao carregar JSON: ", err));
@@ -175,7 +176,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
           {/* Capa */}
           <article className="pagina capa">
             <img
-              src={capaPath}
+              src={Capa}
               alt="Capa infantil do livro Alice no País das Maravilhas"
               className="capa"
             />
