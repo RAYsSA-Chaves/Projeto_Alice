@@ -1,4 +1,4 @@
-.card-3d {
+.card3d {
   width: 300px;
   height: 360px;
   background: #ffffff;
@@ -14,7 +14,7 @@
   perspective: 1000px;
 }
 
-.card-content {
+.cardContent {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -22,14 +22,14 @@
   height: 100%;
 }
 
-.card-image {
+.cardImage {
   width: 100%; /* Garante que a imagem ocupe toda a largura do card */
   height: auto; /* Mantém a proporção da imagem */
   object-fit: cover; /* Garante que a imagem cubra todo o espaço do card sem distorção */
   margin-top: 25px;
 }
 
-.card-title {
+.cardTitle {
   text-align: center;
   font-size: 20px;
   font-weight: bold;

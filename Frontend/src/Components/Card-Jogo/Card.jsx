@@ -42,15 +42,15 @@ export default function Card({ image, title }) {
   return (
     <div
       ref={cardRef}
-      className="card-3d"
+      className="card3d"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
     >
-      <div className="card-content">
+      <div className="cardContent">
         {/* Aqui está a tag de imagem */}
-        <img src={image} alt={title || "Imagem"} className="card-image" />
-        {title && <h2 className="card-title">{title}</h2>}
+        <img src={image} alt={title || "Imagem"} className="cardImage" />
+        {title && <h2 className="cardTitle">{title}</h2>}
       </div>
     </div>
   );
