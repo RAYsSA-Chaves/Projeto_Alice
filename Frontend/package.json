@@ -1,0 +1,33 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "Projeto Alice - Site interativo para crianças",
+    "main": "src/index.js",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "start": "react-scripts start",
+      "build": "vite build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "dependencies": {
+      "aos": "^2.3.4",
+      "lucide-react": "^0.545.0",
+      "phosphor": "^0.7.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-joyride": "^2.9.3",
+      "react-pageflip": "^2.0.3",
+      "react-router-dom": "^7.9.3",
+      "react-scripts": "^0.0.0"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react": "^5.0.4",
+      "eslint": "^8.36.0",
+      "eslint-plugin-react": "^7.31.0",
+      "vite": "^7.1.9"
+    }
+  }

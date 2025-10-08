@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Inicio from './pages/PlayJogo/Inicio.jsx'
 import ComoJogar1 from './pages/Regras1/ComoJogar1.jsx'
 import ComoJogar2 from './pages/Regras2/ComoJogar2.jsx'
