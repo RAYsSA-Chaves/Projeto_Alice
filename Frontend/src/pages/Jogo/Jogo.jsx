@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import estrelas from '../../Assets/Images/estrelas.png';
 import Nuvem from '../../Assets/Images/nuvens.svg';
 
-import ButtonTop from "../../Components/ButtonTopJogo/ButtonTop";
+import ButtonTop from "../../Components/ButtonTop/ButtonTop";
 import Card from '../../Components/Card-Jogo/Card';
 import "./Jogo.css";
+import ModalSair from "../../Components/ModalSair/ModalSair";
 
 // Imagens
 import Rainha from '../../Assets/Images/rainha.png';
@@ -24,6 +25,7 @@ import Relogio from '../../Assets/Images/relogio.png';
 import Xicara from '../../Assets/Images/xicara.png';
 import Chapeu from '../../Assets/Images/chapeu.png';
 
+import iconCasa from '../../Assets/Images/iconCasa.png';
 import CorretoImg from '../../Assets/Images/certo.png';
 import ErradoImg from '../../Assets/Images/errado.png';
 
@@ -55,7 +57,9 @@ const Jogo = () => {
   const [bloquearInputs, setBloquearInputs] = useState(false);
   const [botaoTexto, setBotaoTexto] = useState("Enviar");
 
+  const [isModalOpen, setIsModalOpen] = useState(false); // controla o modal
   const navigate = useNavigate();
+
   const palavraAtual = palavras[indice].palavra;
 
   useEffect(() => {
@@ -72,7 +76,6 @@ const Jogo = () => {
     newResposta[index] = value;
     setResposta(newResposta);
 
-    // Foco automático
     if (value && index < palavraAtual.length - 1) {
       const nextInput = document.getElementById(`input-${index + 1}`);
       if (nextInput) nextInput.focus();
@@ -80,7 +83,6 @@ const Jogo = () => {
   };
 
   const handleSubmit = () => {
-    // Botão Próximo
     if (botaoTexto === "Próximo") {
       if (indice < palavras.length - 1) {
         setIndice(indice + 1);
@@ -96,21 +98,18 @@ const Jogo = () => {
       return;
     }
 
-    // Verifica se todos os campos foram preenchidos
     if (resposta.length < palavraAtual.length || resposta.some(l => !l)) {
       setFeedback("Complete todos os campos!");
       setShowFeedbackImage("errado");
       return;
     }
 
-    // Normaliza acentos e compara
     const respostaNormalizada = resposta.join('')
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     const palavraCorretaNormalizada = palavraAtual
       .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-    // Feedback letra a letra
     const letrasFeedback = palavraAtual.split('').map((letra, i) => {
       const letraUser = (resposta[i] || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
       return letraUser === letra.toLowerCase();
@@ -121,7 +120,7 @@ const Jogo = () => {
       setShowFeedbackImage("correto");
       setBloquearInputs(true);
       setBotaoTexto("Próximo");
-      setPontos(prev => prev + 1); // soma ponto só uma vez
+      setPontos(prev => prev + 1);
     } else {
       setShowFeedbackImage("errado");
       setFeedback("Errado! A resposta correta era: " + palavraAtual);
@@ -130,15 +129,29 @@ const Jogo = () => {
     }
   };
 
+  // --- Funções do Modal ---
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  const confirmExit = () => {
+    setIsModalOpen(false);
+    navigate("/"); // redireciona pra home
+  };
+
   return (
     <div className="jogo-container">
+      {/* Botão Home com modal */}
+      <ButtonTop onClick={openModal}>
+        <img src={iconCasa} alt="icone home" />
+      </ButtonTop>
 
-    
-    <ButtonTop/>
+      {/* Modal de confirmação */}
+      <ModalSair
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onConfirm={confirmExit}
+      />
 
-    
-    
-    <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
+      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
       <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
 
       <div className="jogo-card">
@@ -153,7 +166,6 @@ const Jogo = () => {
           )}
         </div>
 
-        {/* Feedback acima do input */}
         {feedback && (
           <div className="feedback-top">
             <p>{feedback}</p>
@@ -186,10 +198,10 @@ const Jogo = () => {
           </div>
         </div>
 
-        <button onClick={handleSubmit} className="submit-button">{botaoTexto}</button>
+        <button onClick={handleSubmit} className="submit-button">
+          {botaoTexto}
+        </button>
       </div>
-
-      
     </div>
   );
 };

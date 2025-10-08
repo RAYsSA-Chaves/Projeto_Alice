@@ -90,9 +90,9 @@ body {
 
 .fada {
   position: absolute;
-  right: -120px; /* distância da lateral do card */
-  bottom: 100px; /* altura da fada em relação à base do card */
-  width: 250px; /* tamanho ajustável */
+  right: -8%; /* distância da lateral do card */
+  bottom: 0; /* altura da fada em relação à base do card */
+  width: 30%; /* tamanho ajustável */
   z-index: 3;
   pointer-events: none; /* não bloqueia clique */
   animation: flutuar 3s ease-in-out infinite; /* animação suave */

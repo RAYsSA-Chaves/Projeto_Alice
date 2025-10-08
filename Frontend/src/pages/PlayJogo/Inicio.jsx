@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 
 import ButtonTop from "../../Components/ButtonTop/ButtonTop.jsx";
 import ActionButton from "../../Components/ActionButtons/ActionButton.jsx";
 import Container from "../../Components/ContainerBranco/Container.jsx";
-import ModalSair from "../../Components/ModalSair/ModalSair.jsx";
 
 import Nuvens from "../../Assets/Images/Nuvens.svg";
 import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
@@ -22,19 +20,7 @@ import "./Inicio.css";
  */
 
 function Inicio() {
-  // Estado de controle do modal de saída
-  const [mostrarModal, setMostrarModal] = useState(false);
 
-  // Função que abre o modal
-  // const handleOpenModal = () => setMostrarModal(true);
-
-  // Função que fecha o modal
-  const handleCloseModal = () => setMostrarModal(false);
-
-  // Função que confirma a saída do usuário
-  const handleConfirmExit = () => {
-    setMostrarModal(false);
-  };
 
   return (
     <section className="container">
@@ -79,13 +65,6 @@ function Inicio() {
       {/* Imagens decorativas */}
       <img src={Fada_rindo} alt="fada sorrindo" className="fadaSorrindo" />
       <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
-
-      {/* Modal de confirmação de saída */}
-      <ModalSair
-        isOpen={mostrarModal}
-        onClose={handleCloseModal}
-        onConfirm={handleConfirmExit}
-      />
     </section>
   );
 }

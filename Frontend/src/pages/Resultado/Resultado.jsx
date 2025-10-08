@@ -24,11 +24,11 @@ export default function Resultado() {
         </p>
 
         <div className="btns">
-          <button onClick={() => navigate("/iniciojogo")}>
-            <RotateCcw /> Jogar novamente
+          <button onClick={() => navigate("/")}>
+            <RotateCcw /> JOGAR NOVAMENTE
           </button>
           <button onClick={() => navigate("/")}>
-            <House /> Página Inicial
+            <House /> PÁGINA INICIAL
           </button>
         </div>
 
