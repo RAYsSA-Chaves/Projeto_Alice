@@ -13,9 +13,8 @@ export default function Resultado() {
   const pontos = location.state?.pontos || 0;
 
   return (
-    <div className="resultado-container">
-      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
-      <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
+    <div className="resultadoContainer">
+      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
       <div className="resultado">
         <h1>Você concluiu o jogo!</h1>
@@ -35,7 +34,7 @@ export default function Resultado() {
         <img src={fada} alt="Fada" className="fada" />
       </div>
 
-      
+      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
     </div>
   );
 }
