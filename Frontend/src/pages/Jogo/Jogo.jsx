@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import estrelas from '../../Assets/Images/estrelas.png';
 import Nuvem from '../../Assets/Images/nuvens.svg';
 
-import ButtonTop from "../../Components/ButtonTopJogo/ButtonTop";
+
 import Card from '../../Components/Card-Jogo/Card';
 import "./Jogo.css";
 
@@ -63,6 +63,7 @@ const Jogo = () => {
     if (firstInput && !bloquearInputs) firstInput.focus();
   }, [indice, bloquearInputs]);
 
+  // para não dar inputs errados
   const handleInputChange = (index, event) => {
     if (bloquearInputs) return;
     const value = event.target.value;
@@ -131,38 +132,33 @@ const Jogo = () => {
   };
 
   return (
-    <div className="jogo-container">
+    <div className="jogoContainer">
 
     
-    <ButtonTop/>
+      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
-    
-    
-    <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
-      <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
-
-      <div className="jogo-card">
-        <div className="Card" style={{ position: "relative" }}>
+      <div className="jogoCard">
+        <div className="card" style={{ position: "relative" }}>
           <Card image={palavras[indice].imagem} />
 
           {showFeedbackImage === "correto" && (
-            <img src={CorretoImg} alt="Correto" className="feedback-img-overlay" />
+            <img src={CorretoImg} alt="Correto" className="feedbackImgOverlay" />
           )}
           {showFeedbackImage === "errado" && (
-            <img src={ErradoImg} alt="Errado" className="feedback-img-overlay" />
+            <img src={ErradoImg} alt="Errado" className="feedbackImgOverlay" />
           )}
         </div>
 
         {/* Feedback acima do input */}
         {feedback && (
-          <div className="feedback-top">
+          <div className="feedbackTop">
             <p>{feedback}</p>
           </div>
         )}
 
-        <div className="Letras">
+        <div className="letras">
           <p>Digite o nome do personagem:</p>
-          <div className="input-container">
+          <div className="inputContainer">
             {Array.from(palavraAtual).map((_, index) => (
               <input
                 key={index}
@@ -172,11 +168,11 @@ const Jogo = () => {
                 onChange={(e) => handleInputChange(index, e)}
                 maxLength={1}
                 disabled={bloquearInputs}
-                className={`input-field ${
+                className={`inputField ${
                   letrasCorretas.length > 0
                     ? letrasCorretas[index]
-                      ? "letra-correta"
-                      : "letra-incorreta"
+                      ? "letraCorreta"
+                      : "letraIncorreta"
                     : ""
                 }`}
                 placeholder=" "
@@ -186,10 +182,10 @@ const Jogo = () => {
           </div>
         </div>
 
-        <button onClick={handleSubmit} className="submit-button">{botaoTexto}</button>
+        <button onClick={handleSubmit} className="submitButton">{botaoTexto}</button>
       </div>
 
-      
+      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
     </div>
   );
 };

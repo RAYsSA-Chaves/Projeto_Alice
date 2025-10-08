@@ -11,17 +11,19 @@ body{
   background: linear-gradient(to top, #2155e0, #b0aed8);
 }
  
-.jogo-container {
+.jogoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  z-index: 5;
 }
  
-.Letras {
+.letras {
   background-color: aliceblue;
   margin-top: 20px;
   width: 600px;
@@ -31,12 +33,12 @@ body{
   z-index: 5;
 }
  
-.Letras p{
+.letras p{
   font-size: 22px;
   margin-bottom: -5px;
 }
  
-.input-container {
+.inputContainer {
   display: flex;
   gap: 10px;
   margin-top: 20px;
@@ -44,7 +46,7 @@ body{
   border-radius: 20px;
 }
  
-.input-field {
+.inputField {
   width: 40px;
   height: 45px;
   font-size: 20px;
@@ -54,7 +56,7 @@ body{
   box-shadow: 4px 3px black;
 }
  
-.submit-button {
+.submitButton {
   padding: 10px 20px;
   background-color: #1F2D7B;
   color: white;
@@ -67,37 +69,37 @@ body{
  
 }
  
-.submit-button:hover {
+.submitButton:hover {
   background-color: #111a4a;
 }
  
-.input-field.letra-correta {
+.inputField.letraCorreta {
   background-color: #c8f7c5;
   border: 2px solid #2ecc71;
 }
  
-.input-field.letra-correta {
+.inputField.letraCorreta {
   background-color: #c8f7c5;
   border: 2px solid #2ecc71;
 }
  
-.input-field.letra-incorreta {
+.inputField.letraIncorreta {
   background-color: #f7c5c5;
   border: 2px solid #e74c3c;
 }
  
-.feedback-img {
+.feedbackImg {
   width: 50px;
   height: 50px;
 }
  
-.feedback-imagem-container {
+.feedbackImagemContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
  
-.feedback-img-overlay {
+.feedbackImgOverlay {
   position: absolute;
   bottom: 0;  
   left: 240px;  
@@ -108,7 +110,7 @@ body{
   z-index: 10;
 }
 
-.feedback-top {
+.feedbackTop {
   margin-top: 10px;
   text-align: center;
   font-weight: 600;
@@ -118,8 +120,14 @@ body{
   border-radius: 20px;
 }
  
-
-.jogo-card {
+.estrelasBg {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+ 
+.jogoCard {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -127,20 +135,12 @@ body{
   align-items: center;
   z-index: 5;
 }
-
-.estrelas-bg {
+ 
+.nuvensBg {
   display: flex;
   position: absolute;
   width: 100%;
-  top: 0;
-  z-index: 10;
-}
- 
-.nuvens-bg {
-  display: flex;
-  position: relative;
-  width: 100%;
   bottom: 0;
-  z-index: 0;
+  z-index: -2;
 }
  
