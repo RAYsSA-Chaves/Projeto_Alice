@@ -170,7 +170,7 @@ const Jogo = () => {
 
       <div className="jogoCard">
         {/* Card */}
-        <div className="Card" style={{ position: "relative" }}>
+        <div className="card" style={{ position: "relative" }}>
           <Card image={palavras[indice].imagem} />
 
           {/* Imagem se acertou */}
