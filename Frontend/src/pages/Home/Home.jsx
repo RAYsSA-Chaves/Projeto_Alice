@@ -14,6 +14,7 @@ import Footer from '../../assets/Images/Footer.svg'
 import { ArrowDown } from 'phosphor-react'
 import Cards from '../../Components/CardsHome/Cards'
 import FadaAnimacao from '../../Components/FadaAnimacao/FadaAnimacao'
+import CaminhoAbelha from '../../Components/CaminhoAbelha/CaminhoAbelha'
 
 function Home() {
     return (
@@ -76,6 +77,7 @@ function Home() {
 
                 <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
                 <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
+                <CaminhoAbelha/> 
                 <div className='caixaTexto2'>
                     <h2>O que você pode fazer?</h2>
                     <p>Nesse site, você pode tanto jogar

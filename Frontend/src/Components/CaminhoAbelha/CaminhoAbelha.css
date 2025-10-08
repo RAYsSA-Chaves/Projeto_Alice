@@ -1,0 +1,65 @@
+.caminhoAbelha {
+    margin-top: -40%;
+    margin-left: -10%;
+    width: 80%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.linhaAbelha {
+    position: relative;
+    width: 0px;
+    height: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transform: rotate(50deg);
+    z-index: 100;
+    transition: width 0.2s linear;
+}
+
+.linhaAbelha span {
+    display: inline-block;
+    width: 25px;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+    opacity: 0.9;
+    animation: caminho 2.5s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.15s);
+}
+
+.caminhoAbelha {
+    position: relative;
+    top: 80px;
+    left: 15%;
+    width: 90%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+@keyframes caminho {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+}
