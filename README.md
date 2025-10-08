@@ -43,23 +43,34 @@ Dentro de "src" encontram-se todos os componentes React que compõem as páginas
 Para rodar tanto o Back quanto o Front, são necessárias as instalações de algumas dependências:
 
 ### 🐍 Back
+> [!NOTE]
+> Não é necessário rodar o Back para rodar o projeto. Ele foi utilizado apenas para extrair os dados do PDF.
+
 > [!IMPORTANT]
 > Necessário entrar na pasta "Back".
+<br/>
 
 Biblioteca Python utilizada para ler e extrair dados do PDF, como imagens, textos e dimensões, essenciais para montar o JSON do livro:
-
 ```python
 pip install pymupdf
 ```
+Rodar a extração do PDF:
+```python
+py extrairPdf.py
+```
+
 <br/>
 
 ### 💻 Frontend
 > [!IMPORTANT]
 > Necessário entrar na pasta "Frontend".
 
-Biblioteca de ícones utilizada em botões e elementos visuais:
+Bibliotecas de ícones utilizadas em botões e elementos visuais:
 ```bash
 npm install lucide-react
+```
+```bash
+npm install phosphor
 ```
 
 Biblioteca que cria o efeito de virar as páginas como em um livro real:
@@ -87,6 +98,11 @@ Biblioteca que cria animações conforme a página é rolada (Animate On Scroll)
 ```bash
 npm install aos
 ```
+
+Rodar o projeto:
+```bash
+npm run dev
+```
 <br/>
 
 <!-- Protótipo -->
@@ -95,9 +111,9 @@ O protótipo com o fluxo inicial dos usuários foi desenvolvido no Figma, inclui
 
 <!-- <a href="https://www.figma.com/design/QpHT09SWPf9Jk0nD22sqXA/Pequeno-Leitor-Project?node-id=1-26&t=dWwAbxKv6hE3AVgT-1" target="_blank"><img width="20" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg">  Acesse o protótipo no Figma</a> -->
 
-<a href="https://www.figma.com/design/QpHT09SWPf9Jk0nD22sqXA/Pequeno-Leitor-Project?node-id=1-26&t=dWwAbxKv6hE3AVgT-1" target="_blank"><img width="160" loading="lazy" src="https://img.shields.io/badge/Acesse%20o%20protótipo-ff69b4?style=for-the-bagde&logo=figma&logoColor=white" target="_blank"></a> 
+<a href="https://www.figma.com/design/QpHT09SWPf9Jk0nD22sqXA/Pequeno-Leitor-Project?node-id=1-26&t=dWwAbxKv6hE3AVgT-1" target="_blank"><img width="180" loading="lazy" src="https://img.shields.io/badge/Acesse%20o%20protótipo-4B5B96?style=for-the-bagde&logo=figma&logoColor=white" target="_blank"></a> 
 <br/><br/>
 
 <!-- Tecnologias -->
 ## Tecnologias utilizadas
-<img src="https://skillicons.dev/icons?i=react,css,vite,python,figma&perline=10" alt="Frontend" />
+<img src="https://skillicons.dev/icons?i=react,vite,css,python,figma&perline=10" alt="Frontend" />
