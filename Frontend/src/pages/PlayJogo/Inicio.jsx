@@ -12,20 +12,16 @@ import Fada_rindo from "../../Assets/Images/Fada_rindo.png";
 
 import "./Inicio.css";
 
-/**
- * Página inicial do jogo "O Que Você Vê?"
- * Exibe o título do jogo, botões de navegação e modal de confirmação de saída.
+/** Página inicial do jogo
  *
- * @returns {JSX.Element} Página inicial do jogo.
+ * @returns {JSX.Element} Página
  */
 
 function Inicio() {
-
-
   return (
     <section className="container">
       {/* Fundo de estrelas */}
-      <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
+      <img src={Estrelas_fundo} alt="estrelas" className="estrelasBg" />
 
       {/* Botão superior (home) */}
       <Link to="/">
@@ -42,7 +38,7 @@ function Inicio() {
           <h1 className="subtitle">O Que Você Vê?</h1>
 
           {/* Botões principais */}
-          <section className="buttons-container">
+          <section className="buttonsContainer">
             <Link to="/jogo">
               <ActionButton
                 icon={<Play size={28} color="white" />}
@@ -64,7 +60,7 @@ function Inicio() {
 
       {/* Imagens decorativas */}
       <img src={Fada_rindo} alt="fada sorrindo" className="fadaSorrindo" />
-      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
+      <img src={Nuvens} alt="nuvens" className="nuvensBg" />
     </section>
   );
 }

@@ -38,19 +38,19 @@ function LeituraPage() {
 
     return (
         <>
-        <Joyride
-            steps={steps}
-            run={runTutorial}
-            continuous
-            showSkipButton
-            locale={{
-                back: 'Voltar',
-                close: 'Fechar',
-                last: 'Finalizar',
-                next: 'Próximo',
-                skip: 'Pular',
-            }}
-        />
+            <Joyride
+                steps={steps}
+                run={runTutorial}
+                continuous
+                showSkipButton
+                locale={{
+                    back: 'Voltar',
+                    close: 'Fechar',
+                    last: 'Finalizar',
+                    next: 'Próximo',
+                    skip: 'Pular',
+                }}
+            />
             <HeaderLivro
                 busca={busca}
                 setBusca={setBusca}

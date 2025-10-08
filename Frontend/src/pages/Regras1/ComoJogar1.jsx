@@ -11,21 +11,18 @@ import FadaApontando from "../../Assets/Images/FadaApontando.png";
 
 import "../PlayJogo/Inicio.css";
 
-/**
- * Página "Como Jogar? - Etapa 1"
- * Exibe as instruções iniciais para o jogador aprender
- * como funciona o jogo "O Que Você Vê?".
- *
- * @returns {JSX.Element} Página de instruções do jogo.
- */
+/** Página "Como Jogar? - Etapa 1" - Instruções iniciais para o jogador aprender como funciona o jogo
+*
+* @returns {JSX.Element} Página de instruções do jogo
+*/
 
 function ComoJogar1() {
   return (
     <section className="container">
       
       {/* Fundo */}
-      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
-      <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
+      <img src={Nuvens} alt="nuvens" className="nuvensBg" />
+      <img src={Estrelas_fundo} alt="estrelas" className="estrelasBg" />
 
       {/* Botão de voltar (seta no canto superior esquerdo) */}
       <Link to="/iniciojogo">
@@ -52,7 +49,7 @@ function ComoJogar1() {
           </p>
 
           {/* Botão de navegação para próxima etapa */}
-          <section className="buttons-container">
+          <section className="buttonsContainer">
             <Link to="/comojogar2">
               <ActionButton
                 onClick={() => console.log("Próximo clicado")}

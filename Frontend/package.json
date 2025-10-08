@@ -14,7 +14,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "lucide-react": "^0.545.0",
+    "phosphor": "^0.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-joyride": "^2.9.3",

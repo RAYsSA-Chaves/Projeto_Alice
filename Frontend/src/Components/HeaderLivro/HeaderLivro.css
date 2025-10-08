@@ -5,6 +5,7 @@
   justify-content: space-between;
   gap: min(1rem);
   padding: 1.5rem 4rem;
+  background-color: #fff;
 }
 
 /* Botão voltar */

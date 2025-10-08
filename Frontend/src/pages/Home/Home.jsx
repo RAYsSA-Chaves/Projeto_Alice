@@ -1,5 +1,4 @@
 // import './Home.css'
-import Fada from '../../Assets/Images/Fada.svg'
 import EstrelaRosa from '../../Assets/Images/EstrelaRosa.svg'
 import EstrelaBranca from '../../Assets/Images/EstrelaBranca.svg'
 import NuvemAnimacao from '../../Assets/Images/NuvemAnimacao.svg'
@@ -22,7 +21,7 @@ function Home() {
                       ↓
                     </button> 
                     <figure className='fada'>
-                        <img src={Fada} alt='imagem da mascote da fada' />
+                        <img src={""} alt='imagem da mascote da fada' />
                     </figure>
 
                     {/* imagens de decoração */}

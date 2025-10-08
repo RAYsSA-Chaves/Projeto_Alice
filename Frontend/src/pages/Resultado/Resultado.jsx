@@ -8,15 +8,17 @@ import fada from "../../Assets/Images/fadapontos.svg";
 import "./Resultado.css";
 
 export default function Resultado() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const pontos = location.state?.pontos || 0;
+  const location = useLocation(); // pega state enviado via navigate
+  const navigate = useNavigate(); // navegação
+  const pontos = location.state?.pontos || 0; // pega pontos do state ou 0, caso não exista
 
   return (
-    <div className="resultado-container">
-      <img src={Nuvem} alt="Nuvens" className="nuvens-bg" />
-      <img src={estrelas} alt="Estrelas" className="estrelas-bg" />
+    <div className="resultadoContainer">
+      {/* Decorações */}
+      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
+      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
+      {/* Qtd de pontos */}
       <div className="resultado">
         <h1>Você concluiu o jogo!</h1>
         <p>
@@ -24,9 +26,11 @@ export default function Resultado() {
         </p>
 
         <div className="btns">
+          {/* Botão para reiniciar o jogo (volta para a página inicial) */}
           <button onClick={() => navigate("/")}>
             <RotateCcw /> JOGAR NOVAMENTE
           </button>
+          {/* Botão para voltar para a home) */}
           <button onClick={() => navigate("/")}>
             <House /> PÁGINA INICIAL
           </button>
@@ -34,8 +38,6 @@ export default function Resultado() {
 
         <img src={fada} alt="Fada" className="fada" />
       </div>
-
-      
     </div>
   );
 }
