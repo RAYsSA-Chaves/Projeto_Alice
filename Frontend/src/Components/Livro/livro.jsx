@@ -3,11 +3,11 @@ import HTMLFlipBook from "react-pageflip";
 import "./livro.css";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import Nuvem from "../../Assets/Images/Nuvem_msg.png";
+import Capa from "../../Assets/Images/capa_livro.png"
 
 export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   const [paginas, setPaginas] = useState([]);
   const tamanhoTitulo = 32; // altura considerada "título"
-  const capaPath = "/assets/capa_alice.png";
   const bookRef = useRef(null); // referencia o Flipbook
   const [totalEncontradas, setTotalEncontradas] = useState(0); // guarda contagem de palavras
   const [mostrarResultado, setMostrarResultado] = useState(true); // mostrar o resultado ou para de mostrar
@@ -175,11 +175,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
         >
           {/* Capa */}
           <article className="pagina capa">
-            <img
-              src={capaPath}
-              alt="Capa infantil do livro Alice no País das Maravilhas"
-              className="capa"
-            />
+            <img src={Capa} alt="Capa infantil do livro Alice no País das Maravilhas" className="capa" />
           </article>
 
           {/* Página branca */}
