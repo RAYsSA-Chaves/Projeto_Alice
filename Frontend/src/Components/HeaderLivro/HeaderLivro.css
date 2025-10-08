@@ -1,5 +1,5 @@
-/* Container do header */
-.HeaderLivro {
+/* Container do header do livro */
+.headerLivro {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +8,7 @@
 }
 
 /* Botão voltar */
-.ArrowButton {
+.arrowButton {
   background-color: #fff;
   border: 2px solid black;
   color: black;
@@ -21,23 +21,23 @@
   transition: background 0.2s ease;
 }
 
-.ArrowButton svg {
+.arrowButton svg {
   width: 30px;
   height: 30px;
   transition: transform 0.3s;
 }
 
-.ArrowButton:hover {
+.arrowButton:hover {
   background-color: black;
   color: #fff;
 }
 
-.ArrowButton:hover svg {
+.arrowButton:hover svg {
   transform: scale(1.2);
 }
 
 /* Barras de pesquisa */
-.InputPalavra, .InputNum {
+.inputPalavra, .inputNum {
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -48,7 +48,7 @@
   width: fit-content;
 }
 
-.InputPalavra input {
+.inputPalavra input {
   padding: 0 1rem;
   border: none;
   outline: none;
@@ -56,7 +56,7 @@
   height: 50px;
 }
 
-.InputNum input {
+.inputNum input {
   padding: 0 1rem;
   border: none;
   outline: none;
@@ -64,11 +64,11 @@
   height: 50px;
 }
 
-.InputNum input::placeholder {
+.inputNum input::placeholder {
   color: #fff;
 }
 
-.SearchButton {
+.searchButton {
   background-color: #4B5B96;
   border: none;
   width: 60px;
@@ -80,41 +80,41 @@
   cursor: pointer;
 }
 
-.SearchButton svg {
+.searchButton svg {
   color: white;
   width: 26px;
   height: 26px;
   transition: transform 0.3s;
 }
 
-.SearchButton:hover {
+.searchButton:hover {
   background-color: #394470;
 }
 
-.SearchButton:hover svg {
+.searchButton:hover svg {
   transform: scale(1.2);
 }
 
-.InputNum p {
+.inputNum p {
   font-size: 13px;
   color: gray;
   padding: 0 1rem;
   pointer-events: none;
 }
 
-.Numero {
+.numero {
   background-color: #CC536F;
   text-align: center;
   border: none;
   transition: background 0.3s;
 }
 
-.Numero:hover {
+.numero:hover {
     background-color: #8b3247;
 }
 
 /* Marca texto */
-.PencilButton {
+.pencilButton {
   background-color: #4B5B96;
   border: 2px solid black;
   border-radius: 50%;
@@ -128,18 +128,18 @@
   box-shadow: 2px 3px black;
 }
 
-.PencilButton:hover {
+.pencilButton:hover {
   background-color: #394470;
 }
 
-.PencilButton svg {
+.pencilButton svg {
   width: 25px;
   height: 25px;
   color: white;
   transition: transform 0.2s;
 }
 
-.PencilButton:hover svg {
+.pencilButton:hover svg {
   transform: scale(1.2);
 }
 
