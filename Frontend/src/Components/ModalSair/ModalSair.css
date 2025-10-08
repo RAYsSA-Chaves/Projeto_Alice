@@ -1,24 +1,21 @@
-/* ============================================
-   Componente: ModalSair
-   Estilo do modal de confirmação de saída
-   ============================================ */
+/* Estilo do modal de confirmação de saída */
 
-/* ---- Fundo escurecido e centralização do modal ---- */
-.modal-overlay {
+/* Fundo escurecido e centralização do modal */
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* fica acima de outros elementos */
+  z-index: 1000;
 }
 
-/* ---- Conteúdo principal do modal ---- */
-.modal-content {
+/* Conteúdo principal do modal */
+.modalContent {
   background: white;
   padding: 30px;
   max-width: 40%;
@@ -28,26 +25,26 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ---- Comprimento dos botões ---- */
-.modal-content .action-button {
+/* Comprimento dos botões */
+.modalContent .actionButton {
   width: 200px;
   align-self: center;
 }
 
 /* Botão SAIR dentro do modal */
-.modal-content .action-button:last-child {
+.modalContent .actionButton:last-child {
   background: #FE5EA0; 
   box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
 }
 
-/* ---- Container dos botões ---- */
-.buttons-container {
+/* Container dos botões */
+.buttonsContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* ---- Título principal do modal ---- */
+/* Título principal do modal */
 .title1 {
   font-size: 2.7rem;
   font-weight: 500;
@@ -56,16 +53,13 @@
   margin-bottom: 30px;
 }
 
-/* ============================================
-   Responsividade
-   Ajustes de texto e espaçamento em telas menores
-   ============================================ */
+/* Responsividade */
 @media (max-width: 768px) {
   .title1 {
     font-size: 2.2rem;
   }
 
-  .buttons-container {
+  .buttonsContainer {
     gap: 1rem;
   }
 }
