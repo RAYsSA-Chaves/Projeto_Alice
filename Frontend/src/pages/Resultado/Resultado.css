@@ -4,7 +4,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.resultado-container {
+.resultadoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@ body {
 .resultado {
   background-color: white;
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 200px;
   width: 1000px;
   height: 600px;
   border-radius: 70px;
@@ -25,29 +25,29 @@ body {
   z-index: 2;
 }
 
-.resultado-container h1 {
-  font-size: 3.2rem;
+.resultadoContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.resultado-container p {
-  font-size: 1.6rem;
-  margin-bottom: 6vh;
+.resultadoContainer p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 /* --- Botões --- */
 .btns {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* um em cima do outro */
   align-items: center;
-  gap: 15px;  
+  gap: 15px;
 }
 
 .btns button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  gap: 10px;
+  gap: 10px; /* espaçamento entre ícone e texto */
   background-color: #1F2D7B;
   color: white;
   border: none;
@@ -70,7 +70,7 @@ body {
 }
 
 /* --- Imagens de fundo --- */
-.estrelas-bg {
+.estrelasBg {
   position: absolute;
   width: 100%;
   top: 0;
@@ -79,7 +79,7 @@ body {
   pointer-events: none; /* impede bloqueio de clique */
 }
 
-.nuvens-bg {
+.nuvensBg {
   position: absolute;
   width: 100%;
   bottom: 0;
