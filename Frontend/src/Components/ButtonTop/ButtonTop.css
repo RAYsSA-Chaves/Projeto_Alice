@@ -1,6 +1,6 @@
 /* Botão circular superior (ex: botão "Home") */
 
-.home-button {
+.homeButton {
   /* ---- Estrutura e posição ---- */
   position: absolute;
   top: 3.2rem;
@@ -27,21 +27,21 @@
 }
 
 /* ---- Efeito ao passar o mouse ---- */
-.home-button:hover {
+.homeButton:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   outline: none;
 }
 
 /* ---- Efeito ao clicar ---- */
-.home-button:active {
+.homeButton:active {
   transform: scale(0.95);
   outline: none;
 }
 
 /* ---- Ícone ou imagem dentro do botão ---- */
-.home-button svg,
-.home-button img {
+.homeButton svg,
+.homeButton img {
   width: 40px;
   height: 40px;
 }
