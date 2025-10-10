@@ -11,10 +11,10 @@ import "./Container.css";
 
 function Container({ children }) {
   return (
-    <div className="white-container">
+    <section className="whiteContainer">
       {/* Renderiza o conteúdo passado como filho */}
       {children}
-    </div>
+    </section>
   );
 };
 

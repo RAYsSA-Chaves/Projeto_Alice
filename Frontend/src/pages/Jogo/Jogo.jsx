@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+
 import estrelas from '../../Assets/Images/estrelas.png';
 import Nuvem from '../../Assets/Images/nuvens.svg';
 import iconCasa from '../../Assets/Images/iconCasa.png'
 
 import ButtonTop from "../../Components/ButtonTop/ButtonTop";
 import Card from '../../Components/Card-Jogo/Card';
+import ModalSair from "../../Components/ModalSair/ModalSair.jsx";
+
 import "./Jogo.css";
 
 // Imagens
@@ -54,10 +57,13 @@ const Jogo = () => {
   const [showFeedbackImage, setShowFeedbackImage] = useState(null);
   const [pontos, setPontos] = useState(0);
   const [bloquearInputs, setBloquearInputs] = useState(false);
-  const [botaoTexto, setBotaoTexto] = useState("Enviar");
+  const [botaoTexto, setBotaoTexto] = useState("ENVIAR");
 
   const navigate = useNavigate();
   const palavraAtual = palavras[indice].palavra;
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   useEffect(() => {
     const firstInput = document.getElementById("input-0");
@@ -83,7 +89,7 @@ const Jogo = () => {
 
   const handleSubmit = () => {
     // Botão Próximo
-    if (botaoTexto === "Próximo") {
+    if (botaoTexto === "PRÓXIMO") {
       if (indice < palavras.length - 1) {
         setIndice(indice + 1);
         setResposta([]);
@@ -91,7 +97,7 @@ const Jogo = () => {
         setFeedback("");
         setShowFeedbackImage(null);
         setBloquearInputs(false);
-        setBotaoTexto("Enviar");
+        setBotaoTexto("ENVIAR");
       } else {
         navigate("/resultado", { state: { pontos } });
       }
@@ -122,30 +128,46 @@ const Jogo = () => {
     if (respostaNormalizada === palavraCorretaNormalizada) {
       setShowFeedbackImage("correto");
       setBloquearInputs(true);
-      setBotaoTexto("Próximo");
+      setBotaoTexto("PRÓXIMO");
       setPontos(prev => prev + 1); // soma ponto só uma vez
     } else {
       setShowFeedbackImage("errado");
       setFeedback("Errado! A resposta correta era: " + palavraAtual);
       setBloquearInputs(true);
-      setBotaoTexto("Próximo");
+      setBotaoTexto("PRÓXIMO");
     }
+  };
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleConfirmExit = () => {
+    // Fecha o modal e volta para a tela inicial
+    setIsModalOpen(false);
+    navigate("/"); // redireciona para a home
   };
 
   return (
     <div className="jogoContainer">
 
 
-      <Link to="/">
-        <ButtonTop >
-          <img src={iconCasa} alt="ícone home" />
-        </ButtonTop>
-      </Link>
+      <ButtonTop onClick={handleOpenModal}>
+        <img src={iconCasa} alt="ícone home" />
+      </ButtonTop>
+
+      {/* Modal de confirmação de saída */}
+      <ModalSair
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onConfirm={handleConfirmExit}
+      />
+
+
 
       <img src={estrelas} alt="Estrelas" className="estrelasBg" />
 
       <div className="jogoCard">
-        <div className="card" style={{ position: "relative" }}>
+        <div className="card1" style={{ position: "relative" }}>
           <Card image={palavras[indice].imagem} />
 
           {showFeedbackImage === "correto" && (
@@ -176,10 +198,10 @@ const Jogo = () => {
                 maxLength={1}
                 disabled={bloquearInputs}
                 className={`inputField ${letrasCorretas.length > 0
-                    ? letrasCorretas[index]
-                      ? "letraCorreta"
-                      : "letraIncorreta"
-                    : ""
+                  ? letrasCorretas[index]
+                    ? "letraCorreta"
+                    : "letraIncorreta"
+                  : ""
                   }`}
                 placeholder=" "
                 autoComplete="off"

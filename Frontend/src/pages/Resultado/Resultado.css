@@ -1,109 +1,136 @@
-body {
-  background: linear-gradient(to top, #2155e0, #b0aed8);
-  margin: 0;
-  font-family: "Poppins", sans-serif;
+/* Remove sublinhado de links */
+button, a {
+  text-decoration: none;
+  outline: none;
 }
 
-.resultadoContainer {
+/* Estrutura principal */
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 100%;
   height: 100vh;
-  position: relative;
   overflow: hidden;
+  background: linear-gradient(to top, #2155e0, #b0aed8);
 }
 
-.resultado {
-  background-color: white;
-  text-align: center;
-  padding-top: 200px;
-  width: 1000px;
-  height: 600px;
-  border-radius: 70px;
-  position: relative;
-  z-index: 2;
+.pontuacao{
+  width: 40%;
+
 }
 
-.resultadoContainer h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.resultadoContainer p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* --- Botões --- */
-.btns {
-  display: flex;
-  flex-direction: column; /* um em cima do outro */
-  align-items: center;
-  gap: 15px;
-}
-
-.btns button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* espaçamento entre ícone e texto */
-  background-color: #1F2D7B;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.25s ease;
-  z-index: 2;
-}
-
-.btns button:hover {
-  background-color: #08144e;
-  transform: scale(1.05);
-}
-
-.btns button svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* --- Imagens de fundo --- */
+/* Imagens de fundo */
 .estrelasBg {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none; /* impede bloqueio de clique */
+  z-index: 1;
 }
 
 .nuvensBg {
   position: absolute;
   width: 100%;
   bottom: 0;
-  left: 0;
   z-index: 0;
+}
+
+/* Conteúdo central */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.title {
+  margin-top: 1%;
+  font-size: 3.3rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* Container dos botões */
+.buttonsContainer {
+  display: flex;
+  margin-top: 0%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Imagem da fada */
+.fadaSorrindo {
+  position: absolute;
+  right: 13%;
+  bottom: 19%;
+  height: 65%;
+  width: auto;
+  z-index: 6;
   pointer-events: none;
 }
 
-.fada {
-  position: absolute;
-  right: -120px; /* distância da lateral do card */
-  bottom: 100px; /* altura da fada em relação à base do card */
-  width: 250px; /* tamanho ajustável */
-  z-index: 3;
-  pointer-events: none; /* não bloqueia clique */
-  animation: flutuar 3s ease-in-out infinite; /* animação suave */
+
+
+/* ============================================
+   RESPONSIVIDADE APRIMORADA
+   ============================================ */
+
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+ 
+  .fadaSorrindo {
+    height: 55%;
+    right: 6%;
+    bottom: 7%;
+  }
 }
 
-/* Animação opcional para dar movimento à fada */
-@keyframes flutuar {
-  0%, 100% {
-    transform: translateY(0);
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
   }
-  50% {
-    transform: translateY(-10px);
+
+
+  .buttonsContainer {
+    gap: 1rem;
+  }
+
+  .fadaSorrindo {
+    height: 40%;
+    right: 3%;
+    bottom: 4%;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.7rem;
+  }
+
+
+  .buttonsContainer {
+    gap: 0.8rem;
+  }
+
+  .fadaSorrindo {
+    height: 35%;
+    right: 2%;
+    bottom: 3%;
+    opacity: 0.9; /* evita sobreposição visual */
+  }
+
+  .container {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 2rem; /* previne corte do conteúdo */
   }
 }

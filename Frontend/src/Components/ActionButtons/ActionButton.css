@@ -3,7 +3,7 @@
    Estilo do botão principal com ícone opcional
    =============================== */
 
-   .action-button {
+   .actionButton {
     /* Cores e fundo */
     background: #1f2d7b; /* azul principal */
     color: white;
@@ -17,7 +17,7 @@
     /* Espaçamento e forma */
     padding: 1rem 2rem;
     border: none;
-    width: 280px;
+    width: 100%;
     border-radius: 50px;
   
     /* Layout interno */
@@ -36,20 +36,20 @@
   }
   
   /* Efeito ao passar o mouse */
-  .action-button:hover {
+  .actionButton:hover {
     background: #1e3a7e; /* tom de azul mais escuro */
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(42, 74, 158, 0.5);
   }
   
   /* Efeito ao clicar */
-  .action-button:active {
+  .actionButton:active {
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(42, 74, 158, 0.4);
   }
   
   /* Ícone dentro do botão */
-  .action-button-icon {
+  .actionButtonIcon {
     display: flex;
     align-items: center;
     font-size: 1.8rem;

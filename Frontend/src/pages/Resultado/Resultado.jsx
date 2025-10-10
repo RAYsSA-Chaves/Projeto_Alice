@@ -1,40 +1,77 @@
-import { useLocation, useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { RotateCcw, House } from "lucide-react";
 
-import estrelas from "../../Assets/Images/estrelas.png";
-import Nuvem from "../../Assets/Images/nuvens.svg";
-import fada from "../../Assets/Images/fadapontos.svg";
+import ActionButton from "../../Components/ActionButtons/ActionButton.jsx";
+import Container from "../../Components/ContainerBranco/Container.jsx";
+
+import pontuacao from '../../Assets/Images/pontuacao.png'
+import Nuvens from "../../Assets/Images/Nuvens.svg";
+import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
+import Fada_rindo from "../../Assets/Images/Fada_rindo.png";
 
 import "./Resultado.css";
 
-export default function Resultado() {
+/** Página inicial do jogo
+ *
+ * @returns {JSX.Element} Página
+ */
+
+
+
+function Resultado() {
+
   const location = useLocation();
-  const navigate = useNavigate();
   const pontos = location.state?.pontos || 0;
 
   return (
-    <div className="resultadoContainer">
-      <img src={estrelas} alt="Estrelas" className="estrelasBg" />
+    <section className="container">
 
-      <div className="resultado">
-        <h1>Você concluiu o jogo!</h1>
-        <p>
-          Você acertou <strong>{pontos}</strong> de 15 palavras!
-        </p>
+      {/* Fundo de estrelas */}
+      <img src={Estrelas_fundo} alt="estrelas" className="estrelasBg" />
 
-        <div className="btns">
-          <button onClick={() => navigate("/iniciojogo")}>
-            <RotateCcw /> Jogar novamente
-          </button>
-          <button onClick={() => navigate("/")}>
-            <House /> Página Inicial
-          </button>
-        </div>
 
-        <img src={fada} alt="Fada" className="fada" />
-      </div>
+      {/* Conteúdo principal do container */}
+      <Container>
+        <section className="content">
 
-      <img src={Nuvem} alt="Nuvens" className="nuvensBg" />
-    </div>
+          <img src={pontuacao} alt="estrelas" className="pontuacao" />
+
+
+          <h1 className="title">Você concluiu o jogo! </h1>
+          <h1 className="subtitle">Você acertou <strong>{pontos}</strong> de 15 palavras!</h1>
+
+          {/* Botões principais */}
+          <section className="buttonsContainer">
+            <Link to="/iniciojogo">
+              <ActionButton
+                icon={<RotateCcw size={28} color="white" />}
+                onClick={() => console.log("Jogar clicado")}
+              >
+                JOGAR NOVAMENTE
+              </ActionButton>
+            </Link>
+
+
+            <Link to="/">
+              <ActionButton
+                icon={<House size={28} color="white" />}
+                onClick={() => console.log("Como jogar clicado")}>
+                PÁGINA INICIAL
+              </ActionButton>
+            </Link>
+          </section>
+        </section>
+      </Container>
+
+      {/* Imagens decorativas */}
+      <img src={Fada_rindo} alt="fada sorrindo" className="fadaSorrindo" />
+      <img src={Nuvens} alt="nuvens" className="nuvensBg" />
+    </section>
   );
 }
+
+export default Resultado;
+
+

@@ -3,39 +3,67 @@
    Contêiner branco centralizado para agrupar o conteúdo principal
    ============================================ */
 
-   .white-container {
-    /* ---- Estrutura e tamanho ---- */
-    position: relative;
-    width: 60%;
-    height: 84%;
-    max-width: 1200px;
-    z-index: 5;
-  
-    /* ---- Layout interno ---- */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  
-    /* ---- Aparência ---- */
-    background: #f5f5f5;
-    border: 1px solid black;
-    border-radius: 60px;
-    opacity: 0.9;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  
-    /* ---- Espaçamento interno ---- */
-    padding: 3rem 3rem;
+.whiteContainer{
+  /* ---- Estrutura e tamanho ---- */
+  position: relative;
+  width: 60%;
+  height: auto; /* Evita altura fixa em telas pequenas */
+  max-width: 1200px;
+  min-height: 60vh; /* Mantém boa proporção em telas grandes */
+  z-index: 5;
+
+  /* ---- Layout interno ---- */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  /* ---- Aparência ---- */
+  background: #f5f5f5;
+  border: 1px solid #000;
+  border-radius: 60px;
+  opacity: 0.95;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  /* ---- Espaçamento interno ---- */
+  padding: 3rem 3rem;
+
+  /* ---- Transição suave para ajustes de tela ---- */
+  transition: all 0.3s ease-in-out;
+}
+
+/* ============================================
+   Responsividade: tablets (até 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .whiteContainer{
+    width: 80%;
+    padding: 2.5rem 2rem;
+    border-radius: 50px;
   }
-  
-  /* ============================================
-     Responsividade
-     Ajustes de tamanho e espaçamento em telas menores
-     ============================================ */
-  @media (max-width: 768px) {
-    .white-container {
-      width: 95%;
-      border-radius: 40px;
-      padding: 2rem 3rem;
-    }
+}
+
+/* ============================================
+   Responsividade: tablets pequenos e celulares (até 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .whiteContainer{
+    width: 90%;
+    padding: 2rem 1.5rem;
+    border-radius: 40px;
+    gap: 1.5rem;
   }
+}
+
+/* ============================================
+   Responsividade: celulares pequenos (até 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .whiteContainer{
+    width: 95%;
+    padding: 1.5rem 1rem;
+    border-radius: 30px;
+    gap: 1rem;
+  }
+}

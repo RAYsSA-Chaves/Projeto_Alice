@@ -10,14 +10,14 @@ import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
 import iconCasa from "../../Assets/Images/iconCasa.png";
 import Fada_rindo from "../../Assets/Images/Fada_rindo.png";
 
-import "./Inicio.css";
+import './PlayJogo.css'
 
 /** Página inicial do jogo
  *
  * @returns {JSX.Element} Página
  */
 
-function Inicio() {
+function PlayJogo() {
   return (
     <section className="container">
       {/* Fundo de estrelas */}
@@ -65,4 +65,4 @@ function Inicio() {
   );
 }
 
-export default Inicio;
+export default PlayJogo;

@@ -18,11 +18,11 @@ export default function ModalSair({ isOpen, onClose, onConfirm }) {
   if (!isOpen) return null;
 
   return (
-    <section className="modal-overlay">
-      <section className="modal-content">
+    <section className="modalOverlay">
+      <section className="modalContent">
         <h1 className="title1">Tem certeza que deseja sair?</h1>
 
-        <section className="buttons-container">
+        <section className="buttonsContainer">
           {/* Botão de cancelar — fecha o modal */}
           <ActionButton onClick={onClose}>
             CANCELAR

@@ -1,5 +1,3 @@
-/* Estilo geral da página início do jogo: O Que Você Vê? */
-
 /* Remove sublinhado de links */
 button, a {
   text-decoration: none;
@@ -14,7 +12,7 @@ button, a {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 170vh;
   overflow: hidden;
   background: linear-gradient(to top, #2155e0, #b0aed8);
 }
@@ -43,29 +41,11 @@ button, a {
   text-align: center;
 }
 
-/* Títulos */
-.title, .subtitle {
-  font-size: 3.3rem;
-  font-weight: 500;
-  color: #1a1a1a;
-  padding: 0;
-}
-
 .title {
-  margin-top: 30%;
-  margin-bottom: -0.5rem;
-}
-
-.title2 {
-  margin-top: 15%;
+  margin-top: 1%;
   font-size: 3.3rem;
   font-weight: 500;
   color: #1a1a1a;
-}
-
-.subtitle {
-  margin-bottom: 40px;
-
 }
 
 /* Container dos botões */
@@ -73,54 +53,46 @@ button, a {
   display: flex;
   margin-top: 0%;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.9rem;
 }
 
 /* Imagem da fada */
 .fadaSorrindo {
   position: absolute;
-  right: 13%;
-  bottom: 9%;
-  height: 75%;
+  right: 20%;
+  bottom: 15%;
+  height: 70%;
   width: auto;
   z-index: 6;
   pointer-events: none;
 }
 
-/* Textos e parágrafos */
-.paragrafo {
-  font-size: 23px;
-  text-align: justify;
-  line-height: 1.8;
-  color: #1a1a1a;
-  padding: 10px;
-  max-width: 70%;
-  margin-top: 2%;
-  margin-bottom: 5%;
-}
 
-/* Ícones */
-img.iconArrow {
-  width: 40%;
-  height: auto;
-} 
 
-/* Responsividade */
+/* ============================================
+   RESPONSIVIDADE APRIMORADA
+   ============================================ */
+
+/* Tablets e notebooks pequenos */
 @media (max-width: 1024px) {
-  .fadaSorrindo {
-    height: 50%;
-    right: 2%;
-  }
-}
-
-@media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
   }
 
-  .subtitle {
-    font-size: 1.8rem;
+  
+  .fadaSorrindo{
+    height: 55%;
+    right: 6%;
+    bottom: 7%;
   }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
 
   .buttonsContainer {
     gap: 1rem;
@@ -128,6 +100,32 @@ img.iconArrow {
 
   .fadaSorrindo {
     height: 40%;
-    bottom: 5%;
+    right: 3%;
+    bottom: 4%;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.7rem;
+  }
+
+
+  .buttonsContainer {
+    gap: 0.8rem;
+  }
+
+  .fadaSorrindo {
+    height: 35%;
+    right: 2%;
+    bottom: 3%;
+    opacity: 0.9; /* evita sobreposição visual */
+  }
+
+  .container {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 2rem; /* previne corte do conteúdo */
   }
 }

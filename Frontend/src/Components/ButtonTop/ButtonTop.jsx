@@ -10,7 +10,7 @@ import "./ButtonTop.css";
 
 function ButtonTop({ onClick, children }) {
     return (
-        <button className="home-button" onClick={onClick}>
+        <button className="homeButton" onClick={onClick}>
             {/* Renderiza o conteúdo passado como filho (ícone, imagem, texto, etc.) */}
             {children}
         </button>

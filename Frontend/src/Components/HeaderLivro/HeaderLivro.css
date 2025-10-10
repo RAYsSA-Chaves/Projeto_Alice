@@ -1,11 +1,17 @@
+/* ============================================
+   HEADER PRINCIPAL DO LIVRO — VERSÃO RESPONSIVA
+   ============================================ */
+
 /* Container do header */
 .HeaderLivro {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: min(1rem);
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+  gap: 1rem;
   padding: 1.5rem 4rem;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 /* Botão voltar */
@@ -20,6 +26,7 @@
   justify-content: center;
   align-items: center;
   transition: background 0.2s ease;
+  flex-shrink: 0;
 }
 
 .ArrowButton svg {
@@ -47,6 +54,8 @@
   border: black 1px solid;
   box-shadow: 5px 4px black;
   width: fit-content;
+  min-width: 150px;
+  flex-shrink: 0;
 }
 
 .InputPalavra input {
@@ -55,6 +64,7 @@
   outline: none;
   width: 300px;
   height: 50px;
+  font-size: 16px;
 }
 
 .InputNum input {
@@ -63,12 +73,17 @@
   outline: none;
   width: 60px;
   height: 50px;
+  font-size: 16px;
 }
 
-.InputNum input::placeholder {
-  color: #fff;
+.InputNum p {
+  font-size: 13px;
+  color: gray;
+  padding: 0 1rem;
+  pointer-events: none;
 }
 
+/* Botão de busca */
 .SearchButton {
   background-color: #4B5B96;
   border: none;
@@ -96,25 +111,20 @@
   transform: scale(1.2);
 }
 
-.InputNum p {
-  font-size: 13px;
-  color: gray;
-  padding: 0 1rem;
-  pointer-events: none;
-}
-
+/* Input de número */
 .Numero {
   background-color: #CC536F;
   text-align: center;
   border: none;
   transition: background 0.3s;
+  color: white;
 }
 
 .Numero:hover {
-    background-color: #8b3247;
+  background-color: #8b3247;
 }
 
-/* Marca texto */
+/* Marca texto (botão de lápis) */
 .PencilButton {
   background-color: #4B5B96;
   border: 2px solid black;
@@ -127,6 +137,7 @@
   transition: background 0.3s;
   cursor: pointer;
   box-shadow: 2px 3px black;
+  flex-shrink: 0;
 }
 
 .PencilButton:hover {
@@ -144,10 +155,105 @@
   transform: scale(1.2);
 }
 
-/* Retirar spinners do input de número */
-input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+/* Retira spinners dos inputs numéricos */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* ============================================
+   RESPONSIVIDADE APRIMORADA
+   ============================================ */
+
+/* Tablets grandes e notebooks menores */
+@media (max-width: 1024px) {
+  .HeaderLivro {
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .InputPalavra input {
+    width: 250px;
+    height: 45px;
+  }
+
+  .SearchButton, .InputNum input {
+    height: 45px;
+  }
+
+  .ArrowButton, .PencilButton {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+  .HeaderLivro {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.2rem 2rem;
+    gap: 1.2rem;
+  }
+
+  .InputPalavra, .InputNum {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .InputPalavra input {
+    width: 100%;
+  }
+
+  .SearchButton {
+    width: 55px;
+  }
+
+  .ArrowButton, .PencilButton {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .HeaderLivro {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .InputPalavra, .InputNum {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .InputPalavra input, .InputNum input {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .SearchButton {
+    width: 45px;
+    height: 40px;
+  }
+
+  .ArrowButton, .PencilButton {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ArrowButton svg, .PencilButton svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .HeaderLivro > * {
+    align-self: center;
+  }
 }

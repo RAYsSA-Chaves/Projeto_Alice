@@ -10,7 +10,7 @@ import Estrelas_fundo from "../../Assets/Images/Estrelas_fundo.png";
 import SetaVoltar from "../../Assets/Images/SetaVoltar.png";
 import FadaApontando from "../../Assets/Images/FadaApontando.png";
 
-import "../PlayJogo/Inicio.css";
+import "./ComoJogar2.css";
 
 /**
  * Página "Como Jogar? - Etapa 2"
@@ -23,7 +23,7 @@ function ComoJogar2() {
   return (
     <section className="container">
       {/* Fundo de estrelas */}
-      <img src={Estrelas_fundo} alt="estrelas" className="estrelas-bg" />
+      <img src={Estrelas_fundo} alt="estrelas" className="estrelasBg" />
 
       {/* Botão de voltar (seta no canto superior esquerdo) */}
       <Link to="/comojogar1">
@@ -48,7 +48,7 @@ function ComoJogar2() {
           </p>
 
           {/* Botão principal "Jogar" */}
-          <div className="buttons-container">
+          <div className="buttonsContainer">
             <Link to="/jogo">
               <ActionButton
                 icon={<Play size={28} color="white" />}
@@ -66,9 +66,15 @@ function ComoJogar2() {
       <img
         src={FadaApontando}
         alt="fada apontando"
-        className="fadaSorrindo"
+        className="fadaApontando"
       />
-      <img src={Nuvens} alt="nuvens" className="nuvens-bg" />
+
+      {/* Imagem de nuvens como elemento de fundo */}
+      <img
+        src={Nuvens}
+        alt="nuvens"
+        className="nuvensBg"
+      />
     </section>
   );
 }

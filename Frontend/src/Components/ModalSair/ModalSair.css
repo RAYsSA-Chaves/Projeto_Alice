@@ -4,7 +4,7 @@
    ============================================ */
 
 /* ---- Fundo escurecido e centralização do modal ---- */
-.modal-overlay {
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,33 +18,37 @@
 }
 
 /* ---- Conteúdo principal do modal ---- */
-.modal-content {
+.modalContent {
   background: white;
   padding: 30px;
-  max-width: 40%;
+  width: 40%;
+  max-width: 600px;
+  min-width: 300px;
   height: auto;
   border-radius: 50px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
 /* ---- Comprimento dos botões ---- */
-.modal-content .action-button {
+.modalContent .actionButton {
   width: 200px;
   align-self: center;
 }
 
 /* Botão SAIR dentro do modal */
-.modal-content .action-button:last-child {
+.modalContent .actionButton:last-child {
   background: #FE5EA0; 
   box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
 }
 
 /* ---- Container dos botões ---- */
-.buttons-container {
+.buttonsContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 /* ---- Título principal do modal ---- */
@@ -57,15 +61,66 @@
 }
 
 /* ============================================
-   Responsividade
-   Ajustes de texto e espaçamento em telas menores
+   RESPONSIVIDADE APRIMORADA
    ============================================ */
-@media (max-width: 768px) {
-  .title1 {
-    font-size: 2.2rem;
+
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .modalContent {
+    width: 60%;
+    padding: 25px;
+    border-radius: 40px;
   }
 
-  .buttons-container {
+  .title1 {
+    font-size: 2.3rem;
+  }
+
+  .modalContent .actionButton {
+    width: 180px;
+  }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 80%;
+    padding: 20px;
+    border-radius: 35px;
+  }
+
+  .title1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .buttonsContainer {
     gap: 1rem;
+  }
+
+  .modalContent .actionButton {
+    width: 160px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .modalContent {
+    width: 90%;
+    padding: 18px;
+    border-radius: 25px;
+  }
+
+  .title1 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .buttonsContainer {
+    gap: 0.8rem;
+  }
+
+  .modalContent .actionButton {
+    width: 140px;
   }
 }

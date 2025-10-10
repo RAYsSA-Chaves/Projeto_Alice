@@ -3,48 +3,99 @@
    Botão circular superior (ex: botão "Home")
    ============================================ */
 
-   .home-button {
-    /* ---- Estrutura e posição ---- */
-    position: absolute;
-    top: 3.2rem;
-    left: 6rem;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    z-index: 10;
-  
-    /* ---- Aparência ---- */
-    background: white;
-    border: 1px solid #1a1a1a;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  
-    /* ---- Layout interno ---- */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    /* ---- Interação ---- */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
+.homeButton {
+  /* ---- Estrutura e posição ---- */
+  position: absolute;
+  top: 3.2rem;
+  left: 6rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: 10;
+
+  /* ---- Aparência ---- */
+  background: #fff;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* ---- Layout interno ---- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ---- Interação ---- */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* ---- Efeito ao passar o mouse ---- */
+.homeButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Efeito ao clicar ---- */
+.homeButton:active {
+  transform: scale(0.95);
+}
+
+/* ---- Ícone ou imagem dentro do botão ---- */
+.homeButton svg,
+.homeButton img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ============================================
+   Responsividade
+   ============================================ */
+
+/* Tablets médios e notebooks pequenos */
+@media (max-width: 1024px) {
+  .homeButton {
+    top: 2.5rem;
+    left: 3.5rem;
+    width: 60px;
+    height: 60px;
   }
-  
-  /* ---- Efeito ao passar o mouse ---- */
-  .home-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    outline: none;
+
+  .homeButton svg,
+  .homeButton img {
+    width: 32px;
+    height: 32px;
   }
-  
-  /* ---- Efeito ao clicar ---- */
-  .home-button:active {
-    transform: scale(0.95);
-    outline: none;
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+  .homeButton {
+    top: 2rem;
+    left: 2rem;
+    width: 55px;
+    height: 55px;
   }
-  
-  /* ---- Ícone ou imagem dentro do botão ---- */
-  .home-button svg,
-  .home-button img {
-    width: 40px;
-    height: 40px;
+
+  .homeButton svg,
+  .homeButton img {
+    width: 28px;
+    height: 28px;
   }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .homeButton {
+    top: 1.5rem;
+    left: 1.2rem;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .homeButton svg,
+  .homeButton img {
+    width: 24px;
+    height: 24px;
+  }
+}
