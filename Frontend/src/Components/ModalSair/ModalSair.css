@@ -1,7 +1,4 @@
-/* ============================================
-   Componente: ModalSair
-   Estilo do modal de confirmação de saída
-   ============================================ */
+/* Componente: ModalSair - Estilo do modal de confirmação de saída */
 
 /* ---- Fundo escurecido e centralização do modal ---- */
 .modalOverlay {
@@ -10,11 +7,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* fica acima de outros elementos */
+  z-index: 1000; 
 }
 
 /* ---- Conteúdo principal do modal ---- */
@@ -60,11 +57,7 @@
   margin-bottom: 30px;
 }
 
-/* ============================================
-   RESPONSIVIDADE APRIMORADA
-   ============================================ */
-
-/* Tablets e notebooks pequenos */
+/* Responsividade */
 @media (max-width: 1024px) {
   .modalContent {
     width: 60%;
@@ -100,27 +93,5 @@
 
   .modalContent .actionButton {
     width: 160px;
-  }
-}
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
-  .modalContent {
-    width: 90%;
-    padding: 18px;
-    border-radius: 25px;
-  }
-
-  .title1 {
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-  }
-
-  .buttonsContainer {
-    gap: 0.8rem;
-  }
-
-  .modalContent .actionButton {
-    width: 140px;
   }
 }

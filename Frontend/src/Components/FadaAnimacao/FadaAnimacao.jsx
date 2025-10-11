@@ -3,10 +3,11 @@ import './FadaAnimacao.css';
 
 function FadaAnimacao() { 
   return (
+    // fada animada
   <figure className="fadaContainer"> 
     <img 
         src={FadaGif} 
-        alt="gif da mascote fada" 
+        alt="Gif da mascote fada" 
         className="fada" 
       /> 
   </figure>

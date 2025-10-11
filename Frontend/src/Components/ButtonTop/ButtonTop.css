@@ -1,7 +1,4 @@
-/* ============================================
-   Componente: ButtonTop
-   Botão circular superior (ex: botão "Home")
-   ============================================ */
+/* Componente: ButtonTop - Botão circular superior (ex: botão "Home") */
 
 .homeButton {
   /* ---- Estrutura e posição ---- */
@@ -47,11 +44,7 @@
   height: 40px;
 }
 
-/* ============================================
-   Responsividade
-   ============================================ */
-
-/* Tablets médios e notebooks pequenos */
+/* Responsividade */
 @media (max-width: 1024px) {
   .homeButton {
     top: 2.5rem;
@@ -64,38 +57,5 @@
   .homeButton img {
     width: 32px;
     height: 32px;
-  }
-}
-
-/* Tablets pequenos e celulares grandes */
-@media (max-width: 768px) {
-  .homeButton {
-    top: 2rem;
-    left: 2rem;
-    width: 55px;
-    height: 55px;
-  }
-
-  .homeButton svg,
-  .homeButton img {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
-  .homeButton {
-    top: 1.5rem;
-    left: 1.2rem;
-    width: 48px;
-    height: 48px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  }
-
-  .homeButton svg,
-  .homeButton img {
-    width: 24px;
-    height: 24px;
   }
 }

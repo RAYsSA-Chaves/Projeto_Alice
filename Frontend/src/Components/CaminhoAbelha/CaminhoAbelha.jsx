@@ -1,4 +1,3 @@
-// import das bibliotecas utilizadas e arquivo css
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,7 +12,7 @@ function CaminhoAbelha() {
         });
     }, []);
 
-    // seção e div para estilização do caminho e traços da animação
+    // seção e div para estilização dos traços do caminho e animação
     return (
         <>
             <section className="caminhoAbelha">
@@ -28,4 +27,4 @@ function CaminhoAbelha() {
     )
 }
 
-export default CaminhoAbelha
+export default CaminhoAbelha;

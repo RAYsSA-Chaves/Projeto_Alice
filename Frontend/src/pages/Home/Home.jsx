@@ -20,12 +20,12 @@ import CaminhoAbelha2 from '../../Components/CaminhoAbelha2/CaminhoAbelha2'
 function Home() {
     return (
         <>
-            <main className="paginaPrincipal">
+            <section className="paginaPrincipal">
                 <div className="titulos">
                     <h1>Bem-vindo, Pequeno leitor</h1>
                 </div>
                 <FadaAnimacao />
-            </main>
+            </section>
 
             {/* imagens de decoração */}
             <img src={EstrelaRosa} alt='estrela rosa' className='estrela1' />
@@ -47,7 +47,7 @@ function Home() {
                 <ArrowDown size={30} />
             </button>
 
-
+            {/* Cards e nuvens da section */}
             <section className='secaoCards' id='cards'>
                 <div className='nuvens'>
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao1' />
@@ -56,7 +56,7 @@ function Home() {
                 </div>
 
                 <Cards />
-                {/* divs usadas para a estilização das nuvens no começo e final do section dos Cards */}
+
                 <div className='nuvens'>
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao4' />
                     <img src={Nuvem} alt='nuvem branca' id='nuvemSecao5' />
@@ -64,6 +64,7 @@ function Home() {
                 </div>
             </section>
 
+            {/* Cards de fala da fada */}
             <section className='paginaFada'>
                 <section className='caixinha'>
                     <img src={FadaVetor} alt='perfil da fada' id='fadaPerfil' />
@@ -71,8 +72,7 @@ function Home() {
                     <div className='siteApresentacao'>
                         <img src={DecoracaoAzul} alt='decoração da caixa de texto' id='decoracaoTexto' />
                         <div className='caixaTexto'>
-                            <h2>Olá,</h2>
-                            <h2>eu sou a Bina!</h2>
+                            <h2>Olá, eu sou a Bina!</h2>
                             <p>Eu sou uma fada e sua melhor amiga!</p>
                             Vou te acompanhar e auxiliar nessa
                             jornada de leitura e muito
@@ -81,16 +81,15 @@ function Home() {
                     </div>
                 </section>
             
-
                 <section className='caixinha'>
                     <img src={FadaVetor2} alt='perfil da fada' id='fadaPerfil2' />
                     <CaminhoAbelha2/>
                     <img src={DecoracaoRosaAzul} alt='decoração da segunda caixa de texto' id='decoracaoTexto2' />
                     <div className='caixaTexto2'>
                         <h2>O que você pode fazer?</h2>
-                        <p>Nesse site, você pode tanto jogar
+                        <p>Nesse site, você pode tanto ler
                             quanto aproveitar um tempinho
-                            jogando com os cards acima
+                            jogando com os cards acima.
                         </p>
                     </div>
                 </section>
@@ -102,7 +101,7 @@ function Home() {
                         <h2>Aproveite essa experiência</h2>
                         <p>Se divirta nesse momento de leitura
                             e jogos, eu vou estar aqui
-                            te acompanhando
+                            te acompanhando!
                         </p>
                     </div>
                 </section>
@@ -115,4 +114,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;

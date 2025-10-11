@@ -8,11 +8,10 @@
   width: 300%;
   height: auto;
   display: block;
-  animation: pulinhoFada 0.7s infinite ease-in-out;
+  animation: pulinhoFada 0.8s infinite ease-in-out;
 }
 
 @keyframes pulinhoFada {
-
   0%,
   100% {
     transform: translateY(0);

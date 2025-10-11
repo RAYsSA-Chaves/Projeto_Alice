@@ -16,7 +16,6 @@ function Cards() {
                             <Play size={20} weight='fill' /> JOGAR
                         </button>
                     </Link>
-
                 </div>
             </article>
 
@@ -30,8 +29,6 @@ function Cards() {
                             Ler
                         </button>
                     </Link>
-
-
                 </div>
             </article>
         </section>

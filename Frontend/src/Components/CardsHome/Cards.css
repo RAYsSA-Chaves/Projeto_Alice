@@ -3,9 +3,9 @@
 .cards {
     display: flex;
     justify-content: space-between;
-    gap: 8rem;
-    margin-top: 4rem;
-    margin-left: 50%;
+    margin: 15rem 20%;
+    width: 100%;
+    gap: 10px;
 }
 
 .card {
@@ -97,11 +97,3 @@
 .btnCard:hover {
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.7);
 }
-
-@media (min-width: 660px) {
-    .cards {
-        margin-top: 10%;
-        margin-left: 5%;
-    }
-}
-

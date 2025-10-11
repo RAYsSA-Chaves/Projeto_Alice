@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./Card.css";
 
 export default function Card({ image, title }) {
-  const cardRef = useRef(null);
+  const cardRef = useRef(null); // referencia o card para acessr o DOM
 
   // Movimentação 3D da carta
   const handleMouseMove = (e) => {
@@ -28,12 +28,14 @@ export default function Card({ image, title }) {
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
 
+  // Voltar à posição neutra quando o mouse sair
   const handleMouseLeave = () => {
     const card = cardRef.current;
-    card.style.transition = "transform 0.6s ease"; // define a transição primeiro
-    card.style.transform = "rotateX(0deg) rotateY(0deg)"; // depois muda o transform
+    card.style.transition = "transform 0.6s ease";
+    card.style.transform = "rotateX(0deg) rotateY(0deg)";
   };
 
+  // Remover a transiçao para resposta instantânea ao mover
   const handleMouseEnter = () => {
     const card = cardRef.current;
     card.style.transition = "none";
@@ -48,7 +50,7 @@ export default function Card({ image, title }) {
       onMouseEnter={handleMouseEnter}
     >
       <div className="cardContent">
-        {/* Aqui está a tag de imagem */}
+        {/* Imagem do card */}
         <img src={image} alt={title || "Imagem"} className="cardImage" />
         {title && <h2 className="cardTitle">{title}</h2>}
       </div>

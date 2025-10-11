@@ -85,8 +85,8 @@ overflow: hidden;
 }
 
 /* Parágrafo */
-.paragrafo {
-text-indent: 1.5em;
+.paragrafoLivro {
+text-indent: 0;
 line-height: 1.5;
 margin-bottom: 1rem;
 }
@@ -95,10 +95,6 @@ margin-bottom: 1rem;
 .titulo {
 font-size: 1.3em;
 font-weight: bold;
-}
-
-p:has(.titulo) {
-text-indent: none;
 }
 
 /* Palavra normal */
@@ -240,4 +236,13 @@ height: 20px;
 
 .resultadoBusca .btnFecharResultado:hover {
 transform: scale(1.2);
+}
+
+@media (max-width: 1540px) {
+  .resultadoBusca.grifo .btnFecharResultado {
+    border-color: #000 !important;
+  }
+  .resultadoBusca.grifo .btnFecharResultado svg {
+    color: #000 !important;
+  }
 }

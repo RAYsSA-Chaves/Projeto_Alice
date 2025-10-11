@@ -88,7 +88,7 @@ export default function Livro({ busca, setBusca, modoGrifar, setModoGrifar }) {
   // Renderizar um parágrafo como <p> com várias palavras
   const renderBloco = (bloco, paginaIndex, blocoIndex) => {
     return (
-      <p className="paragrafo" key={`p-${paginaIndex}-${blocoIndex}`}>
+      <p className="paragrafoLivro" key={`p-${paginaIndex}-${blocoIndex}`}>
         {renderWords(bloco)}
       </p>
     );

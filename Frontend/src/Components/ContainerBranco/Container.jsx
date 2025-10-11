@@ -1,12 +1,10 @@
 import "./Container.css";
 
 /**
- * Componente Container
- * Responsável por agrupar e centralizar o conteúdo principal
- * dentro de um contêiner branco estilizado.
+ * Componente Container - Agrupa e centraliza o conteúdo dentro de um contêiner branco
  *
- * @param {React.ReactNode} children - Conteúdo interno a ser renderizado dentro do contêiner.
- * @returns {JSX.Element} Estrutura de contêiner.
+ * @param {React.ReactNode} children - Conteúdo interno a ser renderizado dentro do contêiner
+ * @returns {JSX.Element} Estrutura de contêiner
  */
 
 function Container({ children }) {

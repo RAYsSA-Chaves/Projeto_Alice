@@ -1,11 +1,11 @@
 import "./ButtonTop.css";
 
 /**
- * Componente de botão superior (geralmente o botão "Home").
+ * Componente de botão superior (geralmente o botão "Home")
  *
- * @param {Function} onClick - Função executada ao clicar no botão.
- * @param {React.ReactNode} children - Conteúdo interno do botão (ícone ou texto).
- * @returns {JSX.Element} Botão estilizado.
+ * @param {Function} onClick - Função executada ao clicar no botão
+ * @param {React.ReactNode} children - Conteúdo interno do botão (ícone ou texto)
+ * @returns {JSX.Element} Botão estilizado
  */
 
 function ButtonTop({ onClick, children }) {

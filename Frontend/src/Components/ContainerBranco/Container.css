@@ -1,15 +1,12 @@
-/* ============================================
-   Componente: Container
-   Contêiner branco centralizado para agrupar o conteúdo principal
-   ============================================ */
+/* Componente: Container - Contêiner branco centralizado para agrupar o conteúdo principal */
 
-.whiteContainer{
+.whiteContainer { 
   /* ---- Estrutura e tamanho ---- */
   position: relative;
   width: 60%;
-  height: auto; /* Evita altura fixa em telas pequenas */
+  height: auto;
   max-width: 1200px;
-  min-height: 60vh; /* Mantém boa proporção em telas grandes */
+  min-height: 60vh;
   z-index: 5;
 
   /* ---- Layout interno ---- */
@@ -31,39 +28,4 @@
 
   /* ---- Transição suave para ajustes de tela ---- */
   transition: all 0.3s ease-in-out;
-}
-
-/* ============================================
-   Responsividade: tablets (até 1024px)
-   ============================================ */
-@media (max-width: 1024px) {
-  .whiteContainer{
-    width: 80%;
-    padding: 2.5rem 2rem;
-    border-radius: 50px;
-  }
-}
-
-/* ============================================
-   Responsividade: tablets pequenos e celulares (até 768px)
-   ============================================ */
-@media (max-width: 768px) {
-  .whiteContainer{
-    width: 90%;
-    padding: 2rem 1.5rem;
-    border-radius: 40px;
-    gap: 1.5rem;
-  }
-}
-
-/* ============================================
-   Responsividade: celulares pequenos (até 480px)
-   ============================================ */
-@media (max-width: 480px) {
-  .whiteContainer{
-    width: 95%;
-    padding: 1.5rem 1rem;
-    border-radius: 30px;
-    gap: 1rem;
-  }
 }
